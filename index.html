@@ -12,18 +12,22 @@
   <link rel="icon" href="/favicon.png">
   <!-- TailwindCSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Plain CSS (no @apply) so margins/buttons work with the CDN -->
   <style>
-    .btn-primary { @apply inline-flex items-center px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90 transition; }
-    .btn-ghost   { @apply inline-flex items-center px-5 py-3 rounded-2xl border border-black/20 hover:bg-black/5 transition; }
-    .badge       { @apply text-xs font-medium px-2 py-1 rounded-full bg-black/10; }
-    .container   { @apply max-w-6xl mx-auto px-4; }
+    .container{max-width:72rem;margin-left:auto;margin-right:auto;padding-left:1rem;padding-right:1rem;}
+    .btn-primary{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;background:#000;color:#fff;text-decoration:none;transition:opacity .2s;}
+    .btn-primary:hover{opacity:.9;}
+    .btn-ghost{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;border:1px solid rgba(0,0,0,.2);text-decoration:none;transition:background .2s;}
+    .btn-ghost:hover{background:rgba(0,0,0,.05);}
+    .badge{display:inline-block;font-size:.75rem;font-weight:600;padding:.25rem .5rem;border-radius:9999px;background:rgba(0,0,0,.1);}
+    .card{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1rem;padding:1.25rem;}
+    .card-lg{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1.25rem;padding:1.5rem;}
   </style>
 </head>
 <body class="antialiased text-slate-900">
   <header class="border-b border-slate-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
     <nav class="container flex items-center justify-between h-16">
       <a href="/index.html" class="flex items-center gap-2 font-semibold">
-        <span class="text-xl">🏈</span>
         <span>Fair Value Sports</span>
       </a>
       <ul class="hidden md:flex items-center gap-6">
@@ -38,53 +42,135 @@
       </div>
     </nav>
   </header>
-  
-<main>
-  <section class="container py-16 md:py-24">
-    <div class="grid md:grid-cols-2 items-center gap-10">
-      <div>
-        <span class="badge">NFL • EV Model</span>
-        <h1 class="text-4xl md:text-5xl font-bold mt-4">Find +EV bets. Size them with Kelly. Track your edge.</h1>
-        <p class="text-lg text-slate-700 mt-4">
-          Fair Value Sports surfaces expected value across books, de‑vigs market odds, and suggests position sizes based on your bankroll and risk.
-        </p>
-        <div class="flex items-center gap-3 mt-6">
-          <a class="btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Try the Live Model</a>
-          <a class="btn-ghost" href="/products.html">See Pricing</a>
-        </div>
-        <p class="text-sm text-slate-500 mt-3">Free trial in September. Primetime games stay free afterwards.</p>
-      </div>
-      <div class="bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200 rounded-3xl p-6 shadow-sm">
-        <ul class="space-y-4">
-          <li class="flex items-start gap-3"><span>✅</span><span><b>No‑vig probabilities</b> from market consensus</span></li>
-          <li class="flex items-start gap-3"><span>✅</span><span><b>EV% rankings</b> vs. best available price</span></li>
-          <li class="flex items-start gap-3"><span>✅</span><span><b>Kelly sizing</b> with your bankroll & factor</span></li>
-          <li class="flex items-start gap-3"><span>✅</span><span><b>Transparent</b> inputs, timestamps, and model version</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
-  <section class="bg-slate-50 border-y border-slate-200/70">
-    <div class="container py-14">
-      <h2 class="text-2xl font-semibold">Why it matters</h2>
-      <div class="grid md:grid-cols-3 gap-6 mt-6">
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Beat the vig</h3>
-          <p class="text-sm text-slate-700 mt-2">We remove the bookmaker’s margin to estimate true win probabilities.</p>
+  <main>
+    <!-- Hero -->
+    <section class="container py-16 md:py-24">
+      <div class="grid md:grid-cols-2 items-center gap-10">
+        <div>
+          <span class="badge">NFL · EV Model</span>
+          <h1 class="text-4xl md:text-5xl font-bold mt-4">Bet smarter, with an edge.</h1>
+          <p class="text-lg text-slate-700 mt-4">
+            Convert book prices into fair probabilities—find the edge and bet smarter.
+          </p>
+          <div class="flex items-center gap-3 mt-6">
+            <a class="btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Try the Live Model</a>
+            <a class="btn-ghost" href="/products.html">See Pricing</a>
+          </div>
+          <p class="text-xs text-slate-500 mt-3">
+            Information only; not betting advice. Results vary; 21+. Bet responsibly.
+          </p>
         </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Bet with discipline</h3>
-          <p class="text-sm text-slate-700 mt-2">Kelly sizing helps allocate bankroll to the best edges, not the biggest hunches.</p>
-        </div>
-        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
-          <h3 class="font-semibold">Stay responsible</h3>
-          <p class="text-sm text-slate-700 mt-2">Information only. No guarantees. Variance is real—protect your bankroll.</p>
+        <div class="bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200 rounded-3xl p-6 shadow-sm">
+          <ul class="space-y-3 text-slate-800">
+            <li><b>No-vig probabilities</b> from market consensus</li>
+            <li><b>EV% rankings</b> vs. best available price</li>
+            <li><b>Kelly sizing</b> with your bankroll and factor</li>
+            <li><b>Transparent</b> inputs, timestamps, and model version</li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+
+    <!-- Features as cards -->
+    <section class="bg-slate-50 border-y border-slate-200/70">
+      <div class="container py-14">
+        <h2 class="text-2xl font-semibold">What Fair Value Sports can do for you</h2>
+        <div class="grid md:grid-cols-3 gap-6 mt-6">
+          <div class="card">
+            <h3 class="font-semibold">Sportsbook screening & line shopping</h3>
+            <p class="text-sm text-slate-700 mt-2">
+              Scan multiple books and surface the best number for each side/market.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="font-semibold">De-vig market odds</h3>
+            <p class="text-sm text-slate-700 mt-2">
+              Remove the bookmaker’s margin to reveal the market’s underlying signal.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="font-semibold">Fair probabilities</h3>
+            <p class="text-sm text-slate-700 mt-2">
+              Convert no-vig prices into consistent win probabilities.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="font-semibold">EV% filtering & ranking</h3>
+            <p class="text-sm text-slate-700 mt-2">
+              Calculate edge vs. best price, rank plays, and <b>set your own EV% threshold</b>.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="font-semibold">Adjustable Kelly sizing</h3>
+            <p class="text-sm text-slate-700 mt-2">
+              Right-size stakes to your risk with <b>user-set bankroll and Kelly factor</b>.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="font-semibold">Clarity & transparency</h3>
+            <p class="text-sm text-slate-700 mt-2">
+              See timestamps, inputs, and methodology notes alongside results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Built for every betting style (cards) -->
+    <section class="container py-16">
+      <div class="max-w-3xl">
+        <h2 class="text-2xl font-semibold">Built for every betting style</h2>
+        <p class="text-slate-700 mt-2">Pick your style, set your thresholds, and let the edges surface.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mt-6">
+        <div class="card-lg">
+          <h3 class="font-semibold">Line Shopper</h3>
+          <p class="text-sm text-slate-700 mt-2">
+            Scan multiple books and lock the best number, every time.
+          </p>
+          <p class="text-xs text-slate-500 mt-3"><b>Start here:</b> EV% ≥ 1.0–1.5 · Kelly 0.5</p>
+        </div>
+
+        <div class="card-lg">
+          <h3 class="font-semibold">Data-Driven Bettor</h3>
+          <p class="text-sm text-slate-700 mt-2">
+            De-vig the market, turn prices into fair probabilities, and compare apples to apples.
+          </p>
+          <p class="text-xs text-slate-500 mt-3"><b>Start here:</b> EV% ≥ 1.5–2.0 · Kelly 0.5</p>
+        </div>
+
+        <div class="card-lg">
+          <h3 class="font-semibold">Bankroll-Conscious</h3>
+          <p class="text-sm text-slate-700 mt-2">
+            Control variance with higher EV floors and smaller Kelly stakes.
+          </p>
+          <p class="text-xs text-slate-500 mt-3"><b>Start here:</b> EV% ≥ 2–3 · Kelly 0.25</p>
+        </div>
+
+        <div class="card-lg">
+          <h3 class="font-semibold">High-Conviction Hammer</h3>
+          <p class="text-sm text-slate-700 mt-2">
+            Press when the edge is big—deploy larger stakes on rare outliers.
+          </p>
+          <p class="text-xs text-slate-500 mt-3"><b>Start here:</b> EV% ≥ 3–5 · Kelly 0.75–1.0 (0.5 if variance-sensitive)</p>
+        </div>
+
+        <div class="card-lg">
+          <h3 class="font-semibold">Weekend Warriors</h3>
+          <p class="text-sm text-slate-700 mt-2">
+            See the full board, filter by edge, and allocate across more opportunities.
+          </p>
+          <p class="text-xs text-slate-500 mt-3"><b>Start here:</b> EV% ≥ 0.8–1.2 · Kelly 0.5–0.75</p>
+        </div>
+      </div>
+
+      <div class="mt-10 text-sm text-slate-600">
+        <p><b>Not for you if…</b> you want guaranteed wins, won’t accept variance or bankroll discipline, or are under 21 / in an illegal jurisdiction.</p>
+      </div>
+    </section>
+  </main>
 
   <footer class="border-t border-slate-200/70 mt-16">
     <div class="container py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-sm">
