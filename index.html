@@ -133,15 +133,17 @@
       </div>
     </section>
 
-  <!-- Preview section: three worked examples (not live) -->
+<!-- Preview section: three worked examples (not live) -->
 <section id="preview" class="bg-white">
   <div class="container py-12">
     <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
       <div>
         <h2 class="text-2xl font-semibold">NFL EV Model Preview</h2>
-        <p class="text-slate-600 text-sm mt-1">Three worked examples (not live). We’ll add a live edge here soon.</p>
+        <p class="text-slate-600 text-sm mt-1">Three worked examples for illustration (not live).</p>
       </div>
-      <p class="text-xs text-slate-500">September focus: NFL moneylines. Spreads &amp; totals in progress.</p>
+      <a class="btn-ghost" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">
+        Launch the NFL EV Model
+      </a>
     </div>
 
     <div class="mt-4 overflow-x-auto border border-slate-200 rounded-2xl">
@@ -189,26 +191,6 @@
                 </span>
               </div>
             </th>
-
-            <!-- Kelly Sizing with tooltip -->
-            <th class="px-4 py-3">
-              <div class="flex items-center gap-1">
-                Kelly Sizing
-                <span class="relative inline-block group">
-                  <button type="button" class="inline-flex items-center justify-center h-4 w-4 rounded-full border border-current/40 text-slate-600 focus:outline-none" aria-label="What is Kelly Sizing?">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"/>
-                    </svg>
-                  </button>
-                  <span class="absolute left-1/2 -translate-x-1/2 mt-2 w-56 text-[11px] bg-slate-900 text-white rounded-md px-2 py-1 shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
-                    Fractional Kelly stake as % of bankroll (example assumes 0.5× Kelly).
-                  </span>
-                </span>
-              </div>
-            </th>
-
-            <th class="px-4 py-3">Stake ($)</th>
           </tr>
         </thead>
 
@@ -222,8 +204,6 @@
             <td class="px-4 py-3">FanDuel</td>
             <td class="px-4 py-3">46.8%</td>
             <td class="px-4 py-3">+3.0%</td>
-            <td class="px-4 py-3">0.5× · 1.2%</td>
-            <td class="px-4 py-3">$12</td>
           </tr>
 
           <!-- Example 2 -->
@@ -235,8 +215,6 @@
             <td class="px-4 py-3">Caesars</td>
             <td class="px-4 py-3">52.2%</td>
             <td class="px-4 py-3">+1.9%</td>
-            <td class="px-4 py-3">0.5× · 1.0%</td>
-            <td class="px-4 py-3">$10</td>
           </tr>
 
           <!-- Example 3 -->
@@ -248,18 +226,17 @@
             <td class="px-4 py-3">BetMGM</td>
             <td class="px-4 py-3">41.8%</td>
             <td class="px-4 py-3">+2.4%</td>
-            <td class="px-4 py-3">0.5× · 0.8%</td>
-            <td class="px-4 py-3">$8</td>
           </tr>
         </tbody>
       </table>
     </div>
 
     <p class="text-xs text-slate-500 mt-3">
-      Example only; not live data. Assumes a $1,000 bankroll and 0.5× Kelly factor. Information only; not betting advice. Bet responsibly.
+      Example only; not live data. Information only; not betting advice. Bet responsibly.
     </p>
   </div>
 </section>
+
 
   <!-- Supported platforms (navy band) -->
 <section class="bg-blue-950 text-white border-t border-slate-800">
