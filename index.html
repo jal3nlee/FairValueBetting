@@ -255,38 +255,73 @@
     </div>
   </section>
 
-    <!-- EV & Kelly in 60 seconds (beginner primer) -->
-    <section class="bg-sky-50 border-y border-sky-200/70">
-      <div class="container py-10">
-        <h2 class="text-xl md:text-2xl font-semibold">Expected Value &amp; Kelly Overview</h2>
-        <div class="grid md:grid-cols-2 gap-6 mt-4">
-          <div class="card">
-            <h3 class="font-semibold">Where to start?</h3>
-            <p class="text-sm text-slate-700 mt-1">
-                Different sportsbooks post different prices for the same bet. That’s normal. Books adjust lines to manage risk, respond to sharp action, run promos, and compete for customers. Those small price differences change the break-even chance you need to come out ahead.            </p>
-            <p class="text-xs text-slate-500 mt-2">Example: If ML is +125/−145, the no-vig fair might be ~46.8%.</p>
-          </div>
-          <div class="card">
-            <h3 class="font-semibold">2) Edge (EV%)</h3>
-            <p class="text-sm text-slate-700 mt-1">
-              Compare the offered price to the fair line. If the offered price is better than fair, you have positive expected value.
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="font-semibold">3) Kelly Factor</h3>
-            <p class="text-sm text-slate-700 mt-1">
-              Kelly Factor uses edge and win probability to suggest a stake range relative to your bankroll and risk setting.
-            </p>
-          </div>
-          <div class="card">
-            <h3 class="font-semibold">Transparent, not predictive</h3>
-            <p class="text-sm text-slate-700 mt-1">
-              We show math and inputs with timestamps. No picks or guarantees—use your own judgment.
-            </p>
-          </div>
-        </div>
+    <!-- EV & Kelly (beginner primer) -->
+<section class="bg-sky-50 border-y border-sky-200/70">
+  <div class="container py-10">
+    <div class="flex items-baseline justify-between gap-3">
+      <h2 class="text-xl md:text-2xl font-semibold">Expected Value &amp; Kelly Overview</h2>
+      <a href="/howitworks.html" class="text-sm text-slate-700 underline underline-offset-2 hover:text-slate-900">
+        How it works →
+      </a>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 mt-4">
+      <!-- Card 1 -->
+      <div class="card">
+        <h3 class="font-semibold">Where do I start?</h3>
+        <p class="text-sm text-slate-700 mt-1">
+          Different sportsbooks post different prices for the same bet. That’s normal. Books adjust lines to manage risk, respond to sharp action, run promos, and compete for customers. Those small price differences change the break-even chance you need to come out ahead.
+        </p>
+        <p class="text-sm text-slate-700 mt-3">
+          <span class="font-semibold">So what?</span> If you’ve picked a bet, your next job is simple: lock in the best available price. Our model screens supported sportsbooks and surfaces the most favorable odds available at that moment, so you’re starting from the strongest number every time.
+        </p>
       </div>
-    </section>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <h3 class="font-semibold">What do odds mean?</h3>
+        <p class="text-sm text-slate-700 mt-1">
+          In American odds, the sign tells you favorite vs underdog and the size hints at likelihood.
+        </p>
+        <p class="text-sm text-slate-700 mt-2">
+          <b>Negative odds (e.g., −140):</b> the favorite—more likely to happen.
+        </p>
+        <p class="text-sm text-slate-700 mt-1">
+          <b>Positive odds (e.g., +120):</b> the underdog—less likely to happen.
+        </p>
+        <p class="text-sm text-slate-700 mt-1">
+          As odds get more negative, the outcome is more likely; as they get more positive, it’s less likely. For reference, −140 corresponds to a break-even of about 58.3%, while +120 is about 45.5%.
+        </p>
+        <p class="text-sm text-slate-700 mt-3">
+          <span class="font-semibold">So what?</span> Not every two-way bet is priced “fairly”—books build in a margin (vig) so the combined implied probabilities usually add up to over 100%. We remove the vig to estimate the market’s fair win % and a corresponding fair line, giving you a clearer baseline to compare against any book’s offered price.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <h3 class="font-semibold">What are fair probability and EV?</h3>
+        <p class="text-sm text-slate-700 mt-1">
+          Every betting line can be turned into a likelihood. Because sportsbooks include a margin (“vig”), we remove that margin to estimate the market’s no-vig fair win probability, a clearer baseline than any book’s posted odds.
+        </p>
+        <p class="text-sm text-slate-700 mt-3">
+          <span class="font-semibold">So what?</span> Sometimes a sportsbook posts a price that’s meaningfully different from the market’s fair number. That gap is your edge. We highlight these opportunities as positive expected value (EV%), so you can compare the offered price to the fair baseline and focus on bets that pay more than the market implies. Edges move with prices and aren’t guarantees, so it is up to you to use your own judgment and bankroll rules.
+        </p>
+      </div>
+
+      <!-- Card 4 (Kelly) -->
+      <div class="card">
+        <h3 class="font-semibold">How do I know how much to bet?</h3>
+        <p class="text-sm text-slate-700 mt-1">
+          We use Kelly logic. Kelly takes your fair win percentage and the offered price to suggest a fraction of your bankroll that maximizes long-run growth. The larger the edge, the larger the suggested fraction; if the edge is zero or negative, the suggested stake is $0.
+        </p>
+        <p class="text-sm text-slate-700 mt-3">
+          <span class="font-semibold">So what?</span> If you stake the same unit on every +EV bet, you over-bet small edges and under-bet strong ones. Kelly sizing ties stake to edge and win probability, helping you stay consistent. It’s a guideline, not a guarantee, so use a Kelly factor that fits your risk tolerance and never risk money you can’t afford to lose.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- (Moved) Built for every betting style (navy band + white text) -->
     <section class="bg-blue-950 text-white border-t border-slate-800">
