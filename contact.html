@@ -4,65 +4,183 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact · Fair Value Sports</title>
-  <meta name="description" content="EV sports betting model with transparent edges and Kelly-based staking.">
+  <meta name="description" content="Get in touch with Fair Value Sports. Questions, feedback, partnerships, or media inquiries.">
   <meta property="og:title" content="Contact · Fair Value Sports">
-  <meta property="og:description" content="EV sports betting model with transparent edges and Kelly-based staking.">
+  <meta property="og:description" content="Get in touch with Fair Value Sports. Questions, feedback, partnerships, or media inquiries.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/favicon.png">
-  <link rel="icon" href="/favicon.png">
-  <!-- TailwindCSS CDN -->
+  <meta property="og:image" content="/assets/favicon.png">
+  <link rel="icon" href="/assets/favicon.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .btn-primary { @apply inline-flex items-center px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90 transition; }
-    .btn-ghost   { @apply inline-flex items-center px-5 py-3 rounded-2xl border border-black/20 hover:bg-black/5 transition; }
-    .badge       { @apply text-xs font-medium px-2 py-1 rounded-full bg-black/10; }
-    .container   { @apply max-w-6xl mx-auto px-4; }
+    .container{max-width:72rem;margin-left:auto;margin-right:auto;padding-left:1rem;padding-right:1rem;}
+    .btn-primary{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;background:#000;color:#fff;text-decoration:none;transition:opacity .2s;}
+    .btn-primary:hover{opacity:.9;}
+    .btn-ghost{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;border:1px solid rgba(0,0,0,.2);text-decoration:none;transition:background .2s;}
+    .btn-ghost:hover{background:rgba(0,0,0,.05);}
+    .btn-light{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;background:#fff;color:#0f172a;text-decoration:none;transition:opacity .2s;}
+    .btn-light:hover{opacity:.9;}
+    .btn-ghost-light{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;border:1px solid rgba(255,255,255,.5);color:#fff;text-decoration:none;transition:background .2s;}
+    .btn-ghost-light:hover{background:rgba(255,255,255,.08);}
+    .badge{display:inline-block;font-size:.75rem;font-weight:600;padding:.25rem .5rem;border-radius:9999px;background:rgba(0,0,0,.1);}
+    .card{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1rem;padding:1.25rem;}
+    .card-lg{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1.25rem;padding:1.5rem;}
+    .input{width:100%;padding:.625rem .875rem;border:1px solid rgba(15,23,42,.15);border-radius:.75rem;background:#fff;}
+    .label{display:block;font-size:.875rem;font-weight:600;color:#0f172a;margin-bottom:.375rem;}
   </style>
 </head>
 <body class="antialiased text-slate-900">
+
+  <!-- Header (with mobile hamburger) -->
   <header class="border-b border-slate-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
     <nav class="container flex items-center justify-between h-16">
       <a href="/index.html" class="flex items-center gap-2 font-semibold">
-        <span class="text-xl">🏈</span>
-        <span>Fair Value Sports</span>
+        <img src="/assets/logo.png" alt="Fair Value Sports" class="h-6 md:h-7 w-auto">
+        <span class="sr-only">Fair Value Sports</span>
       </a>
+
+      <!-- Desktop nav -->
       <ul class="hidden md:flex items-center gap-6">
         <li><a class="hover:opacity-80" href="/index.html">Home</a></li>
         <li><a class="hover:opacity-80" href="/about.html">About</a></li>
+        <li><a class="hover:opacity-80" href="/howitworks.html">How it works</a></li>
         <li><a class="hover:opacity-80" href="/products.html">Products</a></li>
-        <li><a class="hover:opacity-80" href="/contact.html">Contact</a></li>
+        <li><a class="hover:opacity-80" href="/contact.html" aria-current="page">Contact</a></li>
       </ul>
-      <div class="flex items-center gap-3">
-        <a class="btn-ghost" href="/products.html">Pricing</a>
-        <a class="btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Open the Model</a>
+
+      <!-- Desktop CTAs -->
+      <div class="hidden md:flex items-center gap-3">
+        <a class="btn-ghost" href="/products.html">See Plans</a>
+        <a class="btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Open Model</a>
       </div>
+
+      <!-- Mobile hamburger -->
+      <button id="menuButton" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-300 text-slate-700" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </nav>
+
+    <!-- Mobile menu panel -->
+    <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-slate-200">
+      <div class="container py-3 space-y-1">
+        <a class="block py-2" href="/index.html">Home</a>
+        <a class="block py-2" href="/about.html">About</a>
+        <a class="block py-2" href="/howitworks.html">How it works</a>
+        <a class="block py-2" href="/products.html">Products</a>
+        <a class="block py-2" href="/contact.html" aria-current="page">Contact</a>
+        <div class="pt-3 flex gap-2">
+          <a class="flex-1 btn-ghost" href="/products.html">See Plans</a>
+          <a class="flex-1 btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Open Model</a>
+        </div>
+      </div>
+    </div>
   </header>
-  
-<main class="container py-16 md:py-24">
-  <h1 class="text-4xl font-bold">Contact</h1>
-  <p class="text-slate-700 mt-3">Have questions or ideas? Send a note.</p>
 
-  <form class="mt-8 max-w-xl space-y-4" method="POST" action="https://formspree.io/f/your-id">
-    <div>
-      <label class="block text-sm font-medium">Name</label>
-      <input name="name" required class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2" placeholder="Your name">
-    </div>
-    <div>
-      <label class="block text-sm font-medium">Email</label>
-      <input name="email" type="email" required class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2" placeholder="you@example.com">
-    </div>
-    <div>
-      <label class="block text-sm font-medium">Message</label>
-      <textarea name="message" rows="5" required class="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2" placeholder="How can we help?"></textarea>
-    </div>
-    <button class="btn-primary" type="submit">Send</button>
-    <p class="text-xs text-slate-500 mt-2">We’ll never share your email. By submitting, you agree to our <a class="underline" href="/terms.html">Terms</a> and <a class="underline" href="/privacy.html">Privacy Policy</a>.</p>
-  </form>
+  <main>
+    <!-- HERO -->
+    <section class="bg-blue-950 text-white border-b border-slate-800">
+      <div class="container py-16 md:py-24">
+        <div class="max-w-3xl">
+          <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;">Contact</span>
+          <h1 class="text-4xl md:text-5xl font-bold mt-4">Get in touch</h1>
+          <p class="text-blue-100 mt-4 text-lg">
+            Questions, feedback, partnerships, or media inquiries—we’d love to hear from you.
+          </p>
+        </div>
+      </div>
+    </section>
 
-  <p class="text-sm text-slate-700 mt-8">Prefer email? <a class="underline" href="mailto:hello@fairvaluesports.com">hello@fairvaluesports.com</a></p>
-</main>
+    <!-- CONTACT GRID -->
+    <section class="container py-16">
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <!-- Left: contact options card -->
+        <div class="card-lg">
+          <h2 class="text-xl font-semibold">Contact options</h2>
+          <div class="mt-4 space-y-4">
+            <div>
+              <div class="text-sm font-semibold text-slate-700">Email</div>
+              <a class="text-slate-800 underline break-all" href="mailto:hello@fairvaluesports.com">hello@fairvaluesports.com</a>
+              <!-- Replace with your real address -->
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-slate-700">X / Twitter</div>
+              <a class="text-slate-800 underline" href="https://twitter.com/" target="_blank" rel="noopener">@FairValueSports</a>
+              <!-- Replace with your real handle -->
+            </div>
+            <div>
+              <div class="text-sm font-semibold text-slate-700">Response time</div>
+              <p class="text-sm text-slate-700">Typically 1–2 business days.</p>
+            </div>
+            <div class="pt-2">
+              <a class="btn-ghost" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Open the Model</a>
+            </div>
+          </div>
+        </div>
 
+        <!-- Right: form card (static; wire up to Formspree/Getform when ready) -->
+        <div class="card-lg">
+          <h2 class="text-xl font-semibold">Send a message</h2>
+          <!-- 
+            ACTION OPTIONS:
+            - Formspree:   action="https://formspree.io/f/yourFormID"
+            - Getform:     action="https://getform.io/f/yourFormID"
+            - Netlify:     add netlify attribute to form and deploy on Netlify
+          -->
+          <form class="mt-4 space-y-4" action="https://formspree.io/f/yourFormID" method="POST">
+            <div>
+              <label class="label" for="name">Name</label>
+              <input class="input" type="text" id="name" name="name" autocomplete="name" placeholder="Jane Doe">
+            </div>
+            <div>
+              <label class="label" for="email">Email <span class="text-rose-600">*</span></label>
+              <input class="input" type="email" id="email" name="email" autocomplete="email" required placeholder="you@example.com">
+            </div>
+            <div>
+              <label class="label" for="topic">Topic</label>
+              <select class="input" id="topic" name="topic">
+                <option value="general">General question</option>
+                <option value="feedback">Product feedback</option>
+                <option value="partnership">Partnership</option>
+                <option value="media">Press / media</option>
+              </select>
+            </div>
+            <div>
+              <label class="label" for="message">Message <span class="text-rose-600">*</span></label>
+              <textarea class="input" id="message" name="message" rows="6" required placeholder="How can we help?"></textarea>
+            </div>
+            <!-- Simple honeypot -->
+            <div style="position:absolute;left:-5000px;" aria-hidden="true">
+              <input type="text" name="_gotcha" tabindex="-1">
+            </div>
+            <!-- Optional redirect after submit -->
+            <!-- <input type="hidden" name="_redirect" value="https://yourdomain.com/thanks.html"> -->
+
+            <button type="submit" class="btn-primary">Send message</button>
+            <p class="text-xs text-slate-500">By submitting, you agree to our <a class="underline" href="/privacy.html">Privacy Policy</a>.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHT BAND CTA (optional) -->
+    <section class="bg-sky-50 border-y border-sky-200/70">
+      <div class="container py-10 md:py-12">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div>
+            <h2 class="text-xl font-semibold">Prefer email?</h2>
+            <p class="text-slate-700 mt-1">Reach us directly at <a class="underline" href="mailto:hello@fairvaluesports.com">hello@fairvaluesports.com</a>.</p>
+          </div>
+          <div class="flex gap-3">
+            <a class="btn-ghost" href="/products.html">See Plans</a>
+            <a class="btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Open Model</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
   <footer class="border-t border-slate-200/70 mt-16">
     <div class="container py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-sm">
       <p>© 2025 Fair Value Sports. All rights reserved.</p>
@@ -73,5 +191,11 @@
       </ul>
     </div>
   </footer>
+
+  <script>
+    const btn = document.getElementById('menuButton');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
 </body>
 </html>
