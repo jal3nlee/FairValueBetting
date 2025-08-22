@@ -138,7 +138,7 @@
       <div class="container py-12">
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
           <div>
-            <h2 class="text-2xl font-semibold">NFL Expected Value Model</h2>
+            <h2 class="text-2xl font-semibold">NFL EV Model Preview</h2>
             <p class="text-slate-600 text-sm mt-1">A simple worked example (not live). We’ll add a live edge here soon.</p>
           </div>
           <p class="text-xs text-slate-500">September focus: NFL moneylines. Spreads &amp; totals in progress.</p>
@@ -258,13 +258,12 @@
     <!-- EV & Kelly in 60 seconds (beginner primer) -->
     <section class="bg-sky-50 border-y border-sky-200/70">
       <div class="container py-10">
-        <h2 class="text-xl md:text-2xl font-semibold">EV &amp; Kelly Overview</h2>
+        <h2 class="text-xl md:text-2xl font-semibold">Expected Value &amp; Kelly Overview</h2>
         <div class="grid md:grid-cols-2 gap-6 mt-4">
           <div class="card">
-            <h3 class="font-semibold">1) De-vig → fair win %</h3>
+            <h3 class="font-semibold">Where to start?</h3>
             <p class="text-sm text-slate-700 mt-1">
-              Book odds include a margin (“vig”). We remove it to estimate the market’s fair win probability.
-            </p>
+                Different sportsbooks post different prices for the same bet. That’s normal. Books adjust lines to manage risk, respond to sharp action, run promos, and compete for customers. Those small price differences change the break-even chance you need to come out ahead.            </p>
             <p class="text-xs text-slate-500 mt-2">Example: If ML is +125/−145, the no-vig fair might be ~46.8%.</p>
           </div>
           <div class="card">
@@ -285,58 +284,6 @@
               We show math and inputs with timestamps. No picks or guarantees—use your own judgment.
             </p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- (Moved) Features as cards -->
-    <section class="bg-sky-50 border-y border-sky-200/70">
-      <div class="container py-14">
-        <h2 class="text-2xl font-semibold">What Fair Value Betting can do for you</h2>
-        <div class="grid md:grid-cols-3 gap-6 mt-6">
-
-          <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
-            <h3 class="font-semibold">Sportsbook screening & line shopping</h3>
-            <p class="text-sm text-blue-100 mt-2">
-              Screen multiple books and surface the best line for each matchup.
-            </p>
-          </div>
-
-          <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
-            <h3 class="font-semibold">De-vig market odds</h3>
-            <p class="text-sm text-blue-100 mt-2">
-              Remove the bookmaker’s margin to reveal the market’s underlying odds.
-            </p>
-          </div>
-
-          <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
-            <h3 class="font-semibold">Fair probabilities</h3>
-            <p class="text-sm text-blue-100 mt-2">
-              Convert no-vig prices into consistent implied win probabilities.
-            </p>
-          </div>
-
-          <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
-            <h3 class="font-semibold">EV% filtering</h3>
-            <p class="text-sm text-blue-100 mt-2">
-              Calculate edge vs. best price, rank plays, and set your own EV% threshold.
-            </p>
-          </div>
-
-          <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
-            <h3 class="font-semibold">Adjustable Kelly sizing</h3>
-            <p class="text-sm text-blue-100 mt-2">
-              Right-size stakes to your risk with user-set bankroll and Kelly factor.
-            </p>
-          </div>
-
-          <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
-            <h3 class="font-semibold">Clarity & transparency</h3>
-            <p class="text-sm text-blue-100 mt-2">
-              See timestamps, inputs, and updates alongside results.
-            </p>
-          </div>
-
         </div>
       </div>
     </section>
@@ -401,6 +348,58 @@
       </div>
     </section>
   </main>
+
+    <!-- (Moved) Features as cards -->
+    <section class="bg-sky-50 border-y border-sky-200/70">
+      <div class="container py-14">
+        <h2 class="text-2xl font-semibold">What Fair Value Betting can do for you</h2>
+        <div class="grid md:grid-cols-3 gap-6 mt-6">
+
+          <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
+            <h3 class="font-semibold">Sportsbook screening & line shopping</h3>
+            <p class="text-sm text-blue-100 mt-2">
+              Screen multiple books and surface the best line for each matchup.
+            </p>
+          </div>
+
+          <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
+            <h3 class="font-semibold">De-vig market odds</h3>
+            <p class="text-sm text-blue-100 mt-2">
+              Remove the bookmaker’s margin to reveal the market’s underlying odds.
+            </p>
+          </div>
+
+          <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
+            <h3 class="font-semibold">Fair probabilities</h3>
+            <p class="text-sm text-blue-100 mt-2">
+              Convert no-vig prices into consistent implied win probabilities.
+            </p>
+          </div>
+
+          <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
+            <h3 class="font-semibold">EV% filtering</h3>
+            <p class="text-sm text-blue-100 mt-2">
+              Calculate edge vs. best price, rank plays, and set your own EV% threshold.
+            </p>
+          </div>
+
+          <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
+            <h3 class="font-semibold">Adjustable Kelly sizing</h3>
+            <p class="text-sm text-blue-100 mt-2">
+              Right-size stakes to your risk with user-set bankroll and Kelly factor.
+            </p>
+          </div>
+
+          <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
+            <h3 class="font-semibold">Clarity & transparency</h3>
+            <p class="text-sm text-blue-100 mt-2">
+              See timestamps, inputs, and updates alongside results.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
   <footer class="border-t border-slate-200/70 mt-16">
     <div class="container py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-sm">
