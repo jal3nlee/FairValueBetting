@@ -33,8 +33,8 @@
 </head>
 <body class="antialiased text-slate-900">
 
-  <!-- HEADER (identical to Home) -->
-  <header class="border-b border-slate-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
+  <!-- HEADER (matches Home; includes mobile hamburger/menu) -->
+  <header data-fvb-header class="border-b border-slate-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
     <nav class="container flex items-center justify-between h-16">
       <a href="/index.html" class="flex items-center gap-2 font-semibold">
         <img src="/assets/logo.png" alt="Fair Value Sports" class="h-6 md:h-7 w-auto">
@@ -47,11 +47,46 @@
         <li><a class="hover:opacity-80" href="/products.html">Products</a></li>
         <li><a class="hover:opacity-80" href="/contact.html">Contact</a></li>
       </ul>
-      <div class="flex items-center gap-3">
+      <!-- Desktop CTAs hidden on mobile -->
+      <div class="hidden md:flex items-center gap-3">
         <a class="btn-ghost" href="/products.html">Explore Plans</a>
         <a class="btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Launch Model</a>
       </div>
+
+      <!-- Mobile hamburger -->
+      <button
+        data-menu-button
+        class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-300 text-slate-700"
+        aria-label="Open menu"
+        aria-controls="fvbMobileMenu"
+        aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </nav>
+
+    <!-- Mobile menu -->
+    <div id="fvbMobileMenu" data-mobile-menu class="md:hidden hidden bg-white border-t border-slate-200">
+      <div class="container py-3 space-y-1">
+        <a class="block py-2" href="/index.html">Home</a>
+        <a class="block py-2" href="/about.html">About</a>
+        <a class="block py-2" href="/howitworks.html">How it works</a>
+        <a class="block py-2" href="/products.html">Products</a>
+        <a class="block py-2" href="/contact.html">Contact</a>
+        <div class="pt-1">
+          <a class="block py-2 text-slate-700/90" href="/privacy.html">Privacy</a>
+          <a class="block py-2 text-slate-700/90" href="/terms.html">Terms</a>
+          <a class="block py-2 text-slate-700/90" href="/disclaimer.html">Legal Disclaimer</a>
+        </div>
+        <!-- Mobile CTAs -->
+        <div class="pt-3 flex gap-2">
+          <a class="flex-1 btn-ghost" href="/products.html">Explore Plans</a>
+          <a class="flex-1 btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Launch Model</a>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
@@ -82,138 +117,137 @@
       </div>
     </section>
 
-<!-- FOUNDER (light-blue band) -->
-<section class="bg-sky-50 border-y border-sky-200/70">
-  <div class="container py-14">
-    <div class="grid md:grid-cols-[180px_1fr] gap-8 items-start">
-      <div class="rounded-xl overflow-hidden border border-sky-200 bg-white aspect-square hidden md:block">
-        <!-- Optional headshot; replace or remove -->
-        <img src="/assets/founder.jpg" alt="Founder headshot" class="w-full h-full object-cover">
-      </div>
-      <div>
-        <h2 class="text-2xl font-semibold">About the Founder</h2>
+    <!-- FOUNDER (light-blue band) -->
+    <section class="bg-sky-50 border-y border-sky-200/70">
+      <div class="container py-14">
+        <div class="grid md:grid-cols-[180px_1fr] gap-8 items-start">
+          <div class="rounded-xl overflow-hidden border border-sky-200 bg-white aspect-square hidden md:block">
+            <!-- Optional headshot; replace or remove -->
+            <img src="/assets/founder.jpg" alt="Founder headshot" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <h2 class="text-2xl font-semibold">About the Founder</h2>
 
-        <!-- Founder note -->
-        <h3 class="text-lg font-semibold mt-4">Founder note</h3>
-        <p class="text-slate-700 mt-2">
-          Hi, I’m Jalen Lee. I built Fair Value Betting to bring disciplined, transparent,
-          value-driven betting to everyday bettors. With a background in finance and data analytics,
-          I’m combining a love of sports with the rigor of modeling and visualization to help people focus on
-          fair value, not hype.
+            <!-- Founder note -->
+            <h3 class="text-lg font-semibold mt-4">Founder note</h3>
+            <p class="text-slate-700 mt-2">
+              Hi, I’m Jalen Lee. I built Fair Value Betting to bring disciplined, transparent,
+              value-driven betting to everyday bettors. With a background in finance and data analytics,
+              I’m combining a love of sports with the rigor of modeling and visualization to help people focus on
+              fair value, not hype.
+            </p>
+
+            <!-- What we stand for -->
+            <h3 class="text-lg font-semibold mt-6">What we stand for</h3>
+            <p class="text-slate-700 mt-2">
+              Fair Value Betting doesn’t promise profits. It promises clarity: we surface the market’s fair value and your
+              potential edge so every price, probability, and matchup is presented honestly and comparably. Sportsbooks build
+              a margin (vig) into lines, giving the house an edge over time. We remove that vig, estimate fair win
+              probabilities, and let you compare prices across books on equal footing and compute EV% against the best
+              available price.
+            </p>
+
+            <!-- Sign-off -->
+            <p class="text-slate-700 mt-6">
+              No locks. Just process. — <b>Jalen</b>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROADMAP (navy band, white product cards) -->
+    <section id="roadmap" class="bg-blue-950 text-white border-t border-slate-800">
+      <div class="container py-16 md:py-20">
+        <div class="max-w-3xl">
+          <h2 class="text-2xl font-semibold mt-3">What’s coming next</h2>
+          <p class="text-blue-100 mt-2">Rollout order: <b>CFB → NBA → CBB</b></p>
+          <p class="text-xs text-blue-300 mt-1">Last updated: Aug 2025</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-8">
+          <!-- CFB -->
+          <div class="card text-slate-900">
+            <h3 class="text-lg font-semibold">CFB</h3>
+            <dl class="mt-4 space-y-3">
+              <div>
+                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Status</dt>
+                <dd class="text-sm">In Build</dd>
+              </div>
+              <div>
+                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Launch scope</dt>
+                <dd>
+                  <ul class="text-sm text-slate-700 list-disc pl-5 space-y-1 mt-1">
+                    <li>Expected value model</li>
+                    <li>Spreads & totals (beta)</li>
+                    <li>Futures (beta)</li>
+                  </ul>
+                </dd>
+              </div>
+              <div>
+                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Target window</dt>
+                <dd class="text-sm">Fall 2025</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- NBA -->
+          <div class="card text-slate-900">
+            <h3 class="text-lg font-semibold">NBA</h3>
+            <dl class="mt-4 space-y-3">
+              <div>
+                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Status</dt>
+                <dd class="text-sm">Planned</dd>
+              </div>
+              <div>
+                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Launch scope</dt>
+                <dd>
+                  <ul class="text-sm text-slate-700 list-disc pl-5 space-y-1 mt-1">
+                    <li>Expected value model</li>
+                    <li>Spreads & totals (beta)</li>
+                    <li>Futures (beta)</li>
+                  </ul>
+                </dd>
+              </div>
+              <div>
+                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Target window</dt>
+                <dd class="text-sm">Winter 2025</dd>
+              </div>
+            </dl>
+          </div>
+
+          <!-- CBB -->
+          <div class="card text-slate-900">
+            <h3 class="text-lg font-semibold">CBB</h3>
+            <dl class="mt-4 space-y-3">
+              <div>
+                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Status</dt>
+                <dd class="text-sm">Planned</dd>
+              </div>
+              <div>
+                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Launch scope</dt>
+                <dd>
+                  <ul class="text-sm text-slate-700 list-disc pl-5 space-y-1 mt-1">
+                    <li>Expected value model</li>
+                    <li>Spread & total (beta)</li>
+                    <li>KenPom integration (beta)</li>
+                  </ul>
+                </dd>
+              </div>
+              <div>
+                <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Target window</dt>
+                <dd class="text-sm">Winter 2025</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+
+        <p class="text-xs text-blue-300 mt-6">
+          Roadmap is directional and may change based on data quality and user feedback.
         </p>
-
-        <!-- What we stand for -->
-        <h3 class="text-lg font-semibold mt-6">What we stand for</h3>
-        <p class="text-slate-700 mt-2">
-          Fair Value Betting doesn’t promise profits. It promises clarity: we surface the market’s fair value and your
-          potential edge so every price, probability, and matchup is presented honestly and comparably. Sportsbooks build
-          a margin (vig) into lines, giving the house an edge over time. We remove that vig, estimate fair win
-          probabilities, and let you compare prices across books on equal footing and compute EV% against the best
-          available price.
-        </p>
-
-        <!-- Sign-off -->
-        <p class="text-slate-700 mt-6">
-          No locks. Just process. — <b>Jalen</b>
-        </p>
       </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- ROADMAP (navy band, white product cards) -->
-<section id="roadmap" class="bg-blue-950 text-white border-t border-slate-800">
-  <div class="container py-16 md:py-20">
-    <div class="max-w-3xl">
-      <h2 class="text-2xl font-semibold mt-3">What’s coming next</h2>
-      <p class="text-blue-100 mt-2">Rollout order: <b>CFB → NBA → CBB</b></p>
-      <p class="text-xs text-blue-300 mt-1">Last updated: Aug 2025</p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6 mt-8">
-      <!-- CFB -->
-      <div class="card text-slate-900">
-        <h3 class="text-lg font-semibold">CFB</h3>
-        <dl class="mt-4 space-y-3">
-          <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Status</dt>
-            <dd class="text-sm">In Build</dd>
-          </div>
-          <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Launch scope</dt>
-            <dd>
-              <ul class="text-sm text-slate-700 list-disc pl-5 space-y-1 mt-1">
-                <li>Expected value model</li>
-                <li>Spreads & totals (beta)</li>
-                <li>Futures (beta)</li>
-              </ul>
-            </dd>
-          </div>
-          <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Target window</dt>
-            <dd class="text-sm">Fall 2025</dd>
-          </div>
-        </dl>
-      </div>
-
-      <!-- NBA -->
-      <div class="card text-slate-900">
-        <h3 class="text-lg font-semibold">NBA</h3>
-        <dl class="mt-4 space-y-3">
-          <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Status</dt>
-            <dd class="text-sm">Planned</dd>
-          </div>
-          <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Launch scope</dt>
-            <dd>
-              <ul class="text-sm text-slate-700 list-disc pl-5 space-y-1 mt-1">
-                <li>Expected value model</li>
-                <li>Spreads & totals (beta)</li>
-                <li>Futures (beta)</li>
-              </ul>
-            </dd>
-          </div>
-          <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Target window</dt>
-            <dd class="text-sm">Winter 2025</dd>
-          </div>
-        </dl>
-      </div>
-
-      <!-- CBB -->
-      <div class="card text-slate-900">
-        <h3 class="text-lg font-semibold">CBB</h3>
-        <dl class="mt-4 space-y-3">
-          <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Status</dt>
-            <dd class="text-sm">Planned</dd>
-          </div>
-          <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Launch scope</dt>
-            <dd>
-              <ul class="text-sm text-slate-700 list-disc pl-5 space-y-1 mt-1">
-                <li>Expected value model</li>
-                <li>Spread & total (beta)</li>
-                <li>KenPom integration (beta)</li>
-              </ul>
-            </dd>
-          </div>
-          <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Target window</dt>
-            <dd class="text-sm">Winter 2025</dd>
-          </div>
-        </dl>
-      </div>
-    </div>
-
-    <p class="text-xs text-blue-300 mt-6">
-      Roadmap is directional and may change based on data quality and user feedback.
-    </p>
-  </div>
-</section>
+    </section>
+  </main>
 
   <!-- FOOTER (identical to Home) -->
   <footer class="border-t border-slate-200/70 mt-16">
@@ -222,9 +256,4 @@
       <ul class="flex items-center gap-4">
         <li><a class="hover:opacity-80" href="/terms.html">Terms</a></li>
         <li><a class="hover:opacity-80" href="/privacy.html">Privacy</a></li>
-        <li><a class="hover:opacity-80" href="/disclaimer.html">Legal Disclaimer</a></li>
-      </ul>
-    </div>
-  </footer>
-</body>
-</html>
+        <li><a class="hover:opacity-80" href="/disclaimer.
