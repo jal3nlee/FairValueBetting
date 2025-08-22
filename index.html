@@ -112,19 +112,8 @@
               We turn book odds into fair win percentage and show your estimated edge with transparent calculations.
             </p>
             <div class="flex items-center gap-3 mt-6">
-              <a class="btn-light" href="#preview">Check today’s live edge</a>
-              <a class="btn-ghost-light" href="#preview">See a live preview</a>
+              <a class="btn-light" href="#preview">See a live preview</a>
             </div>
-
-            <!-- Trust strip (one line of badges) -->
-            <div class="mt-4 flex flex-wrap items-center gap-2 text-xs">
-              <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.2);">All legal states</span>
-              <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.2);">DraftKings · FanDuel · BetMGM · Caesars · Fanatics</span>
-              <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.2);">NFL moneylines</span>
-              <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.2);">Refresh every 30s</span>
-              <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.2);">Public changelog</span>
-            </div>
-
             <p class="text-xs text-blue-200 mt-3">
               Information only; not betting advice. Bet responsibly.
             </p>
@@ -161,9 +150,60 @@
                 <th class="px-4 py-3">Book</th>
                 <th class="px-4 py-3">Market</th>
                 <th class="px-4 py-3">Offered</th>
-                <th class="px-4 py-3">Fair %</th>
-                <th class="px-4 py-3">EV %</th>
-                <th class="px-4 py-3">Timestamp</th>
+
+                <!-- Fair % with tooltip -->
+                <th class="px-4 py-3">
+                  <div class="flex items-center gap-1">
+                    Fair %
+                    <span class="relative inline-block group">
+                      <button type="button" class="inline-flex items-center justify-center h-4 w-4 rounded-full border border-current/40 text-slate-600 focus:outline-none" aria-label="What is Fair %?">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"/>
+                        </svg>
+                      </button>
+                      <span class="absolute left-1/2 -translate-x-1/2 mt-2 w-56 text-[11px] bg-slate-900 text-white rounded-md px-2 py-1 shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
+                        Estimated chance after removing the sportsbook margin (vig).
+                      </span>
+                    </span>
+                  </div>
+                </th>
+
+                <!-- EV % with tooltip -->
+                <th class="px-4 py-3">
+                  <div class="flex items-center gap-1">
+                    EV %
+                    <span class="relative inline-block group">
+                      <button type="button" class="inline-flex items-center justify-center h-4 w-4 rounded-full border border-current/40 text-slate-600 focus:outline-none" aria-label="What is EV %?">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"/>
+                        </svg>
+                      </button>
+                      <span class="absolute left-1/2 -translate-x-1/2 mt-2 w-56 text-[11px] bg-slate-900 text-white rounded-md px-2 py-1 shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
+                        Estimated edge based on fair win % compared to the offered price.
+                      </span>
+                    </span>
+                  </div>
+                </th>
+
+                <!-- Timestamp with tooltip -->
+                <th class="px-4 py-3">
+                  <div class="flex items-center gap-1">
+                    Timestamp
+                    <span class="relative inline-block group">
+                      <button type="button" class="inline-flex items-center justify-center h-4 w-4 rounded-full border border-current/40 text-slate-600 focus:outline-none" aria-label="What is Timestamp?">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"/>
+                        </svg>
+                      </button>
+                      <span class="absolute left-1/2 -translate-x-1/2 mt-2 w-56 text-[11px] bg-slate-900 text-white rounded-md px-2 py-1 shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
+                        When this edge was last checked.
+                      </span>
+                    </span>
+                  </div>
+                </th>
               </tr>
             </thead>
             <tbody class="divide-y divide-slate-200">
@@ -182,6 +222,31 @@
         <p class="text-xs text-slate-500 mt-3">
           Information only; not betting advice. Availability may vary by state and sportsbook.
         </p>
+      </div>
+    </section>
+
+    <!-- Supported platforms (navy band) -->
+    <section class="bg-blue-950 text-white border-t border-slate-800">
+      <div class="container py-12">
+        <h2 class="text-2xl font-semibold">Supported platforms</h2>
+        <p class="text-blue-100 mt-1">Available where online sports betting is legal. Launch coverage: NFL moneylines.</p>
+
+        <!-- Top 5 books as badges -->
+        <div class="mt-6 flex flex-wrap items-center gap-2">
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">DraftKings</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">FanDuel</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">BetMGM</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Caesars</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Fanatics Sportsbook</span>
+        </div>
+
+        <!-- And more callout -->
+        <div class="mt-6 bg-white/5 border border-white/10 rounded-2xl p-4">
+          <h3 class="font-semibold">And more</h3>
+          <p class="text-blue-100 text-sm mt-1">
+            We’re adding additional licensed operators over time. Don’t see your book? <a href="/contact.html" class="underline decoration-white/40 hover:decoration-white">Tell us</a>.
+          </p>
+        </div>
       </div>
     </section>
 
