@@ -103,54 +103,101 @@
       </div>
     </section>
 
-<!-- ROADMAP (navy band, white cards) -->
+<!-- ROADMAP (navy band, white product cards) -->
 <section id="roadmap" class="bg-blue-950 text-white border-t border-slate-800">
   <div class="container py-16 md:py-20">
     <div class="max-w-3xl">
       <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;">Roadmap</span>
       <h2 class="text-2xl font-semibold mt-3">What’s coming next</h2>
-      <p class="text-blue-100 mt-2">Rollout order: <b>CFB → NFL → CBB</b></p>
+      <p class="text-blue-100 mt-2">Rollout order: <b>CFB → NBA → CBB</b></p>
       <p class="text-xs text-blue-300 mt-1">Last updated: Aug 2025</p>
     </div>
 
     <div class="grid md:grid-cols-3 gap-6 mt-8">
-      <!-- Column 1: CFB first -->
+      <!-- CFB -->
       <div class="card">
-        <div class="text-xs font-semibold uppercase tracking-wide text-slate-500">Next Up</div>
-        <h3 class="font-semibold mt-1">College Football (CFB)</h3>
-        <ul class="text-sm text-slate-700 mt-3 space-y-2 list-disc pl-5">
-          <li>Moneyline model (de-vig, fair win %s, EV% ranks)</li>
-          <li>Spreads & totals — beta</li>
-          <li>Custom book selection & saved defaults</li>
-          <li>Export picks (.csv) + “Pulled at” timestamps</li>
-          <li>Optional EV% threshold alerts (email)</li>
-        </ul>
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">College Football (CFB)</h3>
+          <span class="px-2 py-1 text-xs rounded-full bg-amber-100 text-amber-900">In Build</span>
+        </div>
+        <dl class="mt-4 space-y-3">
+          <div>
+            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Status</dt>
+            <dd class="text-sm text-slate-800">In Build</dd>
+          </div>
+          <div>
+            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Launch scope</dt>
+            <dd>
+              <ul class="text-sm text-slate-700 list-disc pl-5 space-y-1 mt-1">
+                <li>Moneyline model (de-vig, fair win %, EV% ranks)</li>
+                <li>Spreads & totals — beta</li>
+                <li>Conference & slate filters</li>
+                <li>Export picks (.csv) with timestamps</li>
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Target window</dt>
+            <dd class="text-sm text-slate-800">Fall 2025</dd>
+          </div>
+        </dl>
       </div>
 
-      <!-- Column 2: NFL enhancements -->
+      <!-- NBA -->
       <div class="card">
-        <div class="text-xs font-semibold uppercase tracking-wide text-slate-500">Then</div>
-        <h3 class="font-semibold mt-1">NFL Enhancements</h3>
-        <ul class="text-sm text-slate-700 mt-3 space-y-2 list-disc pl-5">
-          <li>Spreads & totals v1</li>
-          <li>Historical tracking (CLV, ROI, win rate)</li>
-          <li>Per-book diagnostics & refresh controls</li>
-          <li>Watchlists and saved filters</li>
-          <li>Improved mobile layout</li>
-        </ul>
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">NBA Basketball (NBA)</h3>
+          <span class="px-2 py-1 text-xs rounded-full bg-sky-100 text-sky-900">Next</span>
+        </div>
+        <dl class="mt-4 space-y-3">
+          <div>
+            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Status</dt>
+            <dd class="text-sm text-slate-800">Next</dd>
+          </div>
+          <div>
+            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Launch scope</dt>
+            <dd>
+              <ul class="text-sm text-slate-700 list-disc pl-5 space-y-1 mt-1">
+                <li>Moneyline v1; spreads & totals phased rollout</li>
+                <li>High-frequency line updates</li>
+                <li>Saved filters & watchlists</li>
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Target window</dt>
+            <dd class="text-sm text-slate-800">Winter 2025–26</dd>
+          </div>
+        </dl>
       </div>
 
-      <!-- Column 3: CBB after NFL -->
+      <!-- CBB -->
       <div class="card">
-        <div class="text-xs font-semibold uppercase tracking-wide text-slate-500">After That</div>
-        <h3 class="font-semibold mt-1">College Basketball (CBB)</h3>
-        <ul class="text-sm text-slate-700 mt-3 space-y-2 list-disc pl-5">
-          <li>Moneyline model launch</li>
-          <li>Spreads & totals phased rollout</li>
-          <li>High-volume schedule handling & filters</li>
-          <li>Multi-sport switcher & unified favorites</li>
-          <li>Export & API access planning</li>
-        </ul>
+        <div class="flex items-center justify-between">
+          <h3 class="font-semibold">College Basketball (CBB)</h3>
+          <span class="px-2 py-1 text-xs rounded-full bg-slate-100 text-slate-800">Planned</span>
+        </div>
+        <dl class="mt-4 space-y-3">
+          <div>
+            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Status</dt>
+            <dd class="text-sm text-slate-800">Planned</dd>
+          </div>
+          <div>
+            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Launch scope</dt>
+            <dd>
+              <ul class="text-sm text-slate-700 list-disc pl-5 space-y-1 mt-1">
+                <li>Moneyline model launch</li>
+                <li>Spreads & totals phased rollout</li>
+                <li>High-volume slate filters</li>
+                <li>Multi-sport switcher integration</li>
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Target window</dt>
+            <dd class="text-sm text-slate-800">Early 2026</dd>
+          </div>
+        </dl>
       </div>
     </div>
 
@@ -159,6 +206,7 @@
     </p>
   </div>
 </section>
+
 
   <!-- FOOTER (identical to Home) -->
   <footer class="border-t border-slate-200/70 mt-16">
