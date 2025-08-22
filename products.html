@@ -4,83 +4,214 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Products · Fair Value Sports</title>
-  <meta name="description" content="EV sports betting model with transparent edges and Kelly-based staking.">
+  <meta name="description" content="Plans and features for Fair Value Sports — NFL Expected Value Model with de-vig probabilities, EV%, and Kelly sizing.">
   <meta property="og:title" content="Products · Fair Value Sports">
-  <meta property="og:description" content="EV sports betting model with transparent edges and Kelly-based staking.">
+  <meta property="og:description" content="NFL Expected Value Model • De-vig, EV%, Kelly sizing • Transparent inputs & timestamps.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/favicon.png">
-  <link rel="icon" href="/favicon.png">
-  <!-- TailwindCSS CDN -->
+  <meta property="og:image" content="/assets/favicon.png">
+  <link rel="icon" href="/assets/favicon.png">
+
+  <!-- Tailwind (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Minimal utilities to match your other pages -->
   <style>
-    .btn-primary { @apply inline-flex items-center px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90 transition; }
-    .btn-ghost   { @apply inline-flex items-center px-5 py-3 rounded-2xl border border-black/20 hover:bg-black/5 transition; }
-    .badge       { @apply text-xs font-medium px-2 py-1 rounded-full bg-black/10; }
-    .container   { @apply max-w-6xl mx-auto px-4; }
+    .container{max-width:72rem;margin-left:auto;margin-right:auto;padding-left:1rem;padding-right:1rem;}
+    .btn-primary{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;background:#000;color:#fff;text-decoration:none;transition:opacity .2s;}
+    .btn-primary:hover{opacity:.9;}
+    .btn-ghost{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;border:1px solid rgba(0,0,0,.2);text-decoration:none;transition:background .2s;}
+    .btn-ghost:hover{background:rgba(0,0,0,.05);}
+    .btn-light{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;background:#fff;color:#0f172a;text-decoration:none;transition:opacity .2s;}
+    .btn-light:hover{opacity:.9;}
+    .btn-ghost-light{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;border:1px solid rgba(255,255,255,.5);color:#fff;text-decoration:none;transition:background .2s;}
+    .btn-ghost-light:hover{background:rgba(255,255,255,.08);}
+    .badge{display:inline-block;font-size:.75rem;font-weight:600;padding:.25rem .5rem;border-radius:9999px;background:rgba(0,0,0,.1);}
+    .card{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1rem;padding:1.25rem;}
+    .card-lg{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1.25rem;padding:1.5rem;}
   </style>
 </head>
+
 <body class="antialiased text-slate-900">
+  <!-- HEADER -->
   <header class="border-b border-slate-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
     <nav class="container flex items-center justify-between h-16">
       <a href="/index.html" class="flex items-center gap-2 font-semibold">
-        <span class="text-xl">🏈</span>
-        <span>Fair Value Sports</span>
+        <img src="/assets/logo.png" alt="Fair Value Sports" class="h-6 md:h-7 w-auto">
+        <span class="sr-only">Fair Value Sports</span>
       </a>
       <ul class="hidden md:flex items-center gap-6">
         <li><a class="hover:opacity-80" href="/index.html">Home</a></li>
         <li><a class="hover:opacity-80" href="/about.html">About</a></li>
-        <li><a class="hover:opacity-80" href="/products.html">Products</a></li>
+        <li><a class="hover:opacity-80" href="/howitworks.html">How it works</a></li>
+        <li><a class="hover:opacity-80 font-semibold" href="/products.html">Products</a></li>
         <li><a class="hover:opacity-80" href="/contact.html">Contact</a></li>
       </ul>
       <div class="flex items-center gap-3">
-        <a class="btn-ghost" href="/products.html">Pricing</a>
+        <a class="btn-ghost" href="#plans">Pricing</a>
         <a class="btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Open the Model</a>
       </div>
     </nav>
   </header>
-  
-<main class="container py-16 md:py-24">
-  <h1 class="text-4xl font-bold">Products & Pricing</h1>
-  <p class="text-slate-700 mt-3">Free in September. Tiers launch in October.</p>
 
-  <div class="grid md:grid-cols-3 gap-6 mt-8">
-    <div class="border border-slate-200 rounded-2xl p-6 shadow-sm bg-white">
-      <span class="badge">Free</span>
-      <h3 class="text-xl font-semibold mt-2">Primetime Only</h3>
-      <p class="text-sm text-slate-700 mt-2">TNF, SNF, MNF.</p>
-      <ul class="text-sm text-slate-700 mt-4 space-y-2 list-disc list-inside">
-        <li>EV% & Kelly sizing</li>
-        <li>Basic odds freshness</li>
-      </ul>
-      <a class="btn-ghost mt-6 inline-block" href="https://fairvaluesports-nfl.onrender.com" target="_blank">Start Free</a>
-    </div>
+  <main>
+    <!-- HERO: NFL Expected Value Model -->
+    <section class="bg-blue-950 text-white border-b border-slate-800">
+      <div class="container py-16 md:py-24">
+        <div class="grid md:grid-cols-2 items-center gap-10">
+          <div>
+            <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;">NFL • Expected Value Model</span>
+            <h1 class="text-4xl md:text-5xl font-bold mt-4">NFL Expected Value Model</h1>
+            <p class="text-lg text-blue-100 mt-4">
+              De-vig market lines to estimate fair win probabilities, measure EV% versus the best available price, and size positions to your bankroll and risk tolerance.
+            </p>
+            <div class="flex items-center gap-3 mt-6">
+              <a class="btn-light" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Try the Live Model</a>
+              <a class="btn-ghost-light" href="#plans">See Plans</a>
+            </div>
+            <p class="text-xs text-blue-200 mt-3">Information only; not betting advice. Bet responsibly.</p>
+          </div>
+          <div class="bg-sky-200 border border-sky-200 rounded-3xl p-6 shadow-sm text-slate-900">
+            <ul class="space-y-3">
+              <li><b>Fair win probabilities</b> from de-vigged market lines</li>
+              <li><b>Market-implied edge</b> over best available odds</li>
+              <li><b>Bet sizing</b> matched to your bankroll and risk factor</li>
+              <li><b>Transparent</b> inputs, timestamps, and model updates</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="border border-slate-200 rounded-2xl p-6 shadow-sm bg-white">
-      <span class="badge">Pro</span>
-      <h3 class="text-xl font-semibold mt-2">Full Slate</h3>
-      <p class="text-sm text-slate-700 mt-2">$10–15 / mo</p>
-      <ul class="text-sm text-slate-700 mt-4 space-y-2 list-disc list-inside">
-        <li>All games (sides/totals)</li>
-        <li>Near real‑time odds</li>
-        <li>Saved settings</li>
-      </ul>
-      <a class="btn-primary mt-6 inline-block" href="https://fairvaluesports-nfl.onrender.com" target="_blank">Go Pro</a>
-    </div>
+    <!-- WHAT'S INCLUDED -->
+    <section class="bg-white">
+      <div class="container py-14">
+        <h2 class="text-2xl font-semibold">What’s included</h2>
+        <div class="grid md:grid-cols-3 gap-6 mt-6">
+          <div class="card">
+            <h3 class="font-semibold">Sportsbook screening & line shopping</h3>
+            <p class="text-sm text-slate-700 mt-2">Scan multiple books and surface the best price for each matchup.</p>
+          </div>
+          <div class="card">
+            <h3 class="font-semibold">De-vig probabilities</h3>
+            <p class="text-sm text-slate-700 mt-2">Remove the margin to estimate fair win probabilities.</p>
+          </div>
+          <div class="card">
+            <h3 class="font-semibold">EV% ranking & filters</h3>
+            <p class="text-sm text-slate-700 mt-2">Rank plays by edge and set your own EV thresholds.</p>
+          </div>
+          <div class="card">
+            <h3 class="font-semibold">Adjustable Kelly sizing</h3>
+            <p class="text-sm text-slate-700 mt-2">Right-size stakes to risk with a user-set Kelly factor.</p>
+          </div>
+          <div class="card">
+            <h3 class="font-semibold">Timestamps & inputs</h3>
+            <p class="text-sm text-slate-700 mt-2">See when data was pulled, which books/prices, and model version.</p>
+          </div>
+          <div class="card">
+            <h3 class="font-semibold">Clean, explainable outputs</h3>
+            <p class="text-sm text-slate-700 mt-2">No black boxes—math you can audit and repeat.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="border border-slate-200 rounded-2xl p-6 shadow-sm bg-white">
-      <span class="badge">Plus</span>
-      <h3 class="text-xl font-semibold mt-2">Alerts & Props</h3>
-      <p class="text-sm text-slate-700 mt-2">$20 / mo</p>
-      <ul class="text-sm text-slate-700 mt-4 space-y-2 list-disc list-inside">
-        <li>Instant alerts (email/Discord)</li>
-        <li>Props & alt lines</li>
-        <li>Bet tracking & CLV</li>
-      </ul>
-      <a class="btn-ghost mt-6 inline-block" href="https://fairvaluesports-nfl.onrender.com" target="_blank">Learn More</a>
-    </div>
-  </div>
-</main>
+    <!-- PLANS -->
+    <section id="plans" class="bg-slate-50 border-y border-slate-200/70">
+      <div class="container py-16">
+        <div class="max-w-3xl">
+          <h2 class="text-2xl font-semibold">Plans</h2>
+          <p class="text-slate-700 mt-2">Start free, then pick the access level that fits your volume and risk.</p>
+        </div>
 
+        <div class="grid md:grid-cols-3 gap-6 mt-8">
+          <!-- Free / Primetime -->
+          <div class="card flex flex-col">
+            <div>
+              <h3 class="text-xl font-semibold">Primetime (Free)</h3>
+              <p class="text-slate-600 mt-1">MNF, TNF, SNF access</p>
+              <p class="text-3xl font-bold mt-4">$0<span class="text-base font-normal text-slate-500"> / forever</span></p>
+              <ul class="text-sm text-slate-700 mt-4 space-y-2 list-disc pl-5">
+                <li>Live moneyline EV for primetime games</li>
+                <li>De-vig probabilities & EV% ranking</li>
+                <li>Kelly sizing with custom factor</li>
+              </ul>
+            </div>
+            <a class="btn-primary mt-6" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Get Started</a>
+          </div>
+
+          <!-- Pro Monthly -->
+          <div class="card flex flex-col border-blue-600" style="box-shadow:0 0 0 2px rgba(37,99,235,.3) inset;">
+            <div>
+              <div class="inline-block text-xs font-semibold px-2 py-1 rounded-full bg-blue-100 text-blue-900">Most Popular</div>
+              <h3 class="text-xl font-semibold mt-3">Pro (Monthly)</h3>
+              <p class="text-slate-600 mt-1">All NFL games</p>
+              <p class="text-3xl font-bold mt-4">$15<span class="text-base font-normal text-slate-500"> / month</span></p>
+              <ul class="text-sm text-slate-700 mt-4 space-y-2 list-disc pl-5">
+                <li>All moneylines (full slate)</li>
+                <li>Custom EV% thresholds & saved defaults</li>
+                <li>Spreads & totals (beta when available)</li>
+                <li>Timestamps, inputs, and model updates</li>
+              </ul>
+            </div>
+            <a class="btn-primary mt-6" href="/contact.html">Start Subscription</a>
+          </div>
+
+          <!-- Season Pass -->
+          <div class="card flex flex-col">
+            <div>
+              <h3 class="text-xl font-semibold">Season Pass</h3>
+              <p class="text-slate-600 mt-1">All NFL, season access</p>
+              <p class="text-3xl font-bold mt-4">$99<span class="text-base font-normal text-slate-500"> / season</span></p>
+              <ul class="text-sm text-slate-700 mt-4 space-y-2 list-disc pl-5">
+                <li>Everything in Pro</li>
+                <li>Priority feature requests</li>
+                <li>CSV export of picks & timestamps</li>
+              </ul>
+            </div>
+            <a class="btn-primary mt-6" href="/contact.html">Get Season Pass</a>
+          </div>
+        </div>
+
+        <p class="text-xs text-slate-500 mt-4">Pricing subject to change; features may vary during beta.</p>
+      </div>
+    </section>
+
+    <!-- MORE MODELS COMING (references About → Roadmap) -->
+    <section class="bg-sky-50 border-y border-sky-200/70">
+      <div class="container py-16">
+        <div class="max-w-3xl">
+          <h2 class="text-2xl font-semibold">More models coming</h2>
+          <p class="text-slate-700 mt-2">
+            We’re expanding beyond NFL. See the roadmap for timelines and scopes.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-8">
+          <div class="card">
+            <h3 class="font-semibold">CFB</h3>
+            <p class="text-sm text-slate-700 mt-2">Status: In Build</p>
+            <p class="text-sm text-slate-700">Target window: Fall 2025</p>
+          </div>
+          <div class="card">
+            <h3 class="font-semibold">NBA</h3>
+            <p class="text-sm text-slate-700 mt-2">Status: Planned</p>
+            <p class="text-sm text-slate-700">Target window: Winter 2025</p>
+          </div>
+          <div class="card">
+            <h3 class="font-semibold">CBB</h3>
+            <p class="text-sm text-slate-700 mt-2">Status: Planned</p>
+            <p class="text-sm text-slate-700">Target window: Winter 2025</p>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <a class="btn-primary" href="/about.html#roadmap">View the full Roadmap</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
   <footer class="border-t border-slate-200/70 mt-16">
     <div class="container py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-sm">
       <p>© 2025 Fair Value Sports. All rights reserved.</p>
