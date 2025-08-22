@@ -30,12 +30,15 @@
   </style>
 </head>
 <body class="antialiased text-slate-900">
-  <header class="border-b border-slate-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
+  <!-- Header with mobile hamburger + menu -->
+  <header data-fvb-header class="border-b border-slate-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
     <nav class="container flex items-center justify-between h-16">
       <a href="/index.html" class="flex items-center gap-2 font-semibold">
         <img src="/assets/logo.png" alt="Fair Value Sports" class="h-6 md:h-7 w-auto">
         <span class="sr-only">Fair Value Betting</span>
       </a>
+
+      <!-- Desktop nav -->
       <ul class="hidden md:flex items-center gap-6">
         <li><a class="hover:opacity-80" href="/index.html">Home</a></li>
         <li><a class="hover:opacity-80" href="/about.html">About</a></li>
@@ -43,11 +46,50 @@
         <li><a class="hover:opacity-80" href="/products.html">Products</a></li>
         <li><a class="hover:opacity-80" href="/contact.html">Contact</a></li>
       </ul>
-      <div class="flex items-center gap-3">
+
+      <!-- Desktop CTAs -->
+      <div class="hidden md:flex items-center gap-3">
         <a class="btn-ghost" href="/products.html">Explore Plans</a>
         <a class="btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Launch Model</a>
       </div>
+
+      <!-- Mobile hamburger -->
+      <button
+        data-menu-button
+        class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-300 text-slate-700"
+        aria-label="Open menu"
+        aria-controls="fvbMobileMenu"
+        aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </nav>
+
+    <!-- Mobile menu -->
+    <div id="fvbMobileMenu" data-mobile-menu class="md:hidden hidden bg-white border-t border-slate-200">
+      <div class="container py-3 space-y-1">
+        <a class="block py-2" href="/index.html">Home</a>
+        <a class="block py-2" href="/about.html">About</a>
+        <a class="block py-2" href="/howitworks.html">How it works</a>
+        <a class="block py-2" href="/products.html">Products</a>
+        <a class="block py-2" href="/contact.html">Contact</a>
+
+        <!-- Optional legal links on mobile -->
+        <div class="pt-1">
+          <a class="block py-2 text-slate-700/90" href="/privacy.html">Privacy</a>
+          <a class="block py-2 text-slate-700/90" href="/terms.html">Terms</a>
+          <a class="block py-2 text-slate-700/90" href="/disclaimer.html">Legal Disclaimer</a>
+        </div>
+
+        <!-- Mobile CTAs -->
+        <div class="pt-3 flex gap-2">
+          <a class="flex-1 btn-ghost" href="/products.html">Explore Plans</a>
+          <a class="flex-1 btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Launch Model</a>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
@@ -206,5 +248,55 @@
       </ul>
     </div>
   </footer>
+
+  <!-- Mobile menu toggle + scroll lock -->
+  <script>
+  (() => {
+    const header = document.querySelector('[data-fvb-header]');
+    if (!header) return;
+
+    const button = header.querySelector('[data-menu-button]');
+    const menu   = header.querySelector('[data-mobile-menu]');
+    if (!button || !menu) return;
+
+    const openMenu = () => {
+      menu.classList.remove('hidden');
+      button.setAttribute('aria-expanded', 'true');
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeMenu = () => {
+      menu.classList.add('hidden');
+      button.setAttribute('aria-expanded', 'false');
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+    };
+
+    const toggleMenu = () => (menu.classList.contains('hidden') ? openMenu() : closeMenu());
+
+    // Toggle on button click
+    button.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Close when clicking any link in the mobile menu
+    menu.querySelectorAll('a[href]').forEach(a =>
+      a.addEventListener('click', () => closeMenu())
+    );
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      const isClickInside = header.contains(e.target);
+      if (!isClickInside && !menu.classList.contains('hidden')) closeMenu();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !menu.classList.contains('hidden')) closeMenu();
+    });
+  })();
+  </script>
 </body>
 </html>
