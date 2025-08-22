@@ -3,66 +3,229 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy · Fair Value Sports</title>
-  <meta name="description" content="Privacy Policy for Fair Value Sports.">
-  <meta property="og:title" content="Privacy Policy · Fair Value Sports">
-  <meta property="og:description" content="Privacy Policy for Fair Value Sports.">
+  <title>Privacy Policy · Fair Value Betting</title>
+  <meta name="description" content="Privacy policy for Fair Value Betting. What we collect, how we use it, and your choices.">
+  <meta property="og:title" content="Privacy Policy · Fair Value Betting">
+  <meta property="og:description" content="What we collect, how we use it, and your choices.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/favicon.png">
-  <link rel="icon" href="/favicon.png">
-  <!-- TailwindCSS CDN -->
+  <meta property="og:image" content="/assets/favicon.png">
+  <link rel="icon" href="/assets/favicon.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .btn-primary { @apply inline-flex items-center px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90 transition; }
-    .btn-ghost   { @apply inline-flex items-center px-5 py-3 rounded-2xl border border-black/20 hover:bg-black/5 transition; }
-    .badge       { @apply text-xs font-medium px-2 py-1 rounded-full bg-black/10; }
-    .container   { @apply max-w-6xl mx-auto px-4; }
+    .container{max-width:72rem;margin-left:auto;margin-right:auto;padding-left:1rem;padding-right:1rem;}
+    .btn-primary{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;background:#000;color:#fff;text-decoration:none;transition:opacity .2s;}
+    .btn-primary:hover{opacity:.9;}
+    .btn-ghost{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;border:1px solid rgba(0,0,0,.2);text-decoration:none;transition:background .2s;}
+    .btn-ghost:hover{background:rgba(0,0,0,.05);}
+    .btn-light{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;background:#fff;color:#0f172a;text-decoration:none;transition:opacity .2s;}
+    .btn-light:hover{opacity:.9;}
+    .btn-ghost-light{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;border:1px solid rgba(255,255,255,.5);color:#fff;text-decoration:none;transition:background .2s;}
+    .btn-ghost-light:hover{background:rgba(255,255,255,.08);}
+    .badge{display:inline-block;font-size:.75rem;font-weight:600;padding:.25rem .5rem;border-radius:9999px;background:rgba(0,0,0,.1);}
+    .card{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1rem;padding:1.25rem;}
+    .card-lg{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1.25rem;padding:1.5rem;}
   </style>
 </head>
 <body class="antialiased text-slate-900">
+
+  <!-- Header (with mobile hamburger) -->
   <header class="border-b border-slate-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
     <nav class="container flex items-center justify-between h-16">
       <a href="/index.html" class="flex items-center gap-2 font-semibold">
-        <span class="text-xl">🏈</span>
-        <span>Fair Value Sports</span>
+        <img src="/assets/logo.png" alt="Fair Value Betting" class="h-6 md:h-7 w-auto">
+        <span class="sr-only">Fair Value Betting</span>
       </a>
+
+      <!-- Desktop nav -->
       <ul class="hidden md:flex items-center gap-6">
         <li><a class="hover:opacity-80" href="/index.html">Home</a></li>
         <li><a class="hover:opacity-80" href="/about.html">About</a></li>
+        <li><a class="hover:opacity-80" href="/howitworks.html">How it works</a></li>
         <li><a class="hover:opacity-80" href="/products.html">Products</a></li>
         <li><a class="hover:opacity-80" href="/contact.html">Contact</a></li>
+        <li><a class="hover:opacity-80" href="/privacy.html" aria-current="page">Privacy</a></li>
       </ul>
-      <div class="flex items-center gap-3">
-        <a class="btn-ghost" href="/products.html">Pricing</a>
-        <a class="btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Open the Model</a>
-      </div>
-    </nav>
-  </header>
-  
-<main class="container py-16 md:py-24 prose prose-slate">
-  <h1>Privacy Policy</h1>
-  <p><em>Last updated: August 21, 2025</em></p>
-  <h2>Information We Collect</h2>
-  <p>Contact info you submit (e.g., email), usage data, and basic analytics.</p>
-  <h2>How We Use It</h2>
-  <p>To operate the service, respond to inquiries, improve features, and communicate updates.</p>
-  <h2>Sharing</h2>
-  <p>We do not sell personal data. We may share with service providers (e.g., hosting, analytics) under contract.</p>
-  <h2>Your Choices</h2>
-  <p>You can request deletion of your info. You can opt out of marketing emails at any time.</p>
-  <h2>Contact</h2>
-  <p>Questions? <a href="/contact.html">Contact us</a>.</p>
-</main>
 
+      <!-- Desktop CTAs -->
+      <div class="hidden md:flex items-center gap-3">
+        <a class="btn-ghost" href="/products.html">See Plans</a>
+        <a class="btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Open Model</a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button id="menuButton" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-300 text-slate-700" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-slate-200">
+      <div class="container py-3 space-y-1">
+        <a class="block py-2" href="/index.html">Home</a>
+        <a class="block py-2" href="/about.html">About</a>
+        <a class="block py-2" href="/howitworks.html">How it works</a>
+        <a class="block py-2" href="/products.html">Products</a>
+        <a class="block py-2" href="/contact.html">Contact</a>
+        <a class="block py-2" href="/privacy.html" aria-current="page">Privacy</a>
+        <div class="pt-3 flex gap-2">
+          <a class="flex-1 btn-ghost" href="/products.html">See Plans</a>
+          <a class="flex-1 btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Open Model</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="bg-blue-950 text-white border-b border-slate-800">
+      <div class="container py-16 md:py-24">
+        <div class="max-w-3xl">
+          <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;">Privacy</span>
+          <h1 class="text-4xl md:text-5xl font-bold mt-4">Privacy Policy</h1>
+          <p class="text-blue-100 mt-4 text-lg">
+            We respect your privacy. This page explains what we collect, how we use it, and the choices you have.
+          </p>
+          <p class="text-blue-200 mt-2 text-sm">Last updated: Aug 2025</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BODY -->
+    <section class="container py-16">
+      <div class="grid md:grid-cols-3 gap-8 items-start">
+        <!-- Left: Summary -->
+        <div class="md:col-span-1">
+          <div class="card-lg">
+            <h2 class="text-xl font-semibold">At a glance</h2>
+            <ul class="text-slate-700 mt-3 space-y-2 list-disc pl-5">
+              <li>We collect account info you provide and usage data to improve the product.</li>
+              <li>We use cookies/analytics for performance and basic personalization.</li>
+              <li>We don’t sell your personal information.</li>
+              <li>You can request access, correction, or deletion at any time.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right: Details -->
+        <div class="md:col-span-2 space-y-6">
+          <div class="card-lg">
+            <h3 class="text-lg font-semibold">Information we collect</h3>
+            <ul class="text-slate-700 mt-2 space-y-2 list-disc pl-5">
+              <li><b>Account & profile:</b> name, email, and any details you add (e.g., preferences).</li>
+              <li><b>App usage:</b> pages viewed, features used, interactions, timestamps, and referring pages.</li>
+              <li><b>Device & technical:</b> IP address, browser type, device identifiers, approximate location (derived from IP).</li>
+              <li><b>Cookies & similar tech:</b> to keep you signed in, remember settings, and measure performance.</li>
+              <li><b>Payments:</b> if you subscribe, payments are processed by a third-party provider; we receive limited details (e.g., status, plan) but not full card numbers.</li>
+              <li><b>Communications:</b> messages you send us (support, feedback, surveys).</li>
+            </ul>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="text-lg font-semibold">How we use information</h3>
+            <ul class="text-slate-700 mt-2 space-y-2 list-disc pl-5">
+              <li>Provide, secure, and maintain the service (authentication, fraud prevention, debugging).</li>
+              <li>Improve features and performance (analytics, testing, troubleshooting).</li>
+              <li>Personalize your experience (saved settings, reminders, preferences).</li>
+              <li>Communicate with you (account notices, service updates, marketing with your consent).</li>
+              <li>Comply with legal obligations and enforce our Terms.</li>
+            </ul>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="text-lg font-semibold">Legal bases (where applicable)</h3>
+            <p class="text-slate-700 mt-2">
+              Depending on your location, we process data under legal bases such as performance of a contract (to provide the service),
+              legitimate interests (e.g., to improve and secure the product), consent (e.g., marketing), and compliance with legal obligations.
+            </p>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="text-lg font-semibold">Sharing your information</h3>
+            <ul class="text-slate-700 mt-2 space-y-2 list-disc pl-5">
+              <li><b>Service providers:</b> hosting, analytics, customer support, payment processing.</li>
+              <li><b>Legal & safety:</b> to comply with law or protect rights, safety, and security.</li>
+              <li><b>Business transfers:</b> if we explore or complete a merger, acquisition, or asset sale.</li>
+            </ul>
+            <p class="text-slate-700 mt-2">We do not sell your personal information.</p>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="text-lg font-semibold">Data retention</h3>
+            <p class="text-slate-700 mt-2">
+              We keep information for as long as needed to provide the service and for legitimate business or legal purposes. We delete or
+              anonymize data when it’s no longer required.
+            </p>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="text-lg font-semibold">Security</h3>
+            <p class="text-slate-700 mt-2">
+              We use administrative, technical, and organizational measures designed to protect your information. No online service can be
+              100% secure, so please use strong passwords and keep your account details safe.
+            </p>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="text-lg font-semibold">Your choices & rights</h3>
+            <ul class="text-slate-700 mt-2 space-y-2 list-disc pl-5">
+              <li><b>Access/Update:</b> update profile details in your account or contact us.</li>
+              <li><b>Delete:</b> request deletion of your account and associated personal data.</li>
+              <li><b>Opt out of marketing:</b> use unsubscribe links in emails or contact us.</li>
+              <li><b>Cookies:</b> adjust browser settings to refuse or limit cookies (may affect functionality).</li>
+              <li><b>Regional rights:</b> depending on your jurisdiction, you may have additional rights (e.g., portability, objection). Contact us to exercise them.</li>
+            </ul>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="text-lg font-semibold">International users</h3>
+            <p class="text-slate-700 mt-2">
+              We may process and store information in the United States and other countries. By using the service, you acknowledge that your
+              data may be transferred to jurisdictions with different data protection laws.
+            </p>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="text-lg font-semibold">Children</h3>
+            <p class="text-slate-700 mt-2">
+              Our service is not intended for individuals under the legal betting age in their jurisdiction (often 21+ in the U.S.). We do not knowingly
+              collect personal information from minors. If you believe a minor has provided data, contact us and we will take appropriate steps.
+            </p>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="text-lg font-semibold">Changes & contact</h3>
+            <p class="text-slate-700 mt-2">
+              We may update this Privacy Policy from time to time. If we make material changes, we’ll post a notice on this page or within the app.
+              Your continued use of the service after changes means you accept the updated policy.
+            </p>
+            <p class="text-slate-700 mt-2">
+              Questions or requests? Email us at <a class="underline" href="mailto:hello@fairvaluebetting.com">hello@fairvaluebetting.com</a>.
+            </p>
+            <p class="text-slate-500 text-sm mt-2">Effective date: Aug 2025</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
   <footer class="border-t border-slate-200/70 mt-16">
     <div class="container py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-sm">
-      <p>© 2025 Fair Value Sports. All rights reserved.</p>
+      <p>© 2025 Fair Value Betting. All rights reserved.</p>
       <ul class="flex items-center gap-4">
         <li><a class="hover:opacity-80" href="/terms.html">Terms</a></li>
-        <li><a class="hover:opacity-80" href="/privacy.html">Privacy</a></li>
+        <li><a class="hover:opacity-80" href="/privacy.html" aria-current="page">Privacy</a></li>
         <li><a class="hover:opacity-80" href="/disclaimer.html">Legal Disclaimer</a></li>
       </ul>
     </div>
   </footer>
+
+  <script>
+    const btn = document.getElementById('menuButton');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
 </body>
 </html>
