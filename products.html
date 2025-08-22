@@ -33,7 +33,7 @@
 
 <body class="antialiased text-slate-900">
   <!-- HEADER -->
-  <header class="border-b border-slate-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
+  <header data-fvb-header class="border-b border-slate-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
     <nav class="container flex items-center justify-between h-16">
       <a href="/index.html" class="flex items-center gap-2 font-semibold">
         <img src="/assets/logo.png" alt="Fair Value Sports" class="h-6 md:h-7 w-auto">
@@ -46,169 +46,203 @@
         <li><a class="hover:opacity-80" href="/products.html">Products</a></li>
         <li><a class="hover:opacity-80" href="/contact.html">Contact</a></li>
       </ul>
-      <div class="flex items-center gap-3">
+      <div class="hidden md:flex items-center gap-3">
         <a class="btn-ghost" href="#plans">Explore Plans</a>
         <a class="btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Launch Model</a>
       </div>
+
+      <!-- Mobile hamburger -->
+      <button
+        data-menu-button
+        class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-300 text-slate-700"
+        aria-label="Open menu"
+        aria-controls="fvbMobileMenu"
+        aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </nav>
-  </header>
 
-  <main>
-  <!-- HERO: NFL Expected Value Model -->
-  <section class="bg-blue-950 text-white border-b border-slate-800">
-    <div class="container py-16 md:py-24">
-      <div class="grid md:grid-cols-2 items-center gap-10">
-        <div>
-          <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;">NFL • Expected Value Model</span>
-          <h1 class="text-4xl md:text-5xl font-bold mt-4">NFL Expected Value Model</h1>
-          <p class="text-lg text-blue-100 mt-4">
-            De-vig market lines to estimate fair win probabilities, measure EV% versus the best available price, and size positions to your bankroll and risk tolerance.
-          </p>
-          <div class="flex items-center gap-3 mt-6">
-            <a class="btn-light" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Launch NFL EV Model</a>
-            <a class="btn-ghost-light" href="#plans">Explore Plans & Pricing</a>
-          </div>
-          <p class="text-xs text-blue-200 mt-3">Information only; not betting advice. Bet responsibly.</p>
+    <!-- Mobile menu -->
+    <div id="fvbMobileMenu" data-mobile-menu class="md:hidden hidden bg-white border-t border-slate-200">
+      <div class="container py-3 space-y-1">
+        <a class="block py-2" href="/index.html">Home</a>
+        <a class="block py-2" href="/about.html">About</a>
+        <a class="block py-2" href="/howitworks.html">How it works</a>
+        <a class="block py-2" href="/products.html">Products</a>
+        <a class="block py-2" href="/contact.html">Contact</a>
+        <div class="pt-1">
+          <a class="block py-2 text-slate-700/90" href="/privacy.html">Privacy</a>
+          <a class="block py-2 text-slate-700/90" href="/terms.html">Terms</a>
+          <a class="block py-2 text-slate-700/90" href="/disclaimer.html">Legal Disclaimer</a>
         </div>
-
-        <!-- Card: now white background -->
-        <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm text-slate-900">
-          <ul class="space-y-3">
-            <li><b>Fair win probabilities</b> from de-vigged market lines</li>
-            <li><b>Market-implied edge</b> over best available odds</li>
-            <li><b>Bet sizing</b> matched to your bankroll and risk factor</li>
-            <li><b>Transparent</b> inputs, timestamps, and model updates</li>
-          </ul>
+        <!-- Mobile CTAs -->
+        <div class="pt-3 flex gap-2">
+          <a class="flex-1 btn-ghost" href="#plans">Explore Plans</a>
+          <a class="flex-1 btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Launch Model</a>
         </div>
       </div>
     </div>
-  </section>
-</main>
+  </header>
 
-    <!-- WHAT'S INCLUDED -->
-    <section class="bg-white">
-      <div class="container py-14">
-        <h2 class="text-2xl font-semibold">What’s included</h2>
-        <div class="grid md:grid-cols-3 gap-6 mt-6">
-          <div class="card">
-            <h3 class="font-semibold">Sportsbook screening & line shopping</h3>
-            <p class="text-sm text-slate-700 mt-2">Scan multiple books and surface the best price for each matchup.</p>
+  <main>
+    <!-- HERO: NFL Expected Value Model -->
+    <section class="bg-blue-950 text-white border-b border-slate-800">
+      <div class="container py-16 md:py-24">
+        <div class="grid md:grid-cols-2 items-center gap-10">
+          <div>
+            <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;">NFL • Expected Value Model</span>
+            <h1 class="text-4xl md:text-5xl font-bold mt-4">NFL Expected Value Model</h1>
+            <p class="text-lg text-blue-100 mt-4">
+              De-vig market lines to estimate fair win probabilities, measure EV% versus the best available price, and size positions to your bankroll and risk tolerance.
+            </p>
+            <div class="flex items-center gap-3 mt-6">
+              <a class="btn-light" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Launch NFL EV Model</a>
+              <a class="btn-ghost-light" href="#plans">Explore Plans & Pricing</a>
+            </div>
+            <p class="text-xs text-blue-200 mt-3">Information only; not betting advice. Bet responsibly.</p>
           </div>
-          <div class="card">
-            <h3 class="font-semibold">De-vig probabilities</h3>
-            <p class="text-sm text-slate-700 mt-2">Remove the margin to estimate fair win probabilities.</p>
-          </div>
-          <div class="card">
-            <h3 class="font-semibold">EV% ranking & filters</h3>
-            <p class="text-sm text-slate-700 mt-2">Rank plays by edge and set your own EV thresholds.</p>
-          </div>
-          <div class="card">
-            <h3 class="font-semibold">Adjustable Kelly sizing</h3>
-            <p class="text-sm text-slate-700 mt-2">Right-size stakes to risk with a user-set Kelly factor.</p>
-          </div>
-          <div class="card">
-            <h3 class="font-semibold">Timestamps & inputs</h3>
-            <p class="text-sm text-slate-700 mt-2">See when data was pulled, which books/prices, and model version.</p>
-          </div>
-          <div class="card">
-            <h3 class="font-semibold">Clean, explainable outputs</h3>
-            <p class="text-sm text-slate-700 mt-2">No black boxes—math you can audit and repeat.</p>
+
+          <!-- Card: now white background -->
+          <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm text-slate-900">
+            <ul class="space-y-3">
+              <li><b>Fair win probabilities</b> from de-vigged market lines</li>
+              <li><b>Market-implied edge</b> over best available odds</li>
+              <li><b>Bet sizing</b> matched to your bankroll and risk factor</li>
+              <li><b>Transparent</b> inputs, timestamps, and model updates</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
+  </main>
 
-    <!-- ROADMAP (navy band, white product cards) -->
-<section id="roadmap" class="bg-blue-950 text-white border-t border-slate-800">
-  <div class="container py-16 md:py-20">
-    <div class="max-w-3xl">
-      <h2 class="text-2xl font-semibold mt-3">What’s coming next</h2>
-      <p class="text-blue-100 mt-2">Rollout order: <b>CFB → NBA → CBB</b></p>
-      <p class="text-xs text-blue-300 mt-1">Last updated: Aug 2025</p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-6 mt-8">
-      <!-- CFB -->
-      <div class="card text-slate-900">
-        <h3 class="text-lg font-semibold">CFB</h3>
-        <dl class="mt-4 space-y-3">
-          <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Status</dt>
-            <dd class="text-sm">In Build</dd>
-          </div>
-          <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Launch scope</dt>
-            <dd>
-              <ul class="text-sm text-slate-700 list-disc pl-5 space-y-1 mt-1">
-                <li>Expected value model</li>
-                <li>Spreads & totals (beta)</li>
-                <li>Futures (beta)</li>
-              </ul>
-            </dd>
-          </div>
-          <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Target window</dt>
-            <dd class="text-sm">Fall 2025</dd>
-          </div>
-        </dl>
-      </div>
-
-      <!-- NBA -->
-      <div class="card text-slate-900">
-        <h3 class="text-lg font-semibold">NBA</h3>
-        <dl class="mt-4 space-y-3">
-          <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Status</dt>
-            <dd class="text-sm">Planned</dd>
-          </div>
-          <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Launch scope</dt>
-            <dd>
-              <ul class="text-sm text-slate-700 list-disc pl-5 space-y-1 mt-1">
-                <li>Expected value model</li>
-                <li>Spreads & totals (beta)</li>
-                <li>Futures (beta)</li>
-              </ul>
-            </dd>
-          </div>
-          <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Target window</dt>
-            <dd class="text-sm">Winter 2025</dd>
-          </div>
-        </dl>
-      </div>
-
-      <!-- CBB -->
-      <div class="card text-slate-900">
-        <h3 class="text-lg font-semibold">CBB</h3>
-        <dl class="mt-4 space-y-3">
-          <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Status</dt>
-            <dd class="text-sm">Planned</dd>
-          </div>
-          <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Launch scope</dt>
-            <dd>
-              <ul class="text-sm text-slate-700 list-disc pl-5 space-y-1 mt-1">
-                <li>Expected value model</li>
-                <li>Spread & total (beta)</li>
-                <li>KenPom integration (beta)</li>
-              </ul>
-            </dd>
-          </div>
-          <div>
-            <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Target window</dt>
-            <dd class="text-sm">Winter 2025</dd>
-          </div>
-        </dl>
+  <!-- WHAT'S INCLUDED -->
+  <section id="plans" class="bg-white">
+    <div class="container py-14">
+      <h2 class="text-2xl font-semibold">What’s included</h2>
+      <div class="grid md:grid-cols-3 gap-6 mt-6">
+        <div class="card">
+          <h3 class="font-semibold">Sportsbook screening & line shopping</h3>
+          <p class="text-sm text-slate-700 mt-2">Scan multiple books and surface the best price for each matchup.</p>
+        </div>
+        <div class="card">
+          <h3 class="font-semibold">De-vig probabilities</h3>
+          <p class="text-sm text-slate-700 mt-2">Remove the margin to estimate fair win probabilities.</p>
+        </div>
+        <div class="card">
+          <h3 class="font-semibold">EV% ranking & filters</h3>
+          <p class="text-sm text-slate-700 mt-2">Rank plays by edge and set your own EV thresholds.</p>
+        </div>
+        <div class="card">
+          <h3 class="font-semibold">Adjustable Kelly sizing</h3>
+          <p class="text-sm text-slate-700 mt-2">Right-size stakes to risk with a user-set Kelly factor.</p>
+        </div>
+        <div class="card">
+          <h3 class="font-semibold">Timestamps & inputs</h3>
+          <p class="text-sm text-slate-700 mt-2">See when data was pulled, which books/prices, and model version.</p>
+        </div>
+        <div class="card">
+          <h3 class="font-semibold">Clean, explainable outputs</h3>
+          <p class="text-sm text-slate-700 mt-2">No black boxes—math you can audit and repeat.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <p class="text-xs text-blue-300 mt-6">
-      Roadmap is directional and may change based on data quality and user feedback.
-    </p>
-  </div>
-</section>
+  <!-- ROADMAP (navy band, white product cards) -->
+  <section id="roadmap" class="bg-blue-950 text-white border-t border-slate-800">
+    <div class="container py-16 md:py-20">
+      <div class="max-w-3xl">
+        <h2 class="text-2xl font-semibold mt-3">What’s coming next</h2>
+        <p class="text-blue-100 mt-2">Rollout order: <b>CFB → NBA → CBB</b></p>
+        <p class="text-xs text-blue-300 mt-1">Last updated: Aug 2025</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 mt-8">
+        <!-- CFB -->
+        <div class="card text-slate-900">
+          <h3 class="text-lg font-semibold">CFB</h3>
+          <dl class="mt-4 space-y-3">
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Status</dt>
+              <dd class="text-sm">In Build</dd>
+            </div>
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Launch scope</dt>
+              <dd>
+                <ul class="text-sm text-slate-700 list-disc pl-5 space-y-1 mt-1">
+                  <li>Expected value model</li>
+                  <li>Spreads & totals (beta)</li>
+                  <li>Futures (beta)</li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Target window</dt>
+              <dd class="text-sm">Fall 2025</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- NBA -->
+        <div class="card text-slate-900">
+          <h3 class="text-lg font-semibold">NBA</h3>
+          <dl class="mt-4 space-y-3">
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Status</dt>
+              <dd class="text-sm">Planned</dd>
+            </div>
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Launch scope</dt>
+              <dd>
+                <ul class="text-sm text-slate-700 list-disc pl-5 space-y-1 mt-1">
+                  <li>Expected value model</li>
+                  <li>Spreads & totals (beta)</li>
+                  <li>Futures (beta)</li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Target window</dt>
+              <dd class="text-sm">Winter 2025</dd>
+            </div>
+          </dl>
+        </div>
+
+        <!-- CBB -->
+        <div class="card text-slate-900">
+          <h3 class="text-lg font-semibold">CBB</h3>
+          <dl class="mt-4 space-y-3">
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Status</dt>
+              <dd class="text-sm">Planned</dd>
+            </div>
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Launch scope</dt>
+              <dd>
+                <ul class="text-sm text-slate-700 list-disc pl-5 space-y-1 mt-1">
+                  <li>Expected value model</li>
+                  <li>Spread & total (beta)</li>
+                  <li>KenPom integration (beta)</li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wide text-slate-500">Target window</dt>
+              <dd class="text-sm">Winter 2025</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+
+      <p class="text-xs text-blue-300 mt-6">
+        Roadmap is directional and may change based on data quality and user feedback.
+      </p>
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer class="border-t border-slate-200/70 mt-16">
@@ -221,5 +255,55 @@
       </ul>
     </div>
   </footer>
+
+  <!-- Mobile menu toggle + scroll lock -->
+  <script>
+  (() => {
+    const header = document.querySelector('[data-fvb-header]');
+    if (!header) return;
+
+    const button = header.querySelector('[data-menu-button]');
+    const menu   = header.querySelector('[data-mobile-menu]');
+    if (!button || !menu) return;
+
+    const openMenu = () => {
+      menu.classList.remove('hidden');
+      button.setAttribute('aria-expanded', 'true');
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeMenu = () => {
+      menu.classList.add('hidden');
+      button.setAttribute('aria-expanded', 'false');
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+    };
+
+    const toggleMenu = () => (menu.classList.contains('hidden') ? openMenu() : closeMenu());
+
+    // Toggle on button click
+    button.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    // Close when clicking any link in the mobile menu
+    menu.querySelectorAll('a[href]').forEach(a =>
+      a.addEventListener('click', () => closeMenu())
+    );
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      const isClickInside = header.contains(e.target);
+      if (!isClickInside && !menu.classList.contains('hidden')) closeMenu();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !menu.classList.contains('hidden')) closeMenu();
+    });
+  })();
+  </script>
 </body>
 </html>
