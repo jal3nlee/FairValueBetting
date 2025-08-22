@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How it works · Fair Value Sports</title>
+  <meta name="description" content="How Fair Value Sports works: de-vig market lines, compute EV%, and size with Kelly.">
+  <meta property="og:title" content="How it works · Fair Value Sports">
+  <meta property="og:description" content="De-vig market lines, compute EV%, and size with Kelly.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/favicon.png">
+  <link rel="icon" href="/assets/favicon.png">
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Same utility CSS as your other pages -->
+  <style>
+    .container{max-width:72rem;margin-left:auto;margin-right:auto;padding-left:1rem;padding-right:1rem;}
+    .btn-primary{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;background:#000;color:#fff;text-decoration:none;transition:opacity .2s;}
+    .btn-primary:hover{opacity:.9;}
+    .btn-ghost{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;border:1px solid rgba(0,0,0,.2);text-decoration:none;transition:background .2s;}
+    .btn-ghost:hover{background:rgba(0,0,0,.05);}
+    .badge{display:inline-block;font-size:.75rem;font-weight:600;padding:.25rem .5rem;border-radius:9999px;background:rgba(0,0,0,.1);}
+    .card{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1rem;padding:1.25rem;}
+    .card-lg{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1.25rem;padding:1.5rem;}
+  </style>
+</head>
+<body class="antialiased text-slate-900">
+  <!-- Header (same as Home/About) -->
+  <header class="border-b border-slate-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
+    <nav class="container flex items-center justify-between h-16">
+      <a href="/index.html" class="flex items-center gap-2 font-semibold">
+        <img src="/assets/logo.png" alt="Fair Value Sports" class="h-6 md:h-7 w-auto">
+        <span class="sr-only">Fair Value Sports</span>
+      </a>
+      <ul class="hidden md:flex items-center gap-6">
+        <li><a class="hover:opacity-80" href="/index.html">Home</a></li>
+        <li><a class="hover:opacity-80" href="/about.html">About</a></li>
+        <li><a class="hover:opacity-80" href="/products.html">Products</a></li>
+        <li><a class="hover:opacity-80" href="/contact.html">Contact</a></li>
+      </ul>
+      <div class="flex items-center gap-3">
+        <a class="btn-ghost" href="/products.html">Pricing</a>
+        <a class="btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Open the Model</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOW IT WORKS (navy band; no buttons) -->
+    <section id="how-it-works" class="bg-blue-950 text-white border-b border-slate-800">
+      <div class="container py-16 md:py-20">
+        <h1 class="text-3xl md:text-4xl font-bold">How it works</h1>
+        <p class="text-blue-100 mt-2 max-w-3xl">
+          A disciplined workflow: screen books, remove the vig, quantify edge, and size with Kelly.
+        </p>
+
+        <div class="grid md:grid-cols-5 gap-4 mt-6">
+          <div class="card">
+            <div class="text-xs font-semibold uppercase tracking-wide text-slate-500">Step 1</div>
+            <h3 class="font-semibold mt-1">Screen books</h3>
+            <p class="text-sm text-slate-700 mt-2">Aggregate lines across sportsbooks and identify the best available price.</p>
+          </div>
+          <div class="card">
+            <div class="text-xs font-semibold uppercase tracking-wide text-slate-500">Step 2</div>
+            <h3 class="font-semibold mt-1">De-vig odds</h3>
+            <p class="text-sm text-slate-700 mt-2">Remove the bookmaker’s margin to estimate fair win probabilities.</p>
+          </div>
+          <div class="card">
+            <div class="text-xs font-semibold uppercase tracking-wide text-slate-500">Step 3</div>
+            <h3 class="font-semibold mt-1">Quantify edge</h3>
+            <p class="text-sm text-slate-700 mt-2">Compute market-implied EV% versus the top available number.</p>
+          </div>
+          <div class="card">
+            <div class="text-xs font-semibold uppercase tracking-wide text-slate-500">Step 4</div>
+            <h3 class="font-semibold mt-1">Size with Kelly</h3>
+            <p class="text-sm text-slate-700 mt-2">Suggest stake sizes based on bankroll and your chosen Kelly factor.</p>
+          </div>
+          <div class="card">
+            <div class="text-xs font-semibold uppercase tracking-wide text-slate-500">Step 5</div>
+            <h3 class="font-semibold mt-1">Filter & act</h3>
+            <p class="text-sm text-slate-700 mt-2">Rank by EV%, set thresholds, and place disciplined, repeatable bets.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO IT'S FOR (light band; same cards as Home) -->
+    <section id="who-its-for" class="bg-sky-50 border-t border-sky-200/70">
+      <div class="container py-16">
+        <div class="max-w-3xl">
+          <h2 class="text-2xl font-semibold">Built for every betting style</h2>
+          <p class="text-slate-700 mt-2">Pick your style, set your thresholds, and let the edges work for you.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-6">
+          <div class="card-lg">
+            <h3 class="font-semibold">Line Shopper</h3>
+            <p class="text-sm text-slate-700 mt-2">Already have a favorite? Find the best-value sportsbook odds for your bet.</p>
+            <p class="text-xs text-slate-500 mt-3"><b>Start here:</b> EV% ≥ 1.0–1.5 · Kelly 0.5</p>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="font-semibold">Data-Driven Bettor</h3>
+            <p class="text-sm text-slate-700 mt-2">De-vig the market, turn prices into fair probabilities, and integrate your model with ours.</p>
+            <p class="text-xs text-slate-500 mt-3"><b>Start here:</b> EV% ≥ 1.5–2.0 · Kelly 0.75</p>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="font-semibold">Bankroll-Conscious</h3>
+            <p class="text-sm text-slate-700 mt-2">Control variance with higher EV floors and lower Kelly stakes.</p>
+            <p class="text-xs text-slate-500 mt-3"><b>Start here:</b> EV% ≥ 2–3 · Kelly 0.25</p>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="font-semibold">High-Conviction Backer</h3>
+            <p class="text-sm text-slate-700 mt-2">Maximize high-edge opportunities and filter out low-probability bets.</p>
+            <p class="text-xs text-slate-500 mt-3"><b>Start here:</b> EV% ≥ 4–5 · Kelly 0.75–1.0</p>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="font-semibold">Weekend Warriors</h3>
+            <p class="text-sm text-slate-700 mt-2">Filter by edge and lock in your favorites, every Sunday.</p>
+            <p class="text-xs text-slate-500 mt-3"><b>Start here:</b> EV% ≥ 2 · Kelly 0.25–0.75</p>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="font-semibold">Just Learning</h3>
+            <p class="text-sm text-slate-700 mt-2">Learn the workflow—fair win probabilities, EV filters, small consistent stakes.</p>
+            <p class="text-xs text-slate-500 mt-3"><b>Start here:</b> EV% ≥ 2–3 · Kelly 0.25–0.5</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (same as other pages) -->
+  <footer class="border-t border-slate-200/70 mt-16">
+    <div class="container py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-sm">
+      <p>© 2025 Fair Value Sports. All rights reserved.</p>
+      <ul class="flex items-center gap-4">
+        <li><a class="hover:opacity-80" href="/terms.html">Terms</a></li>
+        <li><a class="hover:opacity-80" href="/privacy.html">Privacy</a></li>
+        <li><a class="hover:opacity-80" href="/disclaimer.html">Legal Disclaimer</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
