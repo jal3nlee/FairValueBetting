@@ -3,62 +3,196 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Legal Disclaimer · Fair Value Sports</title>
-  <meta name="description" content="Legal Disclaimer for Fair Value Sports.">
-  <meta property="og:title" content="Legal Disclaimer · Fair Value Sports">
-  <meta property="og:description" content="Legal Disclaimer for Fair Value Sports.">
+  <title>Legal Disclaimer · Fair Value Betting</title>
+  <meta name="description" content="Legal disclaimer for Fair Value Betting. Information-only service with no guarantees or wagering.">
+  <meta property="og:title" content="Legal Disclaimer · Fair Value Betting">
+  <meta property="og:description" content="Information-only service. No financial or betting advice. No guarantees.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/favicon.png">
-  <link rel="icon" href="/favicon.png">
-  <!-- TailwindCSS CDN -->
+  <meta property="og:image" content="/assets/favicon.png">
+  <link rel="icon" href="/assets/favicon.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .btn-primary { @apply inline-flex items-center px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90 transition; }
-    .btn-ghost   { @apply inline-flex items-center px-5 py-3 rounded-2xl border border-black/20 hover:bg-black/5 transition; }
-    .badge       { @apply text-xs font-medium px-2 py-1 rounded-full bg-black/10; }
-    .container   { @apply max-w-6xl mx-auto px-4; }
+    .container{max-width:72rem;margin-left:auto;margin-right:auto;padding-left:1rem;padding-right:1rem;}
+    .btn-primary{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;background:#000;color:#fff;text-decoration:none;transition:opacity .2s;}
+    .btn-primary:hover{opacity:.9;}
+    .btn-ghost{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;border:1px solid rgba(0,0,0,.2);text-decoration:none;transition:background .2s;}
+    .btn-ghost:hover{background:rgba(0,0,0,.05);}
+    .btn-light{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;background:#fff;color:#0f172a;text-decoration:none;transition:opacity .2s;}
+    .btn-light:hover{opacity:.9;}
+    .btn-ghost-light{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;border:1px solid rgba(255,255,255,.5);color:#fff;text-decoration:none;transition:background .2s;}
+    .btn-ghost-light:hover{background:rgba(255,255,255,.08);}
+    .badge{display:inline-block;font-size:.75rem;font-weight:600;padding:.25rem .5rem;border-radius:9999px;background:rgba(0,0,0,.1);}
+    .card{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1rem;padding:1.25rem;}
+    .card-lg{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1.25rem;padding:1.5rem;}
   </style>
 </head>
 <body class="antialiased text-slate-900">
+
+  <!-- Header (with mobile hamburger) -->
   <header class="border-b border-slate-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
     <nav class="container flex items-center justify-between h-16">
       <a href="/index.html" class="flex items-center gap-2 font-semibold">
-        <span class="text-xl">🏈</span>
-        <span>Fair Value Sports</span>
+        <img src="/assets/logo.png" alt="Fair Value Betting" class="h-6 md:h-7 w-auto">
+        <span class="sr-only">Fair Value Betting</span>
       </a>
+
+      <!-- Desktop nav -->
       <ul class="hidden md:flex items-center gap-6">
         <li><a class="hover:opacity-80" href="/index.html">Home</a></li>
         <li><a class="hover:opacity-80" href="/about.html">About</a></li>
+        <li><a class="hover:opacity-80" href="/howitworks.html">How it works</a></li>
         <li><a class="hover:opacity-80" href="/products.html">Products</a></li>
         <li><a class="hover:opacity-80" href="/contact.html">Contact</a></li>
+        <li><a class="hover:opacity-80" href="/disclaimer.html" aria-current="page">Disclaimer</a></li>
       </ul>
-      <div class="flex items-center gap-3">
-        <a class="btn-ghost" href="/products.html">Pricing</a>
-        <a class="btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Open the Model</a>
-      </div>
-    </nav>
-  </header>
-  
-<main class="container py-16 md:py-24 prose prose-slate">
-  <h1>Legal Disclaimer</h1>
-  <p><em>Last updated: August 21, 2025</em></p>
-  <p><strong>Fair Value Sports is for information and entertainment purposes only.</strong> Nothing on this site or in the app constitutes financial or betting advice. We do not make guarantees of profit or outcomes.</p>
-  <ul>
-    <li>Wager responsibly and only where legal.</li>
-    <li>You must be of legal betting age in your jurisdiction.</li>
-    <li>Past performance does not guarantee future results.</li>
-  </ul>
-</main>
 
+      <!-- Desktop CTAs -->
+      <div class="hidden md:flex items-center gap-3">
+        <a class="btn-ghost" href="/products.html">See Plans</a>
+        <a class="btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Open Model</a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button id="menuButton" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-300 text-slate-700" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-slate-200">
+      <div class="container py-3 space-y-1">
+        <a class="block py-2" href="/index.html">Home</a>
+        <a class="block py-2" href="/about.html">About</a>
+        <a class="block py-2" href="/howitworks.html">How it works</a>
+        <a class="block py-2" href="/products.html">Products</a>
+        <a class="block py-2" href="/contact.html">Contact</a>
+        <a class="block py-2" href="/disclaimer.html" aria-current="page">Disclaimer</a>
+        <div class="pt-3 flex gap-2">
+          <a class="flex-1 btn-ghost" href="/products.html">See Plans</a>
+          <a class="flex-1 btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Open Model</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="bg-blue-950 text-white border-b border-slate-800">
+      <div class="container py-16 md:py-24">
+        <div class="max-w-3xl">
+          <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;">Legal</span>
+          <h1 class="text-4xl md:text-5xl font-bold mt-4">Legal Disclaimer</h1>
+          <p class="text-blue-100 mt-4 text-lg">
+            Fair Value Betting is an information and analytics service. We do not accept wagers and do not provide betting or financial advice.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISCLAIMER BODY -->
+    <section class="container py-16">
+      <div class="grid md:grid-cols-3 gap-8 items-start">
+        <!-- Left column: Summary -->
+        <div class="md:col-span-1">
+          <div class="card-lg">
+            <h2 class="text-xl font-semibold">Summary</h2>
+            <p class="text-slate-700 mt-3">
+              Use this site for education and research only. No guarantees of profit or accuracy. You are solely responsible for any decisions you make.
+            </p>
+            <p class="text-slate-700 mt-3">
+              By using our site, you agree to this Disclaimer, our Terms of Service, and our Privacy Policy.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right column: Details -->
+        <div class="md:col-span-2 space-y-6">
+          <div class="card-lg">
+            <h3 class="text-lg font-semibold">Information only; not advice</h3>
+            <p class="text-slate-700 mt-2">
+              Fair Value Betting provides statistical estimates (e.g., fair prices, implied probabilities, expected value) and tools (e.g., filters, rankings, suggested staking formulas). These are
+              for informational and educational purposes only and do not constitute financial, legal, or betting advice. Nothing on this site is a recommendation to place a wager.
+            </p>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="text-lg font-semibold">No wagers; no touting</h3>
+            <p class="text-slate-700 mt-2">
+              We are not a sportsbook or wagering operator and do not accept or facilitate bets. We do not sell “locks,” picks, or guarantees. Past performance, model backtests, or historical edges do not guarantee future results.
+            </p>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="text-lg font-semibold">Model limitations & accuracy</h3>
+            <p class="text-slate-700 mt-2">
+              Our estimates rely on third-party data, market snapshots, and assumptions (including de-vigging approaches). Odds may change rapidly, data can be delayed or inaccurate, and
+              our calculations may not reflect the true underlying probabilities or your personal constraints. We do not warrant accuracy, completeness, or timeliness.
+            </p>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="text-lg font-semibold">No guarantees; assumption of risk</h3>
+            <p class="text-slate-700 mt-2">
+              Wagering involves risk, including the loss of your stake. You bear full responsibility for any choices you make using information from this site. To the maximum extent permitted by law,
+              we disclaim liability for losses or damages arising from use of our content or tools.
+            </p>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="text-lg font-semibold">Jurisdiction, age & eligibility</h3>
+            <p class="text-slate-700 mt-2">
+              Only use this site where sports wagering and data access are legal. You must be of legal betting age in your jurisdiction (e.g., 21+ in many U.S. states). You are responsible for complying with local laws and the terms of any sportsbook you use.
+            </p>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="text-lg font-semibold">Third-party links & affiliates</h3>
+            <p class="text-slate-700 mt-2">
+              We may link to third-party sites (sportsbooks, data providers, resources). We do not control or endorse third-party content and are not responsible for their practices.
+              Any affiliate relationships will be disclosed where applicable and do not affect our commitment to transparency.
+            </p>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="text-lg font-semibold">Responsible betting</h3>
+            <p class="text-slate-700 mt-2">
+              If you choose to bet, do so responsibly and within your means. If you or someone you know may have a gambling problem, seek help. In the U.S., you can visit
+              <a class="underline" href="https://www.ncpgambling.org/help-treatment/" target="_blank" rel="noopener">ncpgambling.org</a> or call/text <span class="font-semibold">1-800-GAMBLER</span> (where available).
+              Resources vary by country and state—check your local support options.
+            </p>
+          </div>
+
+          <div class="card-lg">
+            <h3 class="text-lg font-semibold">Changes & contact</h3>
+            <p class="text-slate-700 mt-2">
+              We may update this Disclaimer from time to time. Your continued use of the site after changes means you accept the updated terms. For questions, contact
+              <a class="underline" href="mailto:hello@fairvaluebetting.com">hello@fairvaluebetting.com</a>.
+            </p>
+            <p class="text-slate-500 text-sm mt-2">Last updated: Aug 2025</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
   <footer class="border-t border-slate-200/70 mt-16">
     <div class="container py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-sm">
-      <p>© 2025 Fair Value Sports. All rights reserved.</p>
+      <p>© 2025 Fair Value Betting. All rights reserved.</p>
       <ul class="flex items-center gap-4">
         <li><a class="hover:opacity-80" href="/terms.html">Terms</a></li>
         <li><a class="hover:opacity-80" href="/privacy.html">Privacy</a></li>
-        <li><a class="hover:opacity-80" href="/disclaimer.html">Legal Disclaimer</a></li>
+        <li><a class="hover:opacity-80" href="/disclaimer.html" aria-current="page">Legal Disclaimer</a></li>
       </ul>
     </div>
   </footer>
+
+  <script>
+    const btn = document.getElementById('menuButton');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
 </body>
 </html>
