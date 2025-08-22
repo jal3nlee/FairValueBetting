@@ -137,7 +137,7 @@
       <div class="container py-12">
         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
           <div>
-            <h2 class="text-2xl font-semibold">Preview: one example</h2>
+            <h2 class="text-2xl font-semibold">NFL Expected Value Model</h2>
             <p class="text-slate-600 text-sm mt-1">A simple worked example (not live). We’ll add a live edge here soon.</p>
           </div>
           <p class="text-xs text-slate-500">September focus: NFL moneylines. Spreads &amp; totals in progress.</p>
@@ -163,7 +163,7 @@
                         </svg>
                       </button>
                       <span class="absolute left-1/2 -translate-x-1/2 mt-2 w-56 text-[11px] bg-slate-900 text-white rounded-md px-2 py-1 shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
-                        Estimated chance after removing the sportsbook margin (vig).
+                        Estimated probability after removing the sportsbook margin (vig).
                       </span>
                     </span>
                   </div>
@@ -199,7 +199,7 @@
                         </svg>
                       </button>
                       <span class="absolute left-1/2 -translate-x-1/2 mt-2 w-56 text-[11px] bg-slate-900 text-white rounded-md px-2 py-1 shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
-                        When this edge was last checked.
+                        When this edge was last updated.
                       </span>
                     </span>
                   </div>
@@ -208,7 +208,7 @@
             </thead>
             <tbody class="divide-y divide-slate-200">
               <tr>
-                <td class="px-4 py-3">DK</td>
+                <td class="px-4 py-3">DraftKings</td>
                 <td class="px-4 py-3">NFL · Eagles ML</td>
                 <td class="px-4 py-3">+125</td>
                 <td class="px-4 py-3">46.8%</td>
@@ -220,40 +220,45 @@
         </div>
 
         <p class="text-xs text-slate-500 mt-3">
-          Information only; not betting advice. Availability may vary by state and sportsbook.
+          Information only; not betting advice. Bet repsponsibly.
         </p>
       </div>
     </section>
 
-    <!-- Supported platforms (navy band) -->
-    <section class="bg-blue-950 text-white border-t border-slate-800">
-      <div class="container py-12">
-        <h2 class="text-2xl font-semibold">Supported platforms</h2>
-        <p class="text-blue-100 mt-1">Available where online sports betting is legal. Launch coverage: NFL moneylines.</p>
+  <!-- Supported platforms (navy band) -->
+<section class="bg-blue-950 text-white border-t border-slate-800">
+  <div class="container py-12">
+    <h2 class="text-2xl font-semibold">Supported platforms</h2>
+    <p class="text-blue-100 mt-1">Available where online sports betting is legal.</p>
 
-        <!-- Top 5 books as badges -->
-        <div class="mt-6 flex flex-wrap items-center gap-2">
-          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">DraftKings</span>
-          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">FanDuel</span>
-          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">BetMGM</span>
-          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Caesars</span>
-          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Fanatics Sportsbook</span>
-        </div>
-
-        <!-- And more callout -->
-        <div class="mt-6 bg-white/5 border border-white/10 rounded-2xl p-4">
-          <h3 class="font-semibold">And more</h3>
-          <p class="text-blue-100 text-sm mt-1">
-            We’re adding additional licensed operators over time. Don’t see your book? <a href="/contact.html" class="underline decoration-white/40 hover:decoration-white">Tell us</a>.
-          </p>
-        </div>
-      </div>
-    </section>
+    <!-- US sportsbooks from The Odds API -->
+    <div class="mt-6 flex flex-wrap items-center gap-2">
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">DraftKings</span>
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">FanDuel</span>
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">BetMGM</span>
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Caesars</span>
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Fanatics</span>
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">BetRivers</span>
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">ESPN BET</span>
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Bally Bet</span>
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">betPARX</span>
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Hard Rock Bet</span>
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Wind Creek (Betfred PA)</span>
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">BetOnline</span>
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Bovada</span>
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">MyBookie</span>
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">BetUS</span>
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">LowVig</span>
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Fliff</span>
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">ReBet</span>
+      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">BetAnySports</span>
+    </div>
+  </section>
 
     <!-- EV & Kelly in 60 seconds (beginner primer) -->
     <section class="bg-sky-50 border-y border-sky-200/70">
       <div class="container py-10">
-        <h2 class="text-xl md:text-2xl font-semibold">EV &amp; Kelly in 60 seconds</h2>
+        <h2 class="text-xl md:text-2xl font-semibold">EV &amp; Kelly Overview</h2>
         <div class="grid md:grid-cols-2 gap-6 mt-4">
           <div class="card">
             <h3 class="font-semibold">1) De-vig → fair win %</h3>
