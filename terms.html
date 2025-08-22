@@ -3,68 +3,244 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Terms of Service · Fair Value Sports</title>
-  <meta name="description" content="Terms of Service for Fair Value Sports.">
-  <meta property="og:title" content="Terms of Service · Fair Value Sports">
-  <meta property="og:description" content="Terms of Service for Fair Value Sports.">
+  <title>Terms of Use · Fair Value Betting</title>
+  <meta name="description" content="Terms of Use for Fair Value Betting. Read about eligibility, subscriptions, IP, disclaimers, and your responsibilities.">
+  <meta property="og:title" content="Terms of Use · Fair Value Betting">
+  <meta property="og:description" content="Read about eligibility, subscriptions, IP, disclaimers, and your responsibilities.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/favicon.png">
-  <link rel="icon" href="/favicon.png">
-  <!-- TailwindCSS CDN -->
+  <meta property="og:image" content="/assets/favicon.png">
+  <link rel="icon" href="/assets/favicon.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .btn-primary { @apply inline-flex items-center px-5 py-3 rounded-2xl bg-black text-white hover:opacity-90 transition; }
-    .btn-ghost   { @apply inline-flex items-center px-5 py-3 rounded-2xl border border-black/20 hover:bg-black/5 transition; }
-    .badge       { @apply text-xs font-medium px-2 py-1 rounded-full bg-black/10; }
-    .container   { @apply max-w-6xl mx-auto px-4; }
+    .container{max-width:72rem;margin-left:auto;margin-right:auto;padding-left:1rem;padding-right:1rem;}
+    .btn-primary{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;background:#000;color:#fff;text-decoration:none;transition:opacity .2s;}
+    .btn-primary:hover{opacity:.9;}
+    .btn-ghost{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;border:1px solid rgba(0,0,0,.2);text-decoration:none;transition:background .2s;}
+    .btn-ghost:hover{background:rgba(0,0,0,.05);}
+    .btn-light{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;background:#fff;color:#0f172a;text-decoration:none;transition:opacity .2s;}
+    .btn-light:hover{opacity:.9;}
+    .btn-ghost-light{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;border:1px solid rgba(255,255,255,.5);color:#fff;text-decoration:none;transition:background .2s;}
+    .btn-ghost-light:hover{background:rgba(255,255,255,.08);}
+    .badge{display:inline-block;font-size:.75rem;font-weight:600;padding:.25rem .5rem;border-radius:9999px;background:rgba(0,0,0,.1);}
+    .card{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1rem;padding:1.25rem;}
+    .card-lg{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1.25rem;padding:1.5rem;}
   </style>
 </head>
 <body class="antialiased text-slate-900">
+
+  <!-- Header (with mobile hamburger) -->
   <header class="border-b border-slate-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
     <nav class="container flex items-center justify-between h-16">
       <a href="/index.html" class="flex items-center gap-2 font-semibold">
-        <span class="text-xl">🏈</span>
-        <span>Fair Value Sports</span>
+        <img src="/assets/logo.png" alt="Fair Value Betting" class="h-6 md:h-7 w-auto">
+        <span class="sr-only">Fair Value Betting</span>
       </a>
+
+      <!-- Desktop nav -->
       <ul class="hidden md:flex items-center gap-6">
         <li><a class="hover:opacity-80" href="/index.html">Home</a></li>
         <li><a class="hover:opacity-80" href="/about.html">About</a></li>
+        <li><a class="hover:opacity-80" href="/howitworks.html">How it works</a></li>
         <li><a class="hover:opacity-80" href="/products.html">Products</a></li>
         <li><a class="hover:opacity-80" href="/contact.html">Contact</a></li>
-      </ul>
-      <div class="flex items-center gap-3">
-        <a class="btn-ghost" href="/products.html">Pricing</a>
-        <a class="btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Open the Model</a>
-      </div>
-    </nav>
-  </header>
-  
-<main class="container py-16 md:py-24 prose prose-slate">
-  <h1>Terms of Service</h1>
-  <p><em>Last updated: August 21, 2025</em></p>
-  <h2>1. Acceptance of Terms</h2>
-  <p>By using Fair Value Sports you agree to these Terms. If you do not agree, do not use the service.</p>
-  <h2>2. No Warranties</h2>
-  <p>The service is provided “as is” without warranty of any kind. We do not guarantee accuracy, profitability, or availability.</p>
-  <h2>3. Responsibility</h2>
-  <p>You are solely responsible for your actions and compliance with local laws. The service is for information and entertainment only.</p>
-  <h2>4. Accounts & Subscriptions</h2>
-  <p>We may offer free and paid tiers. Billing and cancellations will be handled by our payment provider.</p>
-  <h2>5. Changes</h2>
-  <p>We may modify these Terms. Continued use constitutes acceptance.</p>
-  <h2>Contact</h2>
-  <p>Questions? <a href="/contact.html">Contact us</a>.</p>
-</main>
-
-  <footer class="border-t border-slate-200/70 mt-16">
-    <div class="container py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-sm">
-      <p>© 2025 Fair Value Sports. All rights reserved.</p>
-      <ul class="flex items-center gap-4">
-        <li><a class="hover:opacity-80" href="/terms.html">Terms</a></li>
         <li><a class="hover:opacity-80" href="/privacy.html">Privacy</a></li>
-        <li><a class="hover:opacity-80" href="/disclaimer.html">Legal Disclaimer</a></li>
+        <li><a class="hover:opacity-80" href="/terms.html" aria-current="page">Terms</a></li>
       </ul>
+
+      <!-- Desktop CTAs -->
+      <div class="hidden md:flex items-center gap-3">
+        <a class="btn-ghost" href="/products.html">See Plans</a>
+        <a class="btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Open Model</a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button id="menuButton" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-300 text-slate-700" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-slate-200">
+      <div class="container py-3 space-y-1">
+        <a class="block py-2" href="/index.html">Home</a>
+        <a class="block py-2" href="/about.html">About</a>
+        <a class="block py-2" href="/howitworks.html">How it works</a>
+        <a class="block py-2" href="/products.html">Products</a>
+        <a class="block py-2" href="/contact.html">Contact</a>
+        <a class="block py-2" href="/privacy.html">Privacy</a>
+        <a class="block py-2" href="/terms.html" aria-current="page">Terms</a>
+        <div class="pt-3 flex gap-2">
+          <a class="flex-1 btn-ghost" href="/products.html">See Plans</a>
+          <a class="flex-1 btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Open Model</a>
+        </div>
+      </div>
     </div>
-  </footer>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-blue-950 text-white border-b border-slate-800">
+    <div class="container py-14 md:py-20">
+      <div class="max-w-3xl">
+        <span class="badge text-blue-50/90" style="background:rgba(255,255,255,.12)">Legal</span>
+        <h1 class="mt-3 text-3xl md:text-5xl font-semibold tracking-tight">Terms of Use</h1>
+        <p class="mt-4 text-blue-100/90">Please read these terms carefully before using Fair Value Betting. By accessing or using our site, products, or services, you agree to these Terms.</p>
+        <p class="mt-6 text-blue-200 text-sm">Last updated: August 22, 2025</p>
+      </div>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a class="btn-ghost-light" href="/privacy.html">View Privacy Policy</a>
+        <a class="btn-light" href="/contact.html">Contact Support</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <main class="bg-slate-50">
+    <div class="container py-10 md:py-14 space-y-6 md:space-y-8">
+      
+      <article class="card-lg">
+        <h2 class="text-xl md:text-2xl font-semibold">1) Acceptance of Terms</h2>
+        <p class="mt-3 text-slate-700">
+          These Terms of Use (“Terms”) form a binding agreement between you and Fair Value Betting (“Company,” “we,” “our,” or “us”). By visiting, creating an account, or using any feature, model, content, data, or service we provide (collectively, the “Services”), you agree to these Terms and our Privacy Policy. If you do not agree, do not use the Services.
+        </p>
+      </article>
+
+      <article class="card-lg">
+        <h2 class="text-xl md:text-2xl font-semibold">2) Eligibility & Compliance</h2>
+        <ul class="mt-3 list-disc pl-6 text-slate-700 space-y-2">
+          <li>You must be at least 21 years old in the U.S. (or the legal betting age in your jurisdiction) to use the Services.</li>
+          <li>You are solely responsible for ensuring your use is legal where you are located.</li>
+          <li>We do not operate a sportsbook and do not accept or place wagers.</li>
+        </ul>
+      </article>
+
+      <article class="card-lg">
+        <h2 class="text-xl md:text-2xl font-semibold">3) Accounts, Security & Responsible Use</h2>
+        <ul class="mt-3 list-disc pl-6 text-slate-700 space-y-2">
+          <li>Provide accurate registration information and keep it updated.</li>
+          <li>You’re responsible for activity under your account; keep credentials secure.</li>
+          <li>Notify us promptly of any suspected unauthorized use.</li>
+        </ul>
+      </article>
+
+      <article class="card-lg">
+        <h2 class="text-xl md:text-2xl font-semibold">4) Subscriptions, Billing & Cancellations</h2>
+        <ul class="mt-3 list-disc pl-6 text-slate-700 space-y-2">
+          <li>Some features require a paid subscription; prices, features, and limits may change.</li>
+          <li>Unless otherwise stated, subscriptions auto-renew until canceled. Cancel in your account settings; access continues through the current billing period.</li>
+          <li>Fees are generally non-refundable (including partial periods) except where required by law.</li>
+          <li>You authorize charges to your payment method for fees, taxes, and any add-ons.</li>
+        </ul>
+      </article>
+
+      <article class="card-lg">
+        <h2 class="text-xl md:text-2xl font-semibold">5) License & Intellectual Property</h2>
+        <p class="mt-3 text-slate-700">
+          We grant you a limited, personal, non-exclusive, non-transferable license to access and use the Services for your own lawful, non-commercial purposes. All content, models, code, data, trademarks, and other materials are owned by us or our licensors and are protected by intellectual property laws. Except as expressly permitted, you may not copy, modify, distribute, sell, lease, reverse engineer, or create derivative works from the Services.
+        </p>
+      </article>
+
+      <article class="card-lg">
+        <h2 class="text-xl md:text-2xl font-semibold">6) Prohibited Conduct</h2>
+        <ul class="mt-3 list-disc pl-6 text-slate-700 space-y-2">
+          <li>Scraping, bulk downloading, or automated querying without our written permission.</li>
+          <li>Circumventing technical protections, rate limits, access controls, or paywalls.</li>
+          <li>Using the Services where wagering or wagering-related tools are restricted or illegal.</li>
+          <li>Violating any law or third-party rights, or interfering with Service security or operation.</li>
+        </ul>
+      </article>
+
+      <article class="card-lg">
+        <h2 class="text-xl md:text-2xl font-semibold">7) Data Sources, Models & Accuracy</h2>
+        <p class="mt-3 text-slate-700">
+          Outputs (e.g., expected value estimates, probabilities, comparisons, alerts) may incorporate third-party data and market information that can change without notice. We strive for accuracy but do not guarantee correctness, timeliness, completeness, or availability. Modeling involves uncertainty; past performance does not guarantee future results.
+        </p>
+      </article>
+
+      <article class="card-lg">
+        <h2 class="text-xl md:text-2xl font-semibold">8) No Betting, Financial, or Legal Advice</h2>
+        <p class="mt-3 text-slate-700">
+          The Services are for informational and educational purposes only and are not advice of any kind. We do not recommend or encourage wagers. Any decisions you make—including wagering—are solely your responsibility and at your own risk. Seek professional advice if needed.
+        </p>
+      </article>
+
+      <article class="card-lg">
+        <h2 class="text-xl md:text-2xl font-semibold">9) Third-Party Links & Integrations</h2>
+        <p class="mt-3 text-slate-700">
+          The Services may reference third-party websites, sportsbooks, tools, or APIs. We do not control or endorse third parties and are not responsible for their content, terms, or privacy practices. Your use of third-party services is at your own risk and subject to their terms.
+        </p>
+      </article>
+
+      <article class="card-lg">
+        <h2 class="text-xl md:text-2xl font-semibold">10) Changes to the Services</h2>
+        <p class="mt-3 text-slate-700">
+          We may modify, suspend, or discontinue any feature or the Services at any time, with or without notice, and without liability to you.
+        </p>
+      </article>
+
+      <article class="card-lg">
+        <h2 class="text-xl md:text-2xl font-semibold">11) Termination</h2>
+        <p class="mt-3 text-slate-700">
+          We may suspend or terminate your access at any time, including for violations of these Terms or suspected fraudulent or unlawful activity. Provisions that by their nature should survive (e.g., IP, disclaimers, limitations, governing law) will survive termination.
+        </p>
+      </article>
+
+      <article class="card-lg">
+        <h2 class="text-xl md:text-2xl font-semibold">12) Disclaimers</h2>
+        <p class="mt-3 text-slate-700">
+          THE SERVICES ARE PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WARRANTIES OF ACCURACY, RELIABILITY, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. YOUR USE IS AT YOUR SOLE RISK.
+        </p>
+      </article>
+
+      <article class="card-lg">
+        <h2 class="text-xl md:text-2xl font-semibold">13) Limitation of Liability</h2>
+        <p class="mt-3 text-slate-700">
+          TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, REVENUE, DATA, OR GOODWILL, ARISING FROM OR RELATED TO YOUR USE OF THE SERVICES, EVEN IF ADVISED OF THE POSSIBILITY. OUR TOTAL LIABILITY WILL NOT EXCEED THE GREATER OF (A) AMOUNTS YOU PAID IN THE SIX (6) MONTHS BEFORE THE EVENT GIVING RISE TO THE CLAIM OR (B) USD $100.
+        </p>
+      </article>
+
+      <article class="card-lg">
+        <h2 class="text-xl md:text-2xl font-semibold">14) Indemnification</h2>
+        <p class="mt-3 text-slate-700">
+          You agree to defend, indemnify, and hold harmless the Company and its affiliates, officers, directors, employees, and agents from and against any claims, damages, liabilities, costs, and expenses (including reasonable attorneys’ fees) arising out of or related to your use of the Services, your violation of these Terms, or your violation of any law or third-party right.
+        </p>
+      </article>
+
+      <article class="card-lg">
+        <h2 class="text-xl md:text-2xl font-semibold">15) Governing Law & Dispute Resolution</h2>
+        <p class="mt-3 text-slate-700">
+          These Terms are governed by the laws of the State of Arizona, without regard to conflicts of laws principles. You agree that any disputes will be brought exclusively in the state or federal courts located in Maricopa County, Arizona. You and the Company waive any right to a jury trial to the extent permitted by law. Where permitted, disputes must be brought in your individual capacity and not as a class or representative action.
+        </p>
+      </article>
+
+      <article class="card-lg">
+        <h2 class="text-xl md:text-2xl font-semibold">16) Changes to These Terms</h2>
+        <p class="mt-3 text-slate-700">
+          We may update these Terms from time to time. If we make material changes, we will provide notice (for example, by posting on our site or emailing you). Your continued use of the Services after the effective date constitutes your acceptance of the revised Terms.
+        </p>
+      </article>
+
+      <article class="card-lg">
+        <h2 class="text-xl md:text-2xl font-semibold">17) Contact Us</h2>
+        <p class="mt-3 text-slate-700">
+          Questions about these Terms? Reach us at
+          <a class="text-blue-700 underline hover:no-underline" href="mailto:support@fairvaluebetting.com">support@fairvaluebetting.com</a>.
+        </p>
+      </article>
+
+      <div class="text-center text-sm text-slate-600">
+        Bet responsibly. If you or someone you know has a gambling problem and needs help, call the National Council on Problem Gambling at 1-800-522-4700 or visit
+        <a class="text-blue-700 underline hover:no-underline" href="https://www.ncpgambling.org" target="_blank" rel="noopener">ncpgambling.org</a>.
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Mobile menu toggle
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuButton?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
 </body>
 </html>
