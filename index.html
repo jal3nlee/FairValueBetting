@@ -133,98 +133,133 @@
       </div>
     </section>
 
-    <!-- Preview section: one example (no live edge yet) -->
-    <section id="preview" class="bg-white">
-      <div class="container py-12">
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
-          <div>
-            <h2 class="text-2xl font-semibold">NFL EV Model Preview</h2>
-            <p class="text-slate-600 text-sm mt-1">A simple worked example (not live). We’ll add a live edge here soon.</p>
-          </div>
-          <p class="text-xs text-slate-500">September focus: NFL moneylines. Spreads &amp; totals in progress.</p>
-        </div>
-
-        <div class="mt-4 overflow-x-auto border border-slate-200 rounded-2xl">
-          <table class="min-w-full text-sm">
-            <thead class="bg-slate-50">
-              <tr class="text-left text-slate-600">
-                <th class="px-4 py-3">Book</th>
-                <th class="px-4 py-3">Market</th>
-                <th class="px-4 py-3">Offered</th>
-
-                <!-- Fair % with tooltip -->
-                <th class="px-4 py-3">
-                  <div class="flex items-center gap-1">
-                    Fair %
-                    <span class="relative inline-block group">
-                      <button type="button" class="inline-flex items-center justify-center h-4 w-4 rounded-full border border-current/40 text-slate-600 focus:outline-none" aria-label="What is Fair %?">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"/>
-                        </svg>
-                      </button>
-                      <span class="absolute left-1/2 -translate-x-1/2 mt-2 w-56 text-[11px] bg-slate-900 text-white rounded-md px-2 py-1 shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
-                        Estimated probability after removing the sportsbook margin (vig).
-                      </span>
-                    </span>
-                  </div>
-                </th>
-
-                <!-- EV % with tooltip -->
-                <th class="px-4 py-3">
-                  <div class="flex items-center gap-1">
-                    EV %
-                    <span class="relative inline-block group">
-                      <button type="button" class="inline-flex items-center justify-center h-4 w-4 rounded-full border border-current/40 text-slate-600 focus:outline-none" aria-label="What is EV %?">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"/>
-                        </svg>
-                      </button>
-                      <span class="absolute left-1/2 -translate-x-1/2 mt-2 w-56 text-[11px] bg-slate-900 text-white rounded-md px-2 py-1 shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
-                        Estimated edge based on fair win % compared to the offered price.
-                      </span>
-                    </span>
-                  </div>
-                </th>
-
-                <!-- Timestamp with tooltip -->
-                <th class="px-4 py-3">
-                  <div class="flex items-center gap-1">
-                    Timestamp
-                    <span class="relative inline-block group">
-                      <button type="button" class="inline-flex items-center justify-center h-4 w-4 rounded-full border border-current/40 text-slate-600 focus:outline-none" aria-label="What is Timestamp?">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"/>
-                        </svg>
-                      </button>
-                      <span class="absolute left-1/2 -translate-x-1/2 mt-2 w-56 text-[11px] bg-slate-900 text-white rounded-md px-2 py-1 shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
-                        When this edge was last updated.
-                      </span>
-                    </span>
-                  </div>
-                </th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-200">
-              <tr>
-                <td class="px-4 py-3">DraftKings</td>
-                <td class="px-4 py-3">NFL · Eagles ML</td>
-                <td class="px-4 py-3">+125</td>
-                <td class="px-4 py-3">46.8%</td>
-                <td class="px-4 py-3">+3.2%</td>
-                <td class="px-4 py-3">12:34:10</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p class="text-xs text-slate-500 mt-3">
-          Information only; not betting advice. Bet repsponsibly.
-        </p>
+  <!-- Preview section: three worked examples (not live) -->
+<section id="preview" class="bg-white">
+  <div class="container py-12">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
+      <div>
+        <h2 class="text-2xl font-semibold">NFL EV Model Preview</h2>
+        <p class="text-slate-600 text-sm mt-1">Three worked examples (not live). We’ll add a live edge here soon.</p>
       </div>
-    </section>
+      <p class="text-xs text-slate-500">September focus: NFL moneylines. Spreads &amp; totals in progress.</p>
+    </div>
+
+    <div class="mt-4 overflow-x-auto border border-slate-200 rounded-2xl">
+      <table class="min-w-full text-sm">
+        <thead class="bg-slate-50">
+          <tr class="text-left text-slate-600">
+            <th class="px-4 py-3">Date</th>
+            <th class="px-4 py-3">Game</th>
+            <th class="px-4 py-3">Pick</th>
+            <th class="px-4 py-3">Best Odds</th>
+            <th class="px-4 py-3">Best Book</th>
+
+            <!-- Fair Probability with tooltip -->
+            <th class="px-4 py-3">
+              <div class="flex items-center gap-1">
+                Fair Probability
+                <span class="relative inline-block group">
+                  <button type="button" class="inline-flex items-center justify-center h-4 w-4 rounded-full border border-current/40 text-slate-600 focus:outline-none" aria-label="What is Fair Probability?">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"/>
+                    </svg>
+                  </button>
+                  <span class="absolute left-1/2 -translate-x-1/2 mt-2 w-56 text-[11px] bg-slate-900 text-white rounded-md px-2 py-1 shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
+                    Estimated win % after removing the sportsbook margin (vig).
+                  </span>
+                </span>
+              </div>
+            </th>
+
+            <!-- EV % with tooltip -->
+            <th class="px-4 py-3">
+              <div class="flex items-center gap-1">
+                EV %
+                <span class="relative inline-block group">
+                  <button type="button" class="inline-flex items-center justify-center h-4 w-4 rounded-full border border-current/40 text-slate-600 focus:outline-none" aria-label="What is EV %?">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"/>
+                    </svg>
+                  </button>
+                  <span class="absolute left-1/2 -translate-x-1/2 mt-2 w-56 text-[11px] bg-slate-900 text-white rounded-md px-2 py-1 shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
+                    Expected value: compares fair win % to the offered price. Positive = better than fair.
+                  </span>
+                </span>
+              </div>
+            </th>
+
+            <!-- Kelly Sizing with tooltip -->
+            <th class="px-4 py-3">
+              <div class="flex items-center gap-1">
+                Kelly Sizing
+                <span class="relative inline-block group">
+                  <button type="button" class="inline-flex items-center justify-center h-4 w-4 rounded-full border border-current/40 text-slate-600 focus:outline-none" aria-label="What is Kelly Sizing?">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"/>
+                    </svg>
+                  </button>
+                  <span class="absolute left-1/2 -translate-x-1/2 mt-2 w-56 text-[11px] bg-slate-900 text-white rounded-md px-2 py-1 shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
+                    Fractional Kelly stake as % of bankroll (example assumes 0.5× Kelly).
+                  </span>
+                </span>
+              </div>
+            </th>
+
+            <th class="px-4 py-3">Stake ($)</th>
+          </tr>
+        </thead>
+
+        <tbody class="divide-y divide-slate-200">
+          <!-- Example 1 -->
+          <tr>
+            <td class="px-4 py-3">Sep 1</td>
+            <td class="px-4 py-3">Eagles @ Giants</td>
+            <td class="px-4 py-3">Eagles to win (ML)</td>
+            <td class="px-4 py-3">+120</td>
+            <td class="px-4 py-3">FanDuel</td>
+            <td class="px-4 py-3">46.8%</td>
+            <td class="px-4 py-3">+3.0%</td>
+            <td class="px-4 py-3">0.5× · 1.2%</td>
+            <td class="px-4 py-3">$12</td>
+          </tr>
+
+          <!-- Example 2 -->
+          <tr>
+            <td class="px-4 py-3">Sep 1</td>
+            <td class="px-4 py-3">Chiefs @ Ravens</td>
+            <td class="px-4 py-3">Chiefs to win (ML)</td>
+            <td class="px-4 py-3">&minus;105</td>
+            <td class="px-4 py-3">Caesars</td>
+            <td class="px-4 py-3">52.2%</td>
+            <td class="px-4 py-3">+1.9%</td>
+            <td class="px-4 py-3">0.5× · 1.0%</td>
+            <td class="px-4 py-3">$10</td>
+          </tr>
+
+          <!-- Example 3 -->
+          <tr>
+            <td class="px-4 py-3">Sep 1</td>
+            <td class="px-4 py-3">Jets @ Bills</td>
+            <td class="px-4 py-3">Jets to win (ML)</td>
+            <td class="px-4 py-3">+145</td>
+            <td class="px-4 py-3">BetMGM</td>
+            <td class="px-4 py-3">41.8%</td>
+            <td class="px-4 py-3">+2.4%</td>
+            <td class="px-4 py-3">0.5× · 0.8%</td>
+            <td class="px-4 py-3">$8</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-xs text-slate-500 mt-3">
+      Example only; not live data. Assumes a $1,000 bankroll and 0.5× Kelly factor. Information only; not betting advice. Bet responsibly.
+    </p>
+  </div>
+</section>
 
   <!-- Supported platforms (navy band) -->
 <section class="bg-blue-950 text-white border-t border-slate-800">
