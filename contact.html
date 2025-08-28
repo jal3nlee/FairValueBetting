@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact · Fair Value Betting</title>
-  <meta name="description" content="Get in touch with Fair Value Betting. Questions, feedback, partnerships, or media inquiries.">
+  <meta name="description" content="Get in touch with Fair Value Betting. Use the form to send questions, feedback, or partnership inquiries.">
   <meta property="og:title" content="Contact · Fair Value Betting">
-  <meta property="og:description" content="Get in touch with Fair Value Betting. Questions, feedback, partnerships, or media inquiries.">
+  <meta property="og:description" content="Get in touch with Fair Value Betting. Use the form to send questions, feedback, or partnership inquiries.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="/assets/favicon.png">
   <link rel="icon" href="/assets/favicon.png">
@@ -17,10 +17,6 @@
     .btn-primary:hover{opacity:.9;}
     .btn-ghost{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;border:1px solid rgba(0,0,0,.2);text-decoration:none;transition:background .2s;}
     .btn-ghost:hover{background:rgba(0,0,0,.05);}
-    .btn-light{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;background:#fff;color:#0f172a;text-decoration:none;transition:opacity .2s;}
-    .btn-light:hover{opacity:.9;}
-    .btn-ghost-light{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;border:1px solid rgba(255,255,255,.5);color:#fff;text-decoration:none;transition:background .2s;}
-    .btn-ghost-light:hover{background:rgba(255,255,255,.08);}
     .badge{display:inline-block;font-size:.75rem;font-weight:600;padding:.25rem .5rem;border-radius:9999px;background:rgba(0,0,0,.1);}
     .card{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1rem;padding:1.25rem;}
     .card-lg{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1.25rem;padding:1.5rem;}
@@ -30,11 +26,11 @@
 </head>
 <body class="antialiased text-slate-900">
 
-  <!-- Header (with mobile hamburger) -->
+  <!-- Header -->
   <header class="border-b border-slate-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
     <nav class="container flex items-center justify-between h-16">
       <a href="/index.html" class="flex items-center gap-2 font-semibold">
-        <img src="/assets/logo.png" alt="Fair Value Sports" class="h-6 md:h-7 w-auto">
+        <img src="/assets/logo.png" alt="Fair Value Betting" class="h-6 md:h-7 w-auto">
         <span class="sr-only">Fair Value Betting</span>
       </a>
 
@@ -61,7 +57,7 @@
       </button>
     </nav>
 
-    <!-- Mobile menu panel -->
+    <!-- Mobile menu -->
     <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-slate-200">
       <div class="container py-3 space-y-1">
         <a class="block py-2" href="/index.html">Home</a>
@@ -85,7 +81,7 @@
           <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;">Contact</span>
           <h1 class="text-4xl md:text-5xl font-bold mt-4">Get in touch</h1>
           <p class="text-blue-100 mt-4 text-lg">
-            Questions, feedback, partnerships, or media inquiries? We’d love to hear from you.
+            Questions, feedback, partnerships, or media inquiries? Use the form below. We typically reply within 1–2 business days.
           </p>
         </div>
       </div>
@@ -94,40 +90,27 @@
     <!-- CONTACT GRID -->
     <section class="container py-16">
       <div class="grid md:grid-cols-2 gap-8 items-start">
-        <!-- Left: contact options card -->
+        <!-- Left: note/CTA card (no social/email links) -->
         <div class="card-lg">
-          <h2 class="text-xl font-semibold">Contact options</h2>
-          <div class="mt-4 space-y-4">
-            <div>
-              <div class="text-sm font-semibold text-slate-700">Email</div>
-              <a class="text-slate-800 underline break-all" href="mailto:hello@fairvaluesports.com">coming soon...</a>
-              <!-- Replace with your real address -->
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-slate-700">X / Twitter</div>
-              <a class="text-slate-800 underline" href="https://twitter.com/" target="_blank" rel="noopener">@FairValueBetting</a>
-              <!-- Replace with your real handle -->
-            </div>
-            <div>
-              <div class="text-sm font-semibold text-slate-700">Response time</div>
-              <p class="text-sm text-slate-700">Typically 1–2 business days.</p>
-            </div>
-            <div class="pt-2">
-              <a class="btn-ghost" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Launch the Model</a>
-            </div>
+          <h2 class="text-xl font-semibold">How we handle messages</h2>
+          <ul class="mt-4 space-y-3 text-sm text-slate-700 list-disc pl-5">
+            <li>Every submission is reviewed by our small team.</li>
+            <li>Product ideas and bug reports help shape our roadmap.</li>
+            <li>For access to the current model, use the button below.</li>
+          </ul>
+          <div class="pt-5">
+            <a class="btn-ghost" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Launch the Model</a>
           </div>
         </div>
 
-        <!-- Right: form card (static; wire up to Formspree/Getform when ready) -->
+        <!-- Right: form card -->
         <div class="card-lg">
           <h2 class="text-xl font-semibold">Send a message</h2>
-          <!-- 
-            ACTION OPTIONS:
-            - Formspree:   action="https://formspree.io/f/yourFormID"
-            - Getform:     action="https://getform.io/f/yourFormID"
-            - Netlify:     add netlify attribute to form and deploy on Netlify
-          -->
-          <form class="mt-4 space-y-4" action="https://formspree.io/f/yourFormID" method="POST">
+
+          <!-- Basin: replace YOUR_FORM_ID with your endpoint in Basin dashboard -->
+          <form class="mt-4 space-y-4"
+                action="https://usebasin.com/f/YOUR_FORM_ID"
+                method="POST" accept-charset="UTF-8">
             <div>
               <label class="label" for="name">Name</label>
               <input class="input" type="text" id="name" name="name" autocomplete="name" placeholder="Jane Doe">
@@ -149,12 +132,14 @@
               <label class="label" for="message">Message <span class="text-rose-600">*</span></label>
               <textarea class="input" id="message" name="message" rows="6" required placeholder="How can we help?"></textarea>
             </div>
+
             <!-- Simple honeypot -->
             <div style="position:absolute;left:-5000px;" aria-hidden="true">
-              <input type="text" name="_gotcha" tabindex="-1">
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
             </div>
-            <!-- Optional redirect after submit -->
-            <!-- <input type="hidden" name="_redirect" value="https://yourdomain.com/thanks.html"> -->
+
+            <!-- Optional: redirect to a branded thank-you page on success -->
+            <!-- <input type="hidden" name="_redirect" value="/thanks.html"> -->
 
             <button type="submit" class="btn-primary">Send message</button>
             <p class="text-xs text-slate-500">By submitting, you agree to our <a class="underline" href="/privacy.html">Privacy Policy</a>.</p>
@@ -163,16 +148,16 @@
       </div>
     </section>
 
-    <!-- LIGHT BAND CTA (optional) -->
+    <!-- Secondary CTA band (no email/social) -->
     <section class="bg-sky-50 border-y border-sky-200/70">
       <div class="container py-10 md:py-12">
         <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div>
-            <h2 class="text-xl font-semibold">Prefer email?</h2>
-            <p class="text-slate-700 mt-1">Reach us directly at <a class="underline" href="mailto:hello@fairvaluesports.com">coming soon...</a>.</p>
+            <h2 class="text-xl font-semibold">Looking for pricing and features?</h2>
+            <p class="text-slate-700 mt-1">Compare plans and learn what’s included.</p>
           </div>
           <div class="flex gap-3">
-            <a class="btn-ghost" href="/products.html">Explore Plans & Pricing</a>
+            <a class="btn-ghost" href="/products.html">Explore Plans &amp; Pricing</a>
             <a class="btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Launch the Model</a>
           </div>
         </div>
