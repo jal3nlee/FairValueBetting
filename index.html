@@ -18,20 +18,20 @@
     .btn-primary{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;background:#000;color:#fff;text-decoration:none;transition:opacity .2s;}
     .btn-primary:hover{opacity:.9;}
     .btn-ghost{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;border:1px solid rgba(0,0,0,.2);text-decoration:none;transition:background .2s;}
-    .btn-ghost:hover{background:rgba(0,0,0,.05);}
+    .btn-ghost:hover{background:rgba(0,0,0,.05);}    
     /* light-on-dark buttons for the hero */
     .btn-light{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;background:#fff;color:#0f172a;text-decoration:none;transition:opacity .2s;}
     .btn-light:hover{opacity:.9;}
     .btn-ghost-light{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;border:1px solid rgba(255,255,255,.5);color:#fff;text-decoration:none;transition:background .2s;}
-    .btn-ghost-light:hover{background:rgba(255,255,255,.08);}
-    .badge{display:inline-block;font-size:.75rem;font-weight:600;padding:.25rem .5rem;border-radius:9999px;background:rgba(0,0,0,.1);}
+    .btn-ghost-light:hover{background:rgba(255,255,255,.08);}    
+    .badge{display:inline-block;font-weight:600;padding:.25rem .5rem;border-radius:9999px;background:rgba(0,0,0,.1);} /* inherit Body size */
     .card{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1rem;padding:1.25rem;}
     .card-lg{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1.25rem;padding:1.5rem;}
   </style>
 </head>
 <body class="antialiased text-slate-900">
   <!-- Top promo banner -->
-  <div class="bg-blue-600 text-white text-sm">
+  <div class="bg-blue-600 text-white">
     <div class="container py-2 text-center">
       <strong>Free full access in September.</strong> Email sign-up only. No card required.
     </div>
@@ -41,7 +41,7 @@
   <header data-fvb-header class="border-b border-slate-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
     <nav class="container flex items-center justify-between h-16">
       <a href="/index.html" class="flex items-center gap-2 font-semibold">
-        <img src="/assets/logo.png" alt="Fair Value Sports" class="h-6 md:h-7 w-auto">
+        <img src="/assets/logo.png" alt="Fair Value Betting logo" class="h-6 md:h-7 w-auto">
         <span class="sr-only">Fair Value Betting</span>
       </a>
 
@@ -49,7 +49,7 @@
       <ul class="hidden md:flex items-center gap-6">
         <li><a class="hover:opacity-80" href="/index.html">Home</a></li>
         <li><a class="hover:opacity-80" href="/about.html">About</a></li>
-        <li><a class="hover:opacity-80" href="/howitworks.html">How it works</a></li>
+        <li><a class="hover:opacity-80" href="/howitworks.html">How It Works</a></li>
         <li><a class="hover:opacity-80" href="/products.html">Products</a></li>
         <li><a class="hover:opacity-80" href="/contact.html">Contact</a></li>
       </ul>
@@ -79,7 +79,7 @@
       <div class="container py-3 space-y-1">
         <a class="block py-2" href="/index.html">Home</a>
         <a class="block py-2" href="/about.html">About</a>
-        <a class="block py-2" href="/howitworks.html">How it works</a>
+        <a class="block py-2" href="/howitworks.html">How It Works</a>
         <a class="block py-2" href="/products.html">Products</a>
         <a class="block py-2" href="/contact.html">Contact</a>
 
@@ -102,18 +102,17 @@
   <main>
     <!-- Hero (navy band, white text) -->
     <section class="bg-blue-950 text-white border-b border-slate-800">
-      <div class="container py-16 md:py-24">
+      <div class="container py-10 md:py-16">
         <div class="grid md:grid-cols-2 items-center gap-10">
-          <div>
+          <div class="max-w-prose">
             <!-- Override badge colors just in the hero -->
             <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;">Fair Value Betting · Expected Value Model</span>
             <h1 class="text-4xl md:text-5xl font-bold mt-4">Bet smarter, with an edge.</h1>
-            <p class="text-lg text-blue-100 mt-4">
+            <p class="text-blue-100 mt-4">
               We turn book odds into fair win percentage and show your estimated edge with transparent calculations.
             </p>
-           <div class="flex items-center gap-3 mt-6">
-  <a class="btn-light" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">
-    Launch the NFL EV Model</a>
+            <div class="flex items-center gap-3 mt-6">
+              <a class="btn-light" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Launch the NFL EV Model</a>
             </div>
             <p class="text-xs text-blue-200 mt-3">
               Information only; not betting advice. Bet responsibly.
@@ -133,206 +132,203 @@
       </div>
     </section>
 
-<!-- Preview section: three worked examples (not live) -->
-<section id="preview" class="bg-white">
-  <div class="container py-12">
-    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
-      <div>
-        <h2 class="text-2xl font-semibold">NFL EV Model Preview</h2>
-        <p class="text-slate-600 text-sm mt-1">Three worked examples for illustration (not live).</p>
+    <!-- Preview section: three worked examples (not live) -->
+    <section id="preview" class="bg-white">
+      <div class="container py-10 md:py-16">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-3">
+          <div>
+            <h2 class="text-2xl font-semibold">NFL EV Model Preview</h2>
+            <p class="text-slate-600 mt-1">Three worked examples for illustration (not live).</p>
+          </div>
+          <a class="btn-ghost" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">
+            Launch the Live Model
+          </a>
+        </div>
+
+        <div class="mt-4 overflow-x-auto border border-slate-200 rounded-2xl">
+          <table class="min-w-full">
+            <thead class="bg-slate-50">
+              <tr class="text-left text-slate-600">
+                <th class="px-4 py-3">Date</th>
+                <th class="px-4 py-3">Game</th>
+                <th class="px-4 py-3">Pick</th>
+                <th class="px-4 py-3">Best Odds</th>
+                <th class="px-4 py-3">Best Book</th>
+
+                <!-- Fair Probability with tooltip -->
+                <th class="px-4 py-3">
+                  <div class="flex items-center gap-1">
+                    Fair Probability
+                    <span class="relative inline-block group">
+                      <button type="button" class="inline-flex items-center justify-center h-4 w-4 rounded-full border border-current/40 text-slate-600 focus:outline-none" aria-label="What is Fair Probability?">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"/>
+                        </svg>
+                      </button>
+                      <span class="absolute left-1/2 -translate-x-1/2 mt-2 w-56 text-xs bg-slate-900 text-white rounded-md px-2 py-1 shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
+                        Estimated win % after removing the sportsbook margin (vig).
+                      </span>
+                    </span>
+                  </div>
+                </th>
+
+                <!-- EV % with tooltip -->
+                <th class="px-4 py-3">
+                  <div class="flex items-center gap-1">
+                    EV %
+                    <span class="relative inline-block group">
+                      <button type="button" class="inline-flex items-center justify-center h-4 w-4 rounded-full border border-current/40 text-slate-600 focus:outline-none" aria-label="What is EV %?">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"/>
+                        </svg>
+                      </button>
+                      <span class="absolute left-1/2 -translate-x-1/2 mt-2 w-56 text-xs bg-slate-900 text-white rounded-md px-2 py-1 shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
+                        Expected value: compares fair win % to the offered price. Positive = better than fair.
+                      </span>
+                    </span>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+
+            <tbody class="divide-y divide-slate-200">
+              <!-- Example 1 -->
+              <tr>
+                <td class="px-4 py-3">Sep 1</td>
+                <td class="px-4 py-3">Eagles @ Giants</td>
+                <td class="px-4 py-3">Eagles to win (ML)</td>
+                <td class="px-4 py-3">+120</td>
+                <td class="px-4 py-3">FanDuel</td>
+                <td class="px-4 py-3">46.8%</td>
+                <td class="px-4 py-3">+3.0%</td>
+              </tr>
+
+              <!-- Example 2 -->
+              <tr>
+                <td class="px-4 py-3">Sep 1</td>
+                <td class="px-4 py-3">Chiefs @ Ravens</td>
+                <td class="px-4 py-3">Chiefs to win (ML)</td>
+                <td class="px-4 py-3">&minus;105</td>
+                <td class="px-4 py-3">Caesars</td>
+                <td class="px-4 py-3">52.2%</td>
+                <td class="px-4 py-3">+1.9%</td>
+              </tr>
+
+              <!-- Example 3 -->
+              <tr>
+                <td class="px-4 py-3">Sep 1</td>
+                <td class="px-4 py-3">Jets @ Bills</td>
+                <td class="px-4 py-3">Jets to win (ML)</td>
+                <td class="px-4 py-3">+145</td>
+                <td class="px-4 py-3">BetMGM</td>
+                <td class="px-4 py-3">41.8%</td>
+                <td class="px-4 py-3">+2.4%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="text-xs text-slate-500 mt-3">
+          Example only; not live data. Information only; not betting advice. Bet responsibly.
+        </p>
       </div>
-      <a class="btn-ghost" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">
-        Launch the Live Model
-      </a>
-    </div>
+    </section>
 
-    <div class="mt-4 overflow-x-auto border border-slate-200 rounded-2xl">
-      <table class="min-w-full text-sm">
-        <thead class="bg-slate-50">
-          <tr class="text-left text-slate-600">
-            <th class="px-4 py-3">Date</th>
-            <th class="px-4 py-3">Game</th>
-            <th class="px-4 py-3">Pick</th>
-            <th class="px-4 py-3">Best Odds</th>
-            <th class="px-4 py-3">Best Book</th>
+    <!-- Supported Sportsbooks (navy band) -->
+    <section class="bg-blue-950 text-white border-t border-slate-800">
+      <div class="container py-10 md:py-16">
+        <h2 class="text-2xl font-semibold">Supported Sportsbooks</h2>
+        <p class="text-blue-100 mt-1">Available where online sports betting is legal.</p>
 
-            <!-- Fair Probability with tooltip -->
-            <th class="px-4 py-3">
-              <div class="flex items-center gap-1">
-                Fair Probability
-                <span class="relative inline-block group">
-                  <button type="button" class="inline-flex items-center justify-center h-4 w-4 rounded-full border border-current/40 text-slate-600 focus:outline-none" aria-label="What is Fair Probability?">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"/>
-                    </svg>
-                  </button>
-                  <span class="absolute left-1/2 -translate-x-1/2 mt-2 w-56 text-[11px] bg-slate-900 text-white rounded-md px-2 py-1 shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
-                    Estimated win % after removing the sportsbook margin (vig).
-                  </span>
-                </span>
-              </div>
-            </th>
-
-            <!-- EV % with tooltip -->
-            <th class="px-4 py-3">
-              <div class="flex items-center gap-1">
-                EV %
-                <span class="relative inline-block group">
-                  <button type="button" class="inline-flex items-center justify-center h-4 w-4 rounded-full border border-current/40 text-slate-600 focus:outline-none" aria-label="What is EV %?">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z"/>
-                    </svg>
-                  </button>
-                  <span class="absolute left-1/2 -translate-x-1/2 mt-2 w-56 text-[11px] bg-slate-900 text-white rounded-md px-2 py-1 shadow-lg opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 pointer-events-none">
-                    Expected value: compares fair win % to the offered price. Positive = better than fair.
-                  </span>
-                </span>
-              </div>
-            </th>
-          </tr>
-        </thead>
-
-        <tbody class="divide-y divide-slate-200">
-          <!-- Example 1 -->
-          <tr>
-            <td class="px-4 py-3">Sep 1</td>
-            <td class="px-4 py-3">Eagles @ Giants</td>
-            <td class="px-4 py-3">Eagles to win (ML)</td>
-            <td class="px-4 py-3">+120</td>
-            <td class="px-4 py-3">FanDuel</td>
-            <td class="px-4 py-3">46.8%</td>
-            <td class="px-4 py-3">+3.0%</td>
-          </tr>
-
-          <!-- Example 2 -->
-          <tr>
-            <td class="px-4 py-3">Sep 1</td>
-            <td class="px-4 py-3">Chiefs @ Ravens</td>
-            <td class="px-4 py-3">Chiefs to win (ML)</td>
-            <td class="px-4 py-3">&minus;105</td>
-            <td class="px-4 py-3">Caesars</td>
-            <td class="px-4 py-3">52.2%</td>
-            <td class="px-4 py-3">+1.9%</td>
-          </tr>
-
-          <!-- Example 3 -->
-          <tr>
-            <td class="px-4 py-3">Sep 1</td>
-            <td class="px-4 py-3">Jets @ Bills</td>
-            <td class="px-4 py-3">Jets to win (ML)</td>
-            <td class="px-4 py-3">+145</td>
-            <td class="px-4 py-3">BetMGM</td>
-            <td class="px-4 py-3">41.8%</td>
-            <td class="px-4 py-3">+2.4%</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <p class="text-xs text-slate-500 mt-3">
-      Example only; not live data. Information only; not betting advice. Bet responsibly.
-    </p>
-  </div>
-</section>
-
-
-  <!-- Supported platforms (navy band) -->
-<section class="bg-blue-950 text-white border-t border-slate-800">
-  <div class="container py-12">
-    <h2 class="text-2xl font-semibold">Supported platforms</h2>
-    <p class="text-blue-100 mt-1">Available where online sports betting is legal.</p>
-
-    <!-- US sportsbooks from The Odds API -->
-    <div class="mt-6 flex flex-wrap items-center gap-2">
-      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">DraftKings</span>
-      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">FanDuel</span>
-      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">BetMGM</span>
-      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Caesars</span>
-      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Fanatics</span>
-      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">BetRivers</span>
-      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">ESPN BET</span>
-      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Bally Bet</span>
-      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">betPARX</span>
-      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Hard Rock Bet</span>
-      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">BetOnline</span>
-      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Bovada</span>
-      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">MyBookie</span>
-      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">BetUS</span>
-      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">LowVig</span>
-      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Fliff</span>
-      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">ReBet</span>
-      <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">BetAnySports</span>
-    </div>
-  </section>
+        <!-- US sportsbooks from The Odds API -->
+        <div class="mt-6 flex flex-wrap items-center gap-2">
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">DraftKings</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">FanDuel</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">BetMGM</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Caesars</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Fanatics</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">BetRivers</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">ESPN BET</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Bally Bet</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">betPARX</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Hard Rock Bet</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">BetOnline</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Bovada</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">MyBookie</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">BetUS</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">LowVig</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">Fliff</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">ReBet</span>
+          <span class="badge" style="background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);">BetAnySports</span>
+        </div>
+      </div>
+    </section>
 
     <!-- EV & Kelly (beginner primer) -->
-<section class="bg-sky-50 border-y border-sky-200/70">
-  <div class="container py-10">
-    <div class="flex items-baseline justify-between gap-3">
-      <h2 class="text-xl md:text-2xl font-semibold">Expected Value &amp; Kelly Overview</h2>
-      <a href="/howitworks.html" class="text-sm text-slate-700 underline underline-offset-2 hover:text-slate-900">
-        How it works →
-      </a>
-    </div>
+    <section class="bg-sky-50 border-y border-sky-200/70">
+      <div class="container py-10 md:py-16">
+        <div class="flex items-baseline justify-between gap-3">
+          <h2 class="text-2xl font-semibold">Expected Value &amp; Kelly Overview</h2>
+          <a href="/howitworks.html" class="text-slate-700 underline underline-offset-2 hover:text-slate-900">How It Works →</a>
+        </div>
 
-    <div class="grid md:grid-cols-2 gap-6 mt-4">
-      <!-- Card 1 -->
-      <div class="card">
-        <h3 class="font-semibold">Where do I start?</h3>
-        <p class="text-sm text-slate-700 mt-1">
-          Different sportsbooks post different prices for the same bet. That’s normal. Books adjust lines to manage risk, respond to sharp action, run promos, and compete for customers. Those small price differences change the break-even chance you need to come out ahead.
-        </p>
-        <h4 class="font-semibold mt-3">So what?</h4>
-        <p class="text-sm text-slate-700 mt-1">
-          If you’ve picked a bet, your next job is simple: lock in the best available price. Our model screens supported sportsbooks and surfaces the most favorable odds available at that moment, so you’re starting from the strongest number every time.
-        </p>
+        <div class="grid md:grid-cols-2 gap-6 mt-4">
+          <!-- Card 1 -->
+          <div class="card">
+            <h3 class="font-semibold">Where do I start?</h3>
+            <p class="text-slate-700 mt-1">
+              Different sportsbooks post different prices for the same bet. That’s normal. Books adjust lines to manage risk, respond to sharp action, run promos, and compete for customers. Those small price differences change the break-even chance you need to come out ahead.
+            </p>
+            <h4 class="font-semibold mt-3">So what?</h4>
+            <p class="text-slate-700 mt-1">
+              If you’ve picked a bet, your next job is simple: lock in the best available price. Our model screens supported sportsbooks and surfaces the most favorable odds available at that moment, so you’re starting from the strongest number every time.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card">
+            <h3 class="font-semibold">What do odds mean?</h3>
+            <p class="text-slate-700 mt-1">
+              In American odds, the sign tells you favorite vs underdog and the size hints at likelihood. As odds get more negative, the outcome is more likely; as they get more positive, it’s less likely. For reference, −140 corresponds to a break-even of about 58.3%, while +120 is about 45.5%.
+            </p>
+            <h4 class="font-semibold mt-3">So what?</h4>
+            <p class="text-slate-700 mt-1">
+              Not every two-way bet is priced “fairly” because books build in a margin (vig) so the combined implied probabilities usually add up to over 100%. We remove the vig to estimate the market’s fair win % and a corresponding fair line, giving you a clearer baseline to compare against any book’s offered price.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card">
+            <h3 class="font-semibold">What are fair probability and EV?</h3>
+            <p class="text-slate-700 mt-1">
+              Every betting line can be turned into a likelihood. Because sportsbooks include a margin (“vig”), we remove that margin to estimate the market’s no-vig fair win probability, a clearer baseline than any book’s posted odds.
+            </p>
+            <h4 class="font-semibold mt-3">So what?</h4>
+            <p class="text-slate-700 mt-1">
+              Sometimes a sportsbook posts a price that’s meaningfully different from the market’s fair number. That gap is your edge. We highlight these opportunities as positive expected value (EV%), so you can compare the offered price to the fair baseline and focus on bets that pay more than the market implies. Edges move with prices and aren’t guarantees, so it is up to you to use your own judgment and bankroll rules.
+            </p>
+          </div>
+
+          <!-- Card 4 (Kelly) -->
+          <div class="card">
+            <h3 class="font-semibold">How do I know how much to bet?</h3>
+            <p class="text-slate-700 mt-1">
+              We use Kelly logic. Kelly takes your fair win percentage and the offered price to suggest a fraction of your bankroll that maximizes long-run growth. The larger the edge, the larger the suggested fraction; if the edge is zero or negative, the suggested stake is $0.
+            </p>
+            <h4 class="font-semibold mt-3">So what?</h4>
+            <p class="text-slate-700 mt-1">
+              If you stake the same unit on every +EV bet, you over-bet small edges and under-bet strong ones. Kelly sizing ties stake to edge and win probability, helping you stay consistent. It’s a guideline, not a guarantee, so use a Kelly factor that fits your risk tolerance and never risk money you can’t afford to lose.
+            </p>
+          </div>
+        </div>
       </div>
-
-      <!-- Card 2 -->
-      <div class="card">
-        <h3 class="font-semibold">What do odds mean?</h3>
-        <p class="text-sm text-slate-700 mt-1">
-          In American odds, the sign tells you favorite vs underdog and the size hints at likelihood. As odds get more negative, the outcome is more likely; as they get more positive, it’s less likely. For reference, −140 corresponds to a break-even of about 58.3%, while +120 is about 45.5%.
-        </p>
-        <h4 class="font-semibold mt-3">So what?</h4>
-        <p class="text-sm text-slate-700 mt-1">
-          Not every two-way bet is priced “fairly” because books build in a margin (vig) so the combined implied probabilities usually add up to over 100%. We remove the vig to estimate the market’s fair win % and a corresponding fair line, giving you a clearer baseline to compare against any book’s offered price.
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="card">
-        <h3 class="font-semibold">What are fair probability and EV?</h3>
-        <p class="text-sm text-slate-700 mt-1">
-          Every betting line can be turned into a likelihood. Because sportsbooks include a margin (“vig”), we remove that margin to estimate the market’s no-vig fair win probability, a clearer baseline than any book’s posted odds.
-        </p>
-        <h4 class="font-semibold mt-3">So what?</h4>
-        <p class="text-sm text-slate-700 mt-1">
-          Sometimes a sportsbook posts a price that’s meaningfully different from the market’s fair number. That gap is your edge. We highlight these opportunities as positive expected value (EV%), so you can compare the offered price to the fair baseline and focus on bets that pay more than the market implies. Edges move with prices and aren’t guarantees, so it is up to you to use your own judgment and bankroll rules.
-        </p>
-      </div>
-
-      <!-- Card 4 (Kelly) -->
-      <div class="card">
-        <h3 class="font-semibold">How do I know how much to bet?</h3>
-        <p class="text-sm text-slate-700 mt-1">
-          We use Kelly logic. Kelly takes your fair win percentage and the offered price to suggest a fraction of your bankroll that maximizes long-run growth. The larger the edge, the larger the suggested fraction; if the edge is zero or negative, the suggested stake is $0.
-        </p>
-        <h4 class="font-semibold mt-3">So what?</h4>
-        <p class="text-sm text-slate-700 mt-1">
-          If you stake the same unit on every +EV bet, you over-bet small edges and under-bet strong ones. Kelly sizing ties stake to edge and win probability, helping you stay consistent. It’s a guideline, not a guarantee, so use a Kelly factor that fits your risk tolerance and never risk money you can’t afford to lose.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- (Moved) Built for every betting style (navy band + white text) -->
     <section class="bg-blue-950 text-white border-t border-slate-800">
-      <div class="container py-16">
+      <div class="container py-10 md:py-16">
         <div class="max-w-3xl">
           <h2 class="text-2xl font-semibold">Built for every betting style</h2>
           <p class="text-blue-100 mt-2">Pick your style, set your thresholds, and let the edges work for you.</p>
@@ -341,7 +337,7 @@
         <div class="grid md:grid-cols-3 gap-6 mt-6">
           <div class="card-lg text-slate-900">
             <h3 class="font-semibold">Line Shopper</h3>
-            <p class="text-sm text-slate-700 mt-2">
+            <p class="text-slate-700 mt-2">
               Already have a favorite? Find the best-value sportsbook odds for your bet.
             </p>
             <p class="text-xs text-slate-500 mt-3"><b>Start here:</b> EV% ≥ 1.0–1.5 · Kelly 0.5</p>
@@ -349,7 +345,7 @@
 
           <div class="card-lg text-slate-900">
             <h3 class="font-semibold">Data-Driven Bettor</h3>
-            <p class="text-sm text-slate-700 mt-2">
+            <p class="text-slate-700 mt-2">
               De-vig the market, turn prices into fair probabilities, and integrate your model with ours.
             </p>
             <p class="text-xs text-slate-500 mt-3"><b>Start here:</b> EV% ≥ 1.5–2.0 · Kelly 0.75</p>
@@ -357,7 +353,7 @@
 
           <div class="card-lg text-slate-900">
             <h3 class="font-semibold">Bankroll-Conscious</h3>
-            <p class="text-sm text-slate-700 mt-2">
+            <p class="text-slate-700 mt-2">
               Control variance with higher EV floors and lower Kelly stakes.
             </p>
             <p class="text-xs text-slate-500 mt-3"><b>Start here:</b> EV% ≥ 2–3 · Kelly 0.25</p>
@@ -365,7 +361,7 @@
 
           <div class="card-lg text-slate-900">
             <h3 class="font-semibold">High-Conviction Backer</h3>
-            <p class="text-sm text-slate-700 mt-2">
+            <p class="text-slate-700 mt-2">
               Maximize high-edge opportunities and filter out low-probability bets.
             </p>
             <p class="text-xs text-slate-500 mt-3"><b>Start here:</b> EV% ≥ 4–5 · Kelly 0.75–1.0</p>
@@ -373,7 +369,7 @@
 
           <div class="card-lg text-slate-900">
             <h3 class="font-semibold">Weekend Warriors</h3>
-            <p class="text-sm text-slate-700 mt-2">
+            <p class="text-slate-700 mt-2">
               Filter by edge and lock in your favorites, every Sunday.
             </p>
             <p class="text-xs text-slate-500 mt-3"><b>Start here:</b> EV% ≥ 2 · Kelly 0.25–0.75</p>
@@ -381,7 +377,7 @@
 
           <div class="card-lg text-slate-900">
             <h3 class="font-semibold">Just Learning</h3>
-            <p class="text-sm text-slate-700 mt-2">
+            <p class="text-slate-700 mt-2">
               Learn the workflow—see fair win probabilities, filter by edge, and start with small, consistent stakes.
             </p>
             <p class="text-xs text-slate-500 mt-3"><b>Start here:</b> EV% ≥ 2–3 · Kelly 0.25–0.5</p>
@@ -391,60 +387,60 @@
     </section>
   </main>
 
-    <!-- (Moved) Features as cards -->
-    <section class="bg-sky-50 border-y border-sky-200/70">
-      <div class="container py-14">
-        <h2 class="text-2xl font-semibold">What Fair Value Betting can do for you</h2>
-        <div class="grid md:grid-cols-3 gap-6 mt-6">
+  <!-- (Moved) Features as cards -->
+  <section class="bg-sky-50 border-y border-sky-200/70">
+    <div class="container py-10 md:py-16">
+      <h2 class="text-2xl font-semibold">What Fair Value Betting can do for you</h2>
+      <div class="grid md:grid-cols-3 gap-6 mt-6">
 
-          <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
-            <h3 class="font-semibold">Sportsbook screening & line shopping</h3>
-            <p class="text-sm text-blue-100 mt-2">
-              Screen multiple books and surface the best line for each matchup.
-            </p>
-          </div>
-
-          <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
-            <h3 class="font-semibold">De-vig market odds</h3>
-            <p class="text-sm text-blue-100 mt-2">
-              Remove the bookmaker’s margin to reveal the market’s underlying odds.
-            </p>
-          </div>
-
-          <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
-            <h3 class="font-semibold">Fair probabilities</h3>
-            <p class="text-sm text-blue-100 mt-2">
-              Convert no-vig prices into consistent implied win probabilities.
-            </p>
-          </div>
-
-          <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
-            <h3 class="font-semibold">EV% filtering</h3>
-            <p class="text-sm text-blue-100 mt-2">
-              Calculate edge vs. best price, rank plays, and set your own EV% threshold.
-            </p>
-          </div>
-
-          <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
-            <h3 class="font-semibold">Adjustable Kelly sizing</h3>
-            <p class="text-sm text-blue-100 mt-2">
-              Right-size stakes to your risk with user-set bankroll and Kelly factor.
-            </p>
-          </div>
-
-          <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
-            <h3 class="font-semibold">Clarity & transparency</h3>
-            <p class="text-sm text-blue-100 mt-2">
-              See timestamps, inputs, and updates alongside results.
-            </p>
-          </div>
-
+        <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
+          <h3 class="font-semibold">Sportsbook screening &amp; line shopping</h3>
+          <p class="text-blue-100 mt-2">
+            Screen multiple books and surface the best line for each matchup.
+          </p>
         </div>
+
+        <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
+          <h3 class="font-semibold">De-vig market odds</h3>
+          <p class="text-blue-100 mt-2">
+            Remove the bookmaker’s margin to reveal the market’s underlying odds.
+          </p>
+        </div>
+
+        <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
+          <h3 class="font-semibold">Fair probabilities</h3>
+          <p class="text-blue-100 mt-2">
+            Convert no-vig prices into consistent implied win probabilities.
+          </p>
+        </div>
+
+        <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
+          <h3 class="font-semibold">EV% filtering</h3>
+          <p class="text-blue-100 mt-2">
+            Calculate edge vs. best price, rank plays, and set your own EV% threshold.
+          </p>
+        </div>
+
+        <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
+          <h3 class="font-semibold">Adjustable Kelly sizing</h3>
+          <p class="text-blue-100 mt-2">
+            Right-size stakes to your risk with user-set bankroll and Kelly factor.
+          </p>
+        </div>
+
+        <div class="rounded-2xl p-6 border bg-blue-950 border-blue-800 text-white shadow-sm">
+          <h3 class="font-semibold">Clarity &amp; transparency</h3>
+          <p class="text-blue-100 mt-2">
+            See timestamps, inputs, and updates alongside results.
+          </p>
+        </div>
+
       </div>
-    </section>
+    </div>
+  </section>
 
   <footer class="border-t border-slate-200/70 mt-16">
-    <div class="container py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-sm">
+    <div class="container py-6 flex flex-col md:flex-row items-center justify-between gap-3">
       <p>© 2025 Fair Value Betting. All rights reserved.</p>
       <ul class="flex items-center gap-4">
         <li><a class="hover:opacity-80" href="/terms.html">Terms</a></li>
