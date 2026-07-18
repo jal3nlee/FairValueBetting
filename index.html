@@ -8,7 +8,7 @@
   <meta property="og:title" content="Home · Fair Value Betting">
   <meta property="og:description" content="Institutional-grade sports betting research powered by the Fair Value Model, with sportsbook comparisons, matchup analysis, player research, and transparent expected value opportunities.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/assets/fairvaluebetting.png">
+  <meta property="og:image" content="/assets/FairValueBetting.png">
   <link rel="icon" href="/assets/favicon.png">
   <!-- TailwindCSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -27,6 +27,9 @@
     .badge{display:inline-block;font-weight:600;padding:.25rem .5rem;border-radius:9999px;background:rgba(0,0,0,.1);} /* inherit Body size */
     .card{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1rem;padding:1.25rem;}
     .card-lg{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1.25rem;padding:1.5rem;}
+    .sport-card{display:flex;align-items:center;gap:.875rem;border:1px solid rgba(15,23,42,.15);border-radius:1rem;padding:1rem;background:#fff;min-height:5rem;}
+    .sport-logo-wrap{display:flex;align-items:center;justify-content:center;width:3rem;height:3rem;flex:0 0 3rem;border-radius:.875rem;background:#f8fafc;border:1px solid #e2e8f0;}
+    .sport-logo{display:block;max-width:2.15rem;max-height:2.15rem;width:auto;height:auto;object-fit:contain;}
     .hero-image{
       position:relative;
       isolation:isolate;
@@ -152,34 +155,6 @@
       </div>
     </section>
 
-    <!-- Platform overview -->
-    <section class="bg-white">
-      <div class="container py-10 md:py-16">
-        <div class="max-w-3xl">
-          <span class="badge">One research platform</span>
-          <h2 class="text-3xl font-semibold mt-3">Everything you need before placing a bet.</h2>
-          <p class="text-slate-600 mt-2">
-            Sports betting research is scattered across sportsbook apps, statistics sites, injury reports, odds screens, and social media. Fair Value Betting brings the entire decision-making process into one place.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6 mt-8">
-          <div class="card-lg">
-            <h3 class="font-semibold text-lg">Matchup Center</h3>
-            <p class="text-slate-700 mt-2">Start with the teams and games you care about. Review matchups, markets, recent performance, and available opportunities in one organized view.</p>
-          </div>
-          <div class="card-lg">
-            <h3 class="font-semibold text-lg">Sportsbook Screener</h3>
-            <p class="text-slate-700 mt-2">Compare prices across major sportsbooks, identify the best available odds, and surface expected value opportunities without switching between apps.</p>
-          </div>
-          <div class="card-lg">
-            <h3 class="font-semibold text-lg">Player Research</h3>
-            <p class="text-slate-700 mt-2">Go beyond the box score with current player data, recent game performance, trends, and matchup context for deeper research.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Fair Value Model -->
     <section class="bg-sky-50 border-y border-sky-200/70">
       <div class="container py-10 md:py-16">
@@ -204,6 +179,35 @@
               <li><b>Best sportsbook price</b> identified across supported books.</li>
               <li><b>Fresh timestamps and inputs</b> so you know when the market was last updated.</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Platform overview -->
+    <section class="bg-white">
+      <div class="container py-10 md:py-16">
+        <div class="max-w-3xl">
+          <span class="badge">One research platform</span>
+          <h2 class="text-3xl font-semibold mt-3">Everything you need before placing a bet.</h2>
+          <p class="text-slate-600 mt-2">
+            Sports betting research is scattered across sportsbook apps, statistics sites, injury reports, odds screens, and social media. Fair Value Betting brings the entire decision-making process into one place.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-8">
+          <div class="card-lg">
+            <h3 class="font-semibold text-lg">Matchup Center</h3>
+            <p class="text-slate-700 mt-2">Start with the teams and games you care about. Review matchups, markets, recent performance, and available opportunities in one organized view.</p>
+          </div>
+          <div class="card-lg">
+            <h3 class="font-semibold text-lg">Player Research</h3>
+            <p class="text-slate-700 mt-2">Go beyond the box score with current player data, recent game performance, trends, and matchup context for deeper research.</p>
+          </div>
+          <div class="card-lg">
+            <h3 class="font-semibold text-lg">Sportsbook Screener</h3>
+            <p class="text-slate-700 mt-2">Compare prices across major sportsbooks, identify the best available odds, and surface expected value opportunities without switching between apps.</p>
           </div>
         </div>
       </div>
@@ -248,17 +252,32 @@
         <div class="grid md:grid-cols-2 gap-6 mt-6">
           <div class="card-lg">
             <span class="badge">Available now</span>
-            <div class="grid grid-cols-2 gap-3 mt-4">
-              <div class="rounded-xl border border-slate-200 p-4 font-semibold">MLB</div>
-              <div class="rounded-xl border border-slate-200 p-4 font-semibold">NFL</div>
+            <div class="grid sm:grid-cols-2 gap-3 mt-4">
+              <div class="sport-card">
+                <span class="sport-logo-wrap"><img class="sport-logo" src="/assets/mlb-logo.webp" alt="MLB logo"></span>
+                <div><p class="font-semibold">MLB</p><p class="text-sm text-slate-500">Baseball research</p></div>
+              </div>
+              <div class="sport-card">
+                <span class="sport-logo-wrap"><img class="sport-logo" src="/assets/nfl-logo.webp" alt="NFL logo"></span>
+                <div><p class="font-semibold">NFL</p><p class="text-sm text-slate-500">Football research</p></div>
+              </div>
             </div>
           </div>
           <div class="card-lg">
             <span class="badge">Coming soon</span>
-            <div class="grid sm:grid-cols-3 gap-3 mt-4">
-              <div class="rounded-xl border border-slate-200 p-4 font-semibold">College Football</div>
-              <div class="rounded-xl border border-slate-200 p-4 font-semibold">NBA</div>
-              <div class="rounded-xl border border-slate-200 p-4 font-semibold">College Basketball</div>
+            <div class="grid gap-3 mt-4">
+              <div class="sport-card">
+                <span class="sport-logo-wrap"><img class="sport-logo" src="/assets/college-football-logo.svg" alt="College football icon"></span>
+                <div><p class="font-semibold">College Football</p><p class="text-sm text-slate-500">Coming soon</p></div>
+              </div>
+              <div class="sport-card">
+                <span class="sport-logo-wrap"><img class="sport-logo" src="/assets/nba-logo.webp" alt="NBA logo"></span>
+                <div><p class="font-semibold">NBA</p><p class="text-sm text-slate-500">Coming soon</p></div>
+              </div>
+              <div class="sport-card">
+                <span class="sport-logo-wrap"><img class="sport-logo" src="/assets/college-basketball-logo.png" alt="College basketball icon"></span>
+                <div><p class="font-semibold">College Basketball</p><p class="text-sm text-slate-500">Coming soon</p></div>
+              </div>
             </div>
           </div>
         </div>
