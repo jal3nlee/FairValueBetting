@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="See how Fair Value Betting connects market screening, matchup research, player analysis, sportsbook comparison, and parlay building in one platform."
+    content="See how Fair Value Betting connects market screening, matchup research, player analysis, parlay building, sportsbook comparison, and transparent expected value analysis."
   >
 
   <meta property="og:title" content="How It Works · Fair Value Betting">
@@ -138,163 +138,8 @@
 
 <body class="antialiased text-slate-900">
 
-  <!-- Top promo banner -->
-  <div class="bg-blue-600 text-white">
-    <div class="container py-2 text-center">
-      <strong>Free full access this month.</strong>
-      Email sign-up only. No card required.
-    </div>
-  </div>
-
-  <!-- Header -->
-  <header
-    data-fvb-header
-    class="border-b border-slate-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50"
-  >
-    <nav class="container flex items-center justify-between h-16">
-
-      <a href="/index.html" class="flex items-center gap-2 font-semibold">
-        <img
-          src="/assets/logo.png"
-          alt="Fair Value Betting logo"
-          class="h-6 md:h-7 w-auto"
-        >
-        <span class="sr-only">Fair Value Betting</span>
-      </a>
-
-      <ul class="hidden md:flex items-center gap-6">
-        <li>
-          <a class="hover:opacity-80" href="/index.html">Home</a>
-        </li>
-
-        <li>
-          <a class="hover:opacity-80" href="/about.html">About</a>
-        </li>
-
-        <li>
-          <a
-            class="hover:opacity-80"
-            href="/howitworks.html"
-            aria-current="page"
-          >
-            How It Works
-          </a>
-        </li>
-
-        <li>
-          <a class="hover:opacity-80" href="/products.html">Products</a>
-        </li>
-
-        <li>
-          <a class="hover:opacity-80" href="/contact.html">Contact</a>
-        </li>
-      </ul>
-
-      <div class="hidden md:flex items-center gap-3">
-        <a class="btn-ghost" href="/products.html">
-          Explore Platform
-        </a>
-
-        <a
-          class="btn-primary"
-          href="https://fairvaluesports-nfl.onrender.com"
-          target="_blank"
-          rel="noopener"
-        >
-          Launch Platform
-        </a>
-      </div>
-
-      <!-- Mobile hamburger -->
-      <button
-        data-menu-button
-        class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-300 text-slate-700"
-        aria-label="Open menu"
-        aria-controls="fvbMobileMenu"
-        aria-expanded="false"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5 pointer-events-none"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          aria-hidden="true"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
-      </button>
-    </nav>
-
-    <!-- Mobile menu -->
-    <div
-      id="fvbMobileMenu"
-      data-mobile-menu
-      class="md:hidden hidden bg-white border-t border-slate-200"
-    >
-      <div class="container py-3 space-y-1">
-
-        <a class="block py-2" href="/index.html">Home</a>
-
-        <a class="block py-2" href="/about.html">About</a>
-
-        <a
-          class="block py-2"
-          href="/howitworks.html"
-          aria-current="page"
-        >
-          How It Works
-        </a>
-
-        <a class="block py-2" href="/products.html">Products</a>
-
-        <a class="block py-2" href="/contact.html">Contact</a>
-
-        <div class="pt-1">
-          <a
-            class="block py-2 text-slate-700/90"
-            href="/privacy.html"
-          >
-            Privacy
-          </a>
-
-          <a
-            class="block py-2 text-slate-700/90"
-            href="/terms.html"
-          >
-            Terms
-          </a>
-
-          <a
-            class="block py-2 text-slate-700/90"
-            href="/disclaimer.html"
-          >
-            Legal Disclaimer
-          </a>
-        </div>
-
-        <div class="pt-3 flex gap-2">
-          <a class="flex-1 btn-ghost" href="/products.html">
-            Explore Platform
-          </a>
-
-          <a
-            class="flex-1 btn-primary"
-            href="https://fairvaluesports-nfl.onrender.com"
-            target="_blank"
-            rel="noopener"
-          >
-            Launch Platform
-          </a>
-        </div>
-      </div>
-    </div>
-  </header>
+  <!-- Shared promo banner and header load here -->
+  <div id="site-header"></div>
 
   <main>
 
@@ -305,7 +150,7 @@
 
           <span
             class="badge"
-            style="background: rgba(255,255,255,.15); color: #fff;"
+            style="background:rgba(255,255,255,.15);color:#fff;"
           >
             How It Works
           </span>
@@ -325,15 +170,20 @@
           <div class="flex flex-wrap items-center gap-3 mt-7">
             <a
               class="btn-light"
+              href="https://fairvaluebetting-mlb.onrender.com/"
+              target="_blank"
+              rel="noopener"
+            >
+              Launch MLB
+            </a>
+
+            <a
+              class="btn-ghost-light"
               href="https://fairvaluesports-nfl.onrender.com"
               target="_blank"
               rel="noopener"
             >
-              Launch Platform
-            </a>
-
-            <a class="btn-ghost-light" href="/products.html">
-              Explore Products
+              Launch NFL
             </a>
           </div>
 
@@ -368,7 +218,9 @@
         <div class="grid md:grid-cols-3 gap-6 mt-8">
 
           <div class="card-lg">
-            <div class="text-sm font-semibold text-blue-700">01</div>
+            <div class="text-sm font-semibold text-blue-700">
+              01
+            </div>
 
             <h3 class="font-semibold text-lg mt-2">
               Scan the slate
@@ -382,7 +234,9 @@
           </div>
 
           <div class="card-lg">
-            <div class="text-sm font-semibold text-blue-700">02</div>
+            <div class="text-sm font-semibold text-blue-700">
+              02
+            </div>
 
             <h3 class="font-semibold text-lg mt-2">
               Filter the market
@@ -397,7 +251,9 @@
           </div>
 
           <div class="card-lg">
-            <div class="text-sm font-semibold text-blue-700">03</div>
+            <div class="text-sm font-semibold text-blue-700">
+              03
+            </div>
 
             <h3 class="font-semibold text-lg mt-2">
               Research the matchup
@@ -411,7 +267,9 @@
           </div>
 
           <div class="card-lg">
-            <div class="text-sm font-semibold text-blue-700">04</div>
+            <div class="text-sm font-semibold text-blue-700">
+              04
+            </div>
 
             <h3 class="font-semibold text-lg mt-2">
               Research the player
@@ -425,7 +283,9 @@
           </div>
 
           <div class="card-lg">
-            <div class="text-sm font-semibold text-blue-700">05</div>
+            <div class="text-sm font-semibold text-blue-700">
+              05
+            </div>
 
             <h3 class="font-semibold text-lg mt-2">
               Build the wager
@@ -439,7 +299,9 @@
           </div>
 
           <div class="card-lg">
-            <div class="text-sm font-semibold text-blue-700">06</div>
+            <div class="text-sm font-semibold text-blue-700">
+              06
+            </div>
 
             <h3 class="font-semibold text-lg mt-2">
               Compare sportsbooks
@@ -597,7 +459,7 @@
         <div class="max-w-3xl">
           <span
             class="badge"
-            style="background: rgba(255,255,255,.15); color: #fff;"
+            style="background:rgba(255,255,255,.15);color:#fff;"
           >
             Powered by the Fair Value Model™
           </span>
@@ -769,42 +631,60 @@
             <div class="grid grid-cols-2 gap-5 text-sm">
 
               <div>
-                <div class="font-semibold">Game</div>
+                <div class="font-semibold">
+                  Game
+                </div>
+
                 <div class="text-slate-600 mt-1">
                   The matchup and date.
                 </div>
               </div>
 
               <div>
-                <div class="font-semibold">Pick</div>
+                <div class="font-semibold">
+                  Pick
+                </div>
+
                 <div class="text-slate-600 mt-1">
                   The exact side or outcome.
                 </div>
               </div>
 
               <div>
-                <div class="font-semibold">Market</div>
+                <div class="font-semibold">
+                  Market
+                </div>
+
                 <div class="text-slate-600 mt-1">
                   Moneyline, spread, or total.
                 </div>
               </div>
 
               <div>
-                <div class="font-semibold">Best Book</div>
+                <div class="font-semibold">
+                  Best Book
+                </div>
+
                 <div class="text-slate-600 mt-1">
                   The selected book offering the best price.
                 </div>
               </div>
 
               <div>
-                <div class="font-semibold">Best Odds</div>
+                <div class="font-semibold">
+                  Best Odds
+                </div>
+
                 <div class="text-slate-600 mt-1">
                   Shown in the user’s chosen format.
                 </div>
               </div>
 
               <div>
-                <div class="font-semibold">Expected Value</div>
+                <div class="font-semibold">
+                  Expected Value
+                </div>
+
                 <div class="text-slate-600 mt-1">
                   The model’s estimated edge at that price.
                 </div>
@@ -835,30 +715,39 @@
         </h2>
 
         <p class="text-blue-100 mt-3 max-w-2xl mx-auto">
-          Scan the market, research the matchup, build the wager, compare
-          the price, and navigate to the sportsbook—all without
+          Scan the market, research the matchup, build the wager,
+          compare the price, and navigate to the sportsbook—all without
           fragmenting your research process.
         </p>
 
         <div class="flex flex-wrap justify-center gap-3 mt-7">
           <a
             class="btn-light"
+            href="YOUR_MLB_URL"
+            target="_blank"
+            rel="noopener"
+          >
+            Launch MLB
+          </a>
+
+          <a
+            class="btn-ghost-light"
             href="https://fairvaluesports-nfl.onrender.com"
             target="_blank"
             rel="noopener"
           >
-            Launch Platform
-          </a>
-
-          <a class="btn-ghost-light" href="/products.html">
-            Explore Products
+            Launch NFL
           </a>
         </div>
+
+        <p class="text-xs text-blue-200 mt-4">
+          Information only; not betting advice. Bet responsibly.
+        </p>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- Footer remains local for now -->
   <footer class="border-t border-slate-200/70 mt-16">
     <div
       class="container py-6 flex flex-col md:flex-row items-center justify-between gap-3"
@@ -889,69 +778,7 @@
     </div>
   </footer>
 
-  <!-- Mobile menu toggle -->
-  <script>
-    (() => {
-      const header = document.querySelector('[data-fvb-header]');
-
-      if (!header) return;
-
-      const button = header.querySelector('[data-menu-button]');
-      const menu = header.querySelector('[data-mobile-menu]');
-
-      if (!button || !menu) return;
-
-      const openMenu = () => {
-        menu.classList.remove('hidden');
-        button.setAttribute('aria-expanded', 'true');
-        document.documentElement.style.overflow = 'hidden';
-        document.body.style.overflow = 'hidden';
-      };
-
-      const closeMenu = () => {
-        menu.classList.add('hidden');
-        button.setAttribute('aria-expanded', 'false');
-        document.documentElement.style.overflow = '';
-        document.body.style.overflow = '';
-      };
-
-      const toggleMenu = () => {
-        if (menu.classList.contains('hidden')) {
-          openMenu();
-        } else {
-          closeMenu();
-        }
-      };
-
-      button.addEventListener('click', (event) => {
-        event.stopPropagation();
-        toggleMenu();
-      });
-
-      menu.querySelectorAll('a[href]').forEach((link) => {
-        link.addEventListener('click', closeMenu);
-      });
-
-      document.addEventListener('click', (event) => {
-        const isClickInside = header.contains(event.target);
-
-        if (
-          !isClickInside &&
-          !menu.classList.contains('hidden')
-        ) {
-          closeMenu();
-        }
-      });
-
-      document.addEventListener('keydown', (event) => {
-        if (
-          event.key === 'Escape' &&
-          !menu.classList.contains('hidden')
-        ) {
-          closeMenu();
-        }
-      });
-    })();
-  </script>
+  <!-- Loads shared promo banner/header and mobile menu behavior -->
+  <script src="assets/site.js"></script>
 </body>
 </html>
