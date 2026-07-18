@@ -3,361 +3,619 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>About · Fair Value Betting</title>
-  <meta name="description" content="Learn why Fair Value Betting was built: one transparent, institutional-grade research platform for smarter sports betting decisions.">
+
+  <meta
+    name="description"
+    content="Learn why Fair Value Betting was built: one transparent, institutional-grade research platform for smarter sports betting decisions."
+  >
+
   <meta property="og:title" content="About · Fair Value Betting">
-  <meta property="og:description" content="One transparent, institutional-grade research platform for smarter sports betting decisions.">
+
+  <meta
+    property="og:description"
+    content="One transparent, institutional-grade research platform for smarter sports betting decisions."
+  >
+
   <meta property="og:type" content="website">
   <meta property="og:image" content="/assets/favicon.png">
+
   <link rel="icon" href="/assets/favicon.png">
-  <!-- TailwindCSS CDN -->
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Same CSS utilities as Home (margins/buttons/cards) -->
+
   <style>
-    .container{max-width:72rem;margin-left:auto;margin-right:auto;padding-left:1rem;padding-right:1rem;}
-    .btn-primary{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;background:#000;color:#fff;text-decoration:none;transition:opacity .2s;}
-    .btn-primary:hover{opacity:.9;}
-    .btn-ghost{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;border:1px solid rgba(0,0,0,.2);text-decoration:none;transition:background .2s;}
-    .btn-ghost:hover{background:rgba(0,0,0,.05);}    
+    .container {
+      max-width: 72rem;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
 
-    /* light-on-dark buttons for navy hero */
-    .btn-light{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;background:#fff;color:#0f172a;text-decoration:none;transition:opacity .2s;}
-    .btn-light:hover{opacity:.9;}
-    .btn-ghost-light{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.25rem;border-radius:1rem;border:1px solid rgba(255,255,255,.5);color:#fff;text-decoration:none;transition:background .2s;}
-    .btn-ghost-light:hover{background:rgba(255,255,255,.08);}    
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      padding: .75rem 1.25rem;
+      border-radius: 1rem;
+      background: #2563eb;
+      color: #fff;
+      text-decoration: none;
+      transition: background .2s, opacity .2s;
+    }
 
-    .badge{display:inline-block;font-weight:600;padding:.25rem .5rem;border-radius:9999px;background:rgba(0,0,0,.1);} /* inherit Body size */
-    .card{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1rem;padding:1.25rem;}
-    .card-lg{background:#fff;border:1px solid rgba(15,23,42,.15);border-radius:1.25rem;padding:1.5rem;}
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      padding: .75rem 1.25rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(37, 99, 235, .28);
+      color: #1d4ed8;
+      text-decoration: none;
+      transition: background .2s;
+    }
+
+    .btn-ghost:hover {
+      background: #eff6ff;
+    }
+
+    .btn-light {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      padding: .75rem 1.25rem;
+      border-radius: 1rem;
+      background: #fff;
+      color: #0f172a;
+      text-decoration: none;
+      transition: opacity .2s;
+    }
+
+    .btn-light:hover {
+      opacity: .9;
+    }
+
+    .btn-ghost-light {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      padding: .75rem 1.25rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, .5);
+      color: #fff;
+      text-decoration: none;
+      transition: background .2s;
+    }
+
+    .btn-ghost-light:hover {
+      background: rgba(255, 255, 255, .08);
+    }
+
+    .badge {
+      display: inline-block;
+      font-weight: 600;
+      padding: .25rem .5rem;
+      border-radius: 9999px;
+      background: rgba(37, 99, 235, .10);
+      color: #1d4ed8;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid rgba(186, 230, 253, .95);
+      border-radius: 1rem;
+      padding: 1.25rem;
+    }
+
+    .card-lg {
+      background: #fff;
+      border: 1px solid rgba(186, 230, 253, .95);
+      border-radius: 1.25rem;
+      padding: 1.5rem;
+    }
   </style>
 </head>
+
 <body class="antialiased text-slate-900">
 
-<!-- Top promo banner -->
-<div class="bg-blue-600 text-white">
-  <div class="container py-2 text-center">
-    <strong>Free full access this month.</strong> Email sign-up only. No card required.
-  </div>
-</div>
-
-  <!-- HEADER (matches Home; includes mobile hamburger/menu) -->
-  <header data-fvb-header class="border-b border-slate-200/70 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-50">
-    <nav class="container flex items-center justify-between h-16">
-      <a href="/index.html" class="flex items-center gap-2 font-semibold">
-        <img src="/assets/logo.png" alt="Fair Value Betting logo" class="h-6 md:h-7 w-auto">
-        <span class="sr-only">Fair Value Betting</span>
-      </a>
-      <ul class="hidden md:flex items-center gap-6">
-        <li><a class="hover:opacity-80" href="/index.html">Home</a></li>
-        <li><a class="hover:opacity-80" href="/about.html" aria-current="page">About</a></li>
-        <li><a class="hover:opacity-80" href="/howitworks.html">How It Works</a></li>
-        <li><a class="hover:opacity-80" href="/products.html">Products</a></li>
-        <li><a class="hover:opacity-80" href="/contact.html">Contact</a></li>
-      </ul>
-      <!-- Desktop CTAs hidden on mobile -->
-      <div class="hidden md:flex items-center gap-3">
-        <a class="btn-ghost" href="/products.html">Explore Plans</a>
-        <a class="btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Launch Platform</a>
-      </div>
-
-      <!-- Mobile hamburger -->
-      <button
-        data-menu-button
-        class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-slate-300 text-slate-700"
-        aria-label="Open menu"
-        aria-controls="fvbMobileMenu"
-        aria-expanded="false">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </nav>
-
-    <!-- Mobile menu -->
-    <div id="fvbMobileMenu" data-mobile-menu class="md:hidden hidden bg-white border-t border-slate-200">
-      <div class="container py-3 space-y-1">
-        <a class="block py-2" href="/index.html">Home</a>
-        <a class="block py-2" href="/about.html" aria-current="page">About</a>
-        <a class="block py-2" href="/howitworks.html">How It Works</a>
-        <a class="block py-2" href="/products.html">Products</a>
-        <a class="block py-2" href="/contact.html">Contact</a>
-        <div class="pt-1">
-          <a class="block py-2 text-slate-700/90" href="/privacy.html">Privacy</a>
-          <a class="block py-2 text-slate-700/90" href="/terms.html">Terms</a>
-          <a class="block py-2 text-slate-700/90" href="/disclaimer.html">Legal Disclaimer</a>
-        </div>
-        <!-- Mobile CTAs -->
-        <div class="pt-3 flex gap-2">
-          <a class="flex-1 btn-ghost" href="/products.html">Explore Plans</a>
-          <a class="flex-1 btn-primary" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Launch Platform</a>
-        </div>
-      </div>
-    </div>
-  </header>
+  <!-- Shared promo banner and header load here -->
+  <div id="site-header"></div>
 
   <main>
-    <!-- HERO -->
+
+    <!-- Hero -->
     <section class="bg-blue-950 text-white border-b border-slate-800">
       <div class="container py-12 md:py-20">
         <div class="max-w-4xl">
-          <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;">About Fair Value Betting</span>
-          <h1 class="text-4xl md:text-5xl font-bold mt-4">Betting research should not be scattered.</h1>
+
+          <span
+            class="badge"
+            style="background:rgba(255,255,255,.15);color:#fff;"
+          >
+            About Fair Value Betting
+          </span>
+
+          <h1 class="text-4xl md:text-5xl font-bold mt-4">
+            Betting research should not be scattered.
+          </h1>
+
           <p class="text-blue-100 mt-5 text-lg leading-relaxed max-w-3xl">
-            Fair Value Betting brings sportsbook pricing, matchup analysis, player research, and transparent expected value opportunities into one institutional-grade platform built to help bettors make more informed decisions.
+            Fair Value Betting brings sportsbook pricing, matchup
+            analysis, player research, parlay building, line shopping,
+            and transparent expected value opportunities into one
+            institutional-grade platform built to help bettors make more
+            informed decisions.
           </p>
+
           <div class="flex flex-wrap items-center gap-3 mt-7">
-            <a class="btn-light" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Launch Platform</a>
-            <a class="btn-ghost-light" href="/products.html">Explore the Platform</a>
+            <a
+              class="btn-light"
+              href="YOUR_MLB_URL"
+              target="_blank"
+              rel="noopener"
+            >
+              Launch MLB
+            </a>
+
+            <a
+              class="btn-ghost-light"
+              href="https://fairvaluesports-nfl.onrender.com"
+              target="_blank"
+              rel="noopener"
+            >
+              Launch NFL
+            </a>
           </div>
-          <p class="text-xs text-blue-200 mt-4">Information only; not betting advice. Bet responsibly.</p>
+
+          <a
+            href="/howitworks.html"
+            class="inline-block mt-5 text-sm text-blue-100 underline underline-offset-4 hover:text-white"
+          >
+            See how the platform works →
+          </a>
+
+          <p class="text-xs text-blue-200 mt-4">
+            Information only; not betting advice. Bet responsibly.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- WHY WE BUILT IT -->
+    <!-- Why we built it -->
     <section class="bg-sky-50 border-y border-sky-200/70">
       <div class="container py-12 md:py-16">
+
         <div class="grid md:grid-cols-2 gap-10 items-start">
+
           <div>
-            <span class="text-sm font-semibold uppercase tracking-wider text-blue-700">Why we built it</span>
-            <h2 class="text-3xl font-semibold mt-2">One place to research before you bet.</h2>
+            <span
+              class="text-sm font-semibold uppercase tracking-wider text-blue-700"
+            >
+              Why we built it
+            </span>
+
+            <h2 class="text-3xl font-semibold mt-2">
+              One place to research before you bet.
+            </h2>
           </div>
+
           <div class="space-y-4 text-slate-700 leading-relaxed">
             <p>
-              Sports betting research is fragmented across sportsbook apps, statistics websites, injury reports, social media, and isolated odds tools. Bettors are often forced to jump between platforms just to understand a single matchup.
+              Sports betting research is fragmented across sportsbook
+              apps, statistics websites, injury reports, social media,
+              and isolated odds tools. Bettors are often forced to jump
+              between platforms just to understand a single matchup.
             </p>
+
             <p>
-              Fair Value Betting was built to bring that process together. Instead of offering unexplained picks, the platform gives users the pricing, context, research, and market comparisons needed to evaluate an opportunity for themselves.
+              Fair Value Betting was built to bring that process
+              together. Instead of offering unexplained picks, the
+              platform gives users the pricing, context, research, and
+              market comparisons needed to evaluate an opportunity for
+              themselves.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WHAT WE BELIEVE -->
+    <!-- What we believe -->
     <section class="bg-white">
       <div class="container py-12 md:py-16">
+
         <div class="max-w-3xl">
-          <span class="text-sm font-semibold uppercase tracking-wider text-blue-700">What we believe</span>
-          <h2 class="text-3xl font-semibold mt-2">Better tools create better decisions.</h2>
+          <span
+            class="text-sm font-semibold uppercase tracking-wider text-blue-700"
+          >
+            What we believe
+          </span>
+
+          <h2 class="text-3xl font-semibold mt-2">
+            Better tools create better decisions.
+          </h2>
+
           <p class="text-slate-600 mt-3">
-            Fair Value Betting is built around a few principles that shape every feature across the platform.
+            Fair Value Betting is built around a few principles that
+            shape every feature across the platform.
           </p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-6 mt-8">
+
           <div class="card-lg">
-            <h3 class="font-semibold text-lg">Research before recommendations</h3>
+            <h3 class="font-semibold text-lg">
+              Research before recommendations
+            </h3>
+
             <p class="text-slate-700 mt-2">
-              Bettors should be able to understand a matchup, compare the market, and make their own decision instead of relying on unexplained picks.
+              Bettors should be able to understand a matchup, compare
+              the market, and make their own decision instead of relying
+              on unexplained picks.
             </p>
           </div>
 
           <div class="card-lg">
-            <h3 class="font-semibold text-lg">Transparency over hype</h3>
+            <h3 class="font-semibold text-lg">
+              Transparency over hype
+            </h3>
+
             <p class="text-slate-700 mt-2">
-              Every opportunity should include the relevant price, sportsbook, supporting context, and Fair Value Model output so users can see why it may matter.
+              Every opportunity should include the relevant price,
+              sportsbook, supporting context, and Fair Value Model
+              output so users can understand why it may matter.
             </p>
           </div>
 
           <div class="card-lg">
-            <h3 class="font-semibold text-lg">One platform, every workflow</h3>
+            <h3 class="font-semibold text-lg">
+              One platform, every workflow
+            </h3>
+
             <p class="text-slate-700 mt-2">
-              Whether someone researches one favorite team or every market on the board, the platform should support the way they actually bet.
+              Whether someone researches one favorite team or every
+              market on the board, the platform should support the way
+              they actually approach betting.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAIR VALUE MODEL -->
+    <!-- Fair Value Model -->
     <section class="bg-blue-950 text-white border-y border-slate-800">
       <div class="container py-12 md:py-16">
+
         <div class="grid md:grid-cols-2 gap-10 items-center">
+
           <div>
-            <span class="badge" style="background:rgba(255,255,255,.15);color:#fff;">Powered by the Fair Value Model™</span>
-            <h2 class="text-3xl font-semibold mt-4">A transparent layer of market intelligence.</h2>
+            <span
+              class="badge"
+              style="background:rgba(255,255,255,.15);color:#fff;"
+            >
+              Powered by the Fair Value Model™
+            </span>
+
+            <h2 class="text-3xl font-semibold mt-4">
+              A transparent layer of market intelligence.
+            </h2>
           </div>
+
           <div class="text-blue-100 space-y-4 leading-relaxed">
             <p>
-              The Fair Value Model evaluates market pricing across sportsbooks and helps surface transparent expected value opportunities.
+              The Fair Value Model evaluates pricing across sportsbooks,
+              removes each book’s margin, and blends the resulting
+              probabilities into a weighted market consensus.
             </p>
+
             <p>
-              It is not designed to replace judgment. It is designed to give bettors a clearer baseline, stronger context, and a more disciplined research process.
+              The model then compares that fair probability with the
+              best available sportsbook price to help surface
+              transparent expected value opportunities.
             </p>
+
+            <p>
+              It is not designed to replace judgment. It is designed to
+              give bettors a clearer baseline, stronger context, and a
+              more disciplined research process.
+            </p>
+
+            <a
+              href="/howitworks.html"
+              class="inline-block text-white underline underline-offset-4 hover:text-blue-100"
+            >
+              Learn how the Fair Value Model works →
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- WHO IT IS FOR -->
+    <!-- Who it is for -->
     <section class="bg-sky-50 border-b border-sky-200/70">
       <div class="container py-12 md:py-16">
+
         <div class="max-w-3xl">
-          <span class="text-sm font-semibold uppercase tracking-wider text-blue-700">Who it is for</span>
-          <h2 class="text-3xl font-semibold mt-2">Built for every level of bettor.</h2>
+          <span
+            class="text-sm font-semibold uppercase tracking-wider text-blue-700"
+          >
+            Who it is for
+          </span>
+
+          <h2 class="text-3xl font-semibold mt-2">
+            Built for every level of bettor.
+          </h2>
+
           <p class="text-slate-600 mt-3">
-            The platform is designed to scale from quick game-day research to a deeper, data-driven process.
+            The platform is designed to scale from quick game-day
+            research to a deeper, data-driven process.
           </p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-6 mt-8">
+
           <div class="card">
-            <h3 class="font-semibold">Casual fans</h3>
+            <h3 class="font-semibold">
+              Casual fans
+            </h3>
+
             <p class="text-slate-700 mt-2">
-              Get the context needed to research favorite teams, games, and players without spending hours across multiple websites.
+              Get the context needed to research favorite teams, games,
+              and players without spending hours across multiple
+              websites.
             </p>
           </div>
 
           <div class="card">
-            <h3 class="font-semibold">Value-focused bettors</h3>
+            <h3 class="font-semibold">
+              Value-focused bettors
+            </h3>
+
             <p class="text-slate-700 mt-2">
-              Compare sportsbook pricing and identify transparent expected value opportunities through one consistent research workflow.
+              Compare sportsbook pricing and identify transparent
+              expected value opportunities through one consistent
+              research workflow.
             </p>
           </div>
 
           <div class="card">
-            <h3 class="font-semibold">Data-driven researchers</h3>
+            <h3 class="font-semibold">
+              Data-driven researchers
+            </h3>
+
             <p class="text-slate-700 mt-2">
-              Explore matchups, player performance, market pricing, and sportsbook differences in greater depth from one platform.
+              Explore matchups, player performance, market pricing,
+              sportsbook differences, fair probabilities, and expected
+              value in greater depth.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ROADMAP -->
+    <!-- Platform growth -->
     <section id="roadmap" class="bg-white">
       <div class="container py-12 md:py-16">
+
         <div class="max-w-3xl">
-          <span class="text-sm font-semibold uppercase tracking-wider text-blue-700">Platform growth</span>
-          <h2 class="text-3xl font-semibold mt-2">Expanding across the sports bettors follow most.</h2>
+          <span
+            class="text-sm font-semibold uppercase tracking-wider text-blue-700"
+          >
+            Platform growth
+          </span>
+
+          <h2 class="text-3xl font-semibold mt-2">
+            Expanding across the sports bettors follow most.
+          </h2>
+
           <p class="text-slate-600 mt-3">
-            MLB and NFL are available today, with college football, NBA, and college basketball on the way.
+            MLB and NFL are available today, with college football, NBA,
+            and college basketball on the way.
           </p>
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-8">
-          <div class="card text-center flex flex-col items-center">
-            <div class="w-20 h-20 rounded-2xl border border-sky-200 bg-white p-3 flex items-center justify-center">
-              <img src="/assets/mlb-logo.webp" alt="MLB logo" loading="lazy" class="w-full h-full object-contain">
+
+          <a
+            class="card text-center flex flex-col items-center hover:border-blue-400 transition-colors"
+            href="YOUR_MLB_URL"
+            target="_blank"
+            rel="noopener"
+          >
+            <div
+              class="w-20 h-20 rounded-2xl border border-sky-200 bg-white p-3 flex items-center justify-center"
+            >
+              <img
+                src="/assets/mlb-logo.webp"
+                alt="MLB logo"
+                loading="lazy"
+                class="w-full h-full object-contain"
+              >
             </div>
-            <h3 class="font-semibold text-lg mt-4">MLB</h3>
-            <div class="text-sm font-semibold text-blue-700 mt-1">Available</div>
+
+            <h3 class="font-semibold text-lg mt-4">
+              MLB
+            </h3>
+
+            <div class="text-sm font-semibold text-blue-700 mt-1">
+              Launch Platform
+            </div>
+          </a>
+
+          <a
+            class="card text-center flex flex-col items-center hover:border-blue-400 transition-colors"
+            href="https://fairvaluesports-nfl.onrender.com"
+            target="_blank"
+            rel="noopener"
+          >
+            <div
+              class="w-20 h-20 rounded-2xl border border-sky-200 bg-white p-3 flex items-center justify-center"
+            >
+              <img
+                src="/assets/nfl-logo.webp"
+                alt="NFL logo"
+                loading="lazy"
+                class="w-full h-full object-contain"
+              >
+            </div>
+
+            <h3 class="font-semibold text-lg mt-4">
+              NFL
+            </h3>
+
+            <div class="text-sm font-semibold text-blue-700 mt-1">
+              Launch Platform
+            </div>
+          </a>
+
+          <div class="card text-center flex flex-col items-center">
+            <div
+              class="w-20 h-20 rounded-2xl border border-sky-200 bg-white p-3 flex items-center justify-center"
+            >
+              <img
+                src="/assets/college-football-logo.svg"
+                alt="College football logo"
+                loading="lazy"
+                class="w-full h-full object-contain"
+              >
+            </div>
+
+            <h3 class="font-semibold text-lg mt-4">
+              College Football
+            </h3>
+
+            <div class="text-sm font-semibold text-slate-500 mt-1">
+              Coming Soon
+            </div>
           </div>
 
           <div class="card text-center flex flex-col items-center">
-            <div class="w-20 h-20 rounded-2xl border border-sky-200 bg-white p-3 flex items-center justify-center">
-              <img src="/assets/nfl-logo.webp" alt="NFL logo" loading="lazy" class="w-full h-full object-contain">
+            <div
+              class="w-20 h-20 rounded-2xl border border-sky-200 bg-white p-3 flex items-center justify-center"
+            >
+              <img
+                src="/assets/nba-logo.webp"
+                alt="NBA logo"
+                loading="lazy"
+                class="w-full h-full object-contain"
+              >
             </div>
-            <h3 class="font-semibold text-lg mt-4">NFL</h3>
-            <div class="text-sm font-semibold text-blue-700 mt-1">Available</div>
+
+            <h3 class="font-semibold text-lg mt-4">
+              NBA
+            </h3>
+
+            <div class="text-sm font-semibold text-slate-500 mt-1">
+              Coming Soon
+            </div>
           </div>
 
           <div class="card text-center flex flex-col items-center">
-            <div class="w-20 h-20 rounded-2xl border border-sky-200 bg-white p-3 flex items-center justify-center shadow-sm">
-              <img src="/assets/college-football-logo.svg" alt="College football logo" loading="lazy" class="w-full h-full object-contain">
+            <div
+              class="w-20 h-20 rounded-2xl border border-sky-200 bg-white p-3 flex items-center justify-center"
+            >
+              <img
+                src="/assets/college-basketball-logo.png"
+                alt="College basketball logo"
+                loading="lazy"
+                class="w-full h-full object-contain"
+              >
             </div>
-            <h3 class="font-semibold text-lg mt-4">College Football</h3>
-            <div class="text-sm font-semibold text-slate-500 mt-1">Coming Soon</div>
-          </div>
 
-          <div class="card text-center flex flex-col items-center">
-            <div class="w-20 h-20 rounded-2xl border border-sky-200 bg-white p-3 flex items-center justify-center shadow-sm">
-              <img src="/assets/nba-logo.webp" alt="NBA logo" loading="lazy" class="w-full h-full object-contain">
-            </div>
-            <h3 class="font-semibold text-lg mt-4">NBA</h3>
-            <div class="text-sm font-semibold text-slate-500 mt-1">Coming Soon</div>
-          </div>
+            <h3 class="font-semibold text-lg mt-4">
+              College Basketball
+            </h3>
 
-          <div class="card text-center flex flex-col items-center">
-            <div class="w-20 h-20 rounded-2xl border border-sky-200 bg-white p-3 flex items-center justify-center shadow-sm">
-              <img src="/assets/college-basketball-logo.png" alt="College basketball logo" loading="lazy" class="w-full h-full object-contain">
+            <div class="text-sm font-semibold text-slate-500 mt-1">
+              Coming Soon
             </div>
-            <h3 class="font-semibold text-lg mt-4">College Basketball</h3>
-            <div class="text-sm font-semibold text-slate-500 mt-1">Coming Soon</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FINAL CTA -->
+    <!-- Final CTA -->
     <section class="bg-blue-950 text-white border-y border-slate-800">
       <div class="container py-12 md:py-16 text-center">
-        <h2 class="text-3xl font-semibold">A better place to do your betting research.</h2>
+
+        <h2 class="text-3xl font-semibold">
+          A better place to do your betting research.
+        </h2>
+
         <p class="text-blue-100 mt-3 max-w-2xl mx-auto">
-          Research matchups, compare sportsbooks, understand fair value, and make more informed decisions from one platform.
+          Research matchups, compare sportsbooks, understand fair value,
+          and make more informed decisions from one platform.
         </p>
+
         <div class="flex flex-wrap justify-center gap-3 mt-7">
-          <a class="btn-light" href="https://fairvaluesports-nfl.onrender.com" target="_blank" rel="noopener">Launch Platform</a>
-          <a class="btn-ghost-light" href="/products.html">Explore Products</a>
+          <a
+            class="btn-light"
+            href="YOUR_MLB_URL"
+            target="_blank"
+            rel="noopener"
+          >
+            Launch MLB
+          </a>
+
+          <a
+            class="btn-ghost-light"
+            href="https://fairvaluesports-nfl.onrender.com"
+            target="_blank"
+            rel="noopener"
+          >
+            Launch NFL
+          </a>
         </div>
+
+        <p class="text-xs text-blue-200 mt-4">
+          Information only; not betting advice. Bet responsibly.
+        </p>
       </div>
     </section>
   </main>
 
-
-  <!-- FOOTER (identical to Home) -->
+  <!-- Footer remains local for now -->
   <footer class="border-t border-slate-200/70 mt-16">
-    <div class="container py-6 flex flex-col md:flex-row items-center justify-between gap-3">
-      <p>© 2026 Fair Value Betting. All rights reserved.</p>
+    <div
+      class="container py-6 flex flex-col md:flex-row items-center justify-between gap-3"
+    >
+      <p>
+        © 2026 Fair Value Betting. All rights reserved.
+      </p>
+
       <ul class="flex items-center gap-4">
-        <li><a class="hover:opacity-80" href="/terms.html">Terms</a></li>
-        <li><a class="hover:opacity-80" href="/privacy.html">Privacy</a></li>
-        <li><a class="hover:opacity-80" href="/disclaimer.html">Legal Disclaimer</a></li>
+        <li>
+          <a class="hover:opacity-80" href="/terms.html">
+            Terms
+          </a>
+        </li>
+
+        <li>
+          <a class="hover:opacity-80" href="/privacy.html">
+            Privacy
+          </a>
+        </li>
+
+        <li>
+          <a class="hover:opacity-80" href="/disclaimer.html">
+            Legal Disclaimer
+          </a>
+        </li>
       </ul>
     </div>
   </footer>
 
-  <!-- Mobile menu toggle + scroll lock -->
-  <script>
-  (() => {
-    const header = document.querySelector('[data-fvb-header]');
-    if (!header) return;
-
-    const button = header.querySelector('[data-menu-button]');
-    const menu   = header.querySelector('[data-mobile-menu]');
-    if (!button || !menu) return;
-
-    const openMenu = () => {
-      menu.classList.remove('hidden');
-      button.setAttribute('aria-expanded', 'true');
-      document.documentElement.style.overflow = 'hidden';
-      document.body.style.overflow = 'hidden';
-    };
-
-    const closeMenu = () => {
-      menu.classList.add('hidden');
-      button.setAttribute('aria-expanded', 'false');
-      document.documentElement.style.overflow = '';
-      document.body.style.overflow = '';
-    };
-
-    const toggleMenu = () => (menu.classList.contains('hidden') ? openMenu() : closeMenu());
-
-    // Toggle on button click
-    button.addEventListener('click', (e) => {
-      e.stopPropagation();
-      toggleMenu();
-    });
-
-    // Close when clicking any link in the mobile menu
-    menu.querySelectorAll('a[href]').forEach(a =>
-      a.addEventListener('click', () => closeMenu())
-    );
-
-    // Close on outside click
-    document.addEventListener('click', (e) => {
-      const isClickInside = header.contains(e.target);
-      if (!isClickInside && !menu.classList.contains('hidden')) closeMenu();
-    });
-
-    // Close on Escape
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !menu.classList.contains('hidden')) closeMenu();
-    });
-  })();
-  </script>
+  <!-- Loads shared promo banner/header and mobile menu behavior -->
+  <script src="assets/site.js"></script>
 </body>
 </html>
